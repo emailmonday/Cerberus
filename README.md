@@ -3,7 +3,7 @@ Cerberus
 
 A small number of responsive email patterns that go a long way when combined. Each code block can be used and reused to assemble emails. This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
 
-##_Default Template
+##`_default.html`
 * Forces columns into rows
 * Uses fluid images
 * Works most everywhere for desktop

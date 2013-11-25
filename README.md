@@ -1,11 +1,14 @@
 Cerberus
 ========
 
-A small number of responsive email patterns that go a long way when combined. Each code block can be used and reused to assemble emails. This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
+A few responsive email patterns that go a long way when combined. Each code block can be used and reused to assemble emails.
+
+This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
 
 ##`_default.html`
 * Forces columns into rows
 * Uses fluid images
+* Includes two breakpoints
 * Works most everywhere for desktop
 * Relies on media queries for narrow screens
 

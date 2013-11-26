@@ -6,6 +6,7 @@ A few responsive email patterns that go a long way when combined. Each code bloc
 This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
 
 ***
+
 ###`_default.html`
 ![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-default.png)
 * Forces columns into rows
@@ -13,12 +14,16 @@ This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s 
 * Includes two breakpoints
 * Works most everywhere for desktop
 * Relies on media queries for narrow screens
+
 ***
+
 ###`_fluid.html`
 * Works everywhere
 * Fluid layout using `max-width` to shrink email's width
 * Fixed, wide layout for Outlook and Lotus 8
+
 ***
+
 ### Tools and Resources
 * [Guide to CSS Support](http://www.campaignmonitor.com/css) from Campaign Monitor.
 * [HTML Email Boilerplate](http://htmlemailboilerplate.com/) from Sean Powell.

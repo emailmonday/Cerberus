@@ -18,6 +18,7 @@ This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s 
 ***
 
 ###`_fluid.html`
+![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-fluid.png)
 * Works everywhere
 * Fluid layout using `max-width` to shrink email's width
 * Fixed, wide layout for Outlook and Lotus 8

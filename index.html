@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cerberus - Responsive Email Patterns</title>
+    <link rel="stylesheet" href="assets/tea.css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrapper">
+      
+      <header>
+        <hgroup>
+          <div>
+            <h1>Cerberus</h1>
+            <h2>A few simple, but solid patterns for responsive HTML emails. Even in Outlook.</h2>
+            <hr>
+          </div>
+        </hgroup>
+      </header>
+        
+      <div class="downloads">
+        <ul>
+          <li><a href="https://github.com/TedGoas/Cerberus/zipball/master">Download (ZIP)</a></li>
+          <li><a href="https://github.com/TedGoas/Cerberus/fork">Fork on GitHub</a></li>
+          <li><a href="https://github.com/TedGoas/Cerberus">View on GitHub</a></li>
+        </ul>
+      </div>
+      
+      <div class="content">
+        <blockquote>
+          <p><i>Cerberus - </i></p>
+          <p>Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.</p>
+        </blockquote>
+
+        <hr>
+
+        <h2>A few responsive email patterns that go a long way</h2>
+        <p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>
+        <h4>That's what Cerberus is.</h4>
+        <p>Cerberus is just a few responsive email patterns. There are two templates, one that relies media queries and one that does not.</p>
+        <p>Each code block can be used and reused to assemble emails. These blocks are compartmentalized so that they may be mixed, matched, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.</p>
+        <p>Cerberus is <a href="https://github.com/TedGoas/Responsive-Email-XX">Responsive Email XX</a>'s successor.
+
+        <hr>
+
+	      <h3>_default.html</h3>
+      	<div class="img">
+      		<img src="assets/wireframe-default.png" alt="Layout transformation wireframe">
+      	</div>
+      	<div class="det cf">
+	      <h4>This template relies media queries to force table columns into rows and shrinks images, all while maintaining the layout's spacing, padding, and alignment.</h4>
+      		<ul>
+      			<li>Works everywhere on desktop</li>
+      			<li>Works everywhere on narrow screen clients that support media queries</li>
+      			<li>Includes two breakpoints</li>
+      			<li>Forces columns into rows</li>
+      			<li>Uses fluid images</li>
+					</ul>
+	        <p>When combined, these patterns go a long way. The HTML / CSS patterns used are supported in even the strictest email clients like Outlook and Gmail.</p>
+	        <p>The small screen layouts rely on media queries. Since  some clients like mobile Gmail strip out the <code>&lt;style&gt;</code> tag, a shrunk version of the desktop layout will display instead.</p>
+      	</div>
+      	<div class="cta">
+	      	<a href="_default.html" class="btn">View A Demo</a>
+				</div>
+        
+        <hr>
+
+	      <h3>_fluid.html</h3>
+      	<div class="img">
+      		<img src="assets/wireframe-fluid.png" alt="Layout transformation wireframe">
+      	</div>
+      	<div class="det cf">
+	      <h4>This template focuses on one layout that looks good on all screen sizes. Good for when media queries aren't available to detect device size and reconfigure the layout.</h4>
+      		<ul>
+      			<li>Works everywhere</li>
+      			<li>Fluid layout using max-width to shrink email's width</li>
+      			<li>Fixed, wide layout for Outlook and Lotus 8</li>
+					</ul>
+	        <p>This layout uses percentage-based widths to shrink horizontally on narrow screens. It doesn't rely media queries or even the <code>&lt;style&gt;</code> tag.</p>
+      	</div>
+      	<div class="cta">
+	      	<a href="_fluid.html" class="btn">View A Demo</a>
+				</div>
+        
+        <hr>
+
+      <footer>
+        <p>
+          <!-- Keeping this line would be very considerate, but is not required. -->
+          <a href="https://github.com/house/tea">Tea Theme</a> created by <a href="http://twitter.com/house">Allison House</a> and adapted by <a href="http://twitter.com/tedgoas">Ted Goas</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -73,8 +73,6 @@
 			td[class="force-col-center"] {
 				display: block !important;
 				width: 100% !important;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
 				clear: both;
 			}
 			/* And center these ones */
@@ -84,12 +82,12 @@
 			
 			/* Force table cells into rows */
 			/* Float a previously stacked image to the left */
-				img[class="col-3-img-l"] {
+			img[class="col-3-img-l"] {
 				float: left;
 				margin: 0 15px 15px 0;
 			}
 			/* Float a previously stacked image to the right */
-				img[class="col-3-img-r"] {
+			img[class="col-3-img-r"] {
 				float: right;
 				margin: 0 0 15px 15px;
 			}
@@ -98,7 +96,7 @@
 
     /* Media queries for when the viewport is narrow. */
     /* Rules prefixed with 'hh-' (for 'handheld') repeat much of what's above, but these don't trigger until the smaller screen width. */
-    @media screen and (max-device-width: 360px), screen and (max-width: 360px) {
+    @media screen and (max-device-width: 425px), screen and (max-width: 425px) {
 
 			/* Center stuff */
 			div[class="hh-center"] {
@@ -128,8 +126,6 @@
 			td[class="hh-force-col-center"] {
 				display: block !important;
 				width: 100% !important;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
 				clear: both;
 			}
 			/* And center these ones */
@@ -137,11 +133,24 @@
 				text-align: center !important;
 			}
 			
+			/* Force table cells into rows */
+			td[class="hh-spacer"] {
+				display: block !important;
+				width: 100% !important;
+				height: 30px;
+			}
+			
 			/* Stack the previously floated images */
 			img[class="col-3-img-l"],
 			img[class="col-3-img-r"] {
 				float: none !important;
-				margin: 15px auto;
+				margin: 15px auto !important;
+				text-align: center !important;
+			}
+			
+			table[class="button"] {
+				width: 100% !important;
+				text-align: center !important;
 			}
 
     }
@@ -166,21 +175,20 @@
       <td>
         <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="margin: auto;" class="email-container">
           <tr>
-            <td height="5" style="font-size: 0; line-height: 0;">&nbsp;</td>
+            <td height="10" style="font-size: 0; line-height: 0;">&nbsp;</td>
           </tr>
           <tr>
-            <td class="force-col-center" valign="middle" style="text-align: left;">
-              <img src="http://placehold.it/200x40/888888/555555" alt="alt text" height="40" width="200" border="0" style="display: block;border: 1px solid #444444;" class="force-col-center">
+            <td class="hh-force-col-center" valign="middle" style="text-align: left;">
+              <img src="http://placehold.it/200x40/888888/555555" alt="alt text" height="40" width="200" border="0">
             </td>
-            <td class="force-col-center" valign="middle" style="padding: 10px 0;text-align: right;">
-              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 1</a>
-              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 2</a>
+            <td class="hh-force-col-center" valign="middle" style="padding: 10px 0;text-align: right;">
+              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 1</a>&nbsp;&nbsp;
+              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 2</a>&nbsp;&nbsp;
               <a href="" style="color: #ffffff;font-family: sans-serif;">Link 3</a>
-              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 4</a>
             </td>
           </tr>
           <tr>
-            <td height="5" style="font-size: 0; line-height: 0;">&nbsp;</td>
+            <td height="10" style="font-size: 0; line-height: 0;">&nbsp;</td>
           </tr>
         </table>
       </td>
@@ -188,38 +196,30 @@
   </table>
   <!-- Logo Left, Nav Right, 100% Nav Bar : END -->
   
-  <!-- Logo Centered + Vertical Padding : BEGIN -->
-  <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" class="email-container">
-    <tr>
-      <td class="force-col-center" valign="middle" align="center" style="padding: 20px 0;text-align: center;">
-        <img src="http://placehold.it/300x75/888888/7777777" alt="alt text" height="75" width="300" align="center" border="0" style="border: 1px solid #cccccc; margin: auto;text-align: center;">
-      </td>
-    </tr>
-  </table>
-  <!-- Logo Centered + Vertical Padding : END -->
-  
   <!-- Logo Left Nav Right + Vertical Padding : BEGIN -->
   <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" class="email-container">
     <tr>
-      <td height="20" style="font-size: 0; line-height: 0;">&nbsp;</td>
+      <td height="30" style="font-size: 0; line-height: 0;">&nbsp;</td>
     </tr>
     <tr>
       <td class="force-col-center" valign="middle" style="padding: 20px 0;text-align: left;">
-        <img src="http://placehold.it/300x75/888888/7777777" alt="alt text" height="75" width="300" border="0" style="display: block;border: 1px solid #cccccc;" class="force-col-center">
+        <img src="http://placehold.it/300x75/888888/7777777" alt="alt text" height="75" width="300" border="0">
       </td>
       <td class="force-col-center" valign="middle" style="padding: 20px 0;text-align: right;">
-        <a href="" style="font-family: sans-serif;">Link</a>
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 1</a>&nbsp;&nbsp;
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 2</a>&nbsp;&nbsp;
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 3</a>
       </td>
     </tr>
     <tr>
-      <td height="20" style="font-size: 0; line-height: 0;">&nbsp;</td>
+      <td height="30" style="font-size: 0; line-height: 0;">&nbsp;</td>
     </tr>
   </table>
   <!-- Logo Left Nav Right + Vertical Padding : END -->
-  
+ 
   <!-- Email Container : BEGIN -->
   <!-- This table wraps the whole body email within it's width (600px), sets the background color (white) and border (thin, gray, solid) -->
-    <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="border: 1px solid #cccccc;background: #ffffff;" class="email-container">
+    <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="background: #ffffff;border: 1px solid #e5e5e5;" class="email-container">
   
       <!-- Single Fluid Image, No Crop : BEGIN -->
       <tr>
@@ -231,10 +231,10 @@
     
       <!-- Full Width, Fluid Column : BEGIN -->
       <tr>
-        <td style="border-bottom: 1px solid #cccccc;">
+        <td style="border-bottom: 1px solid #e5e5e5;">
           <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
             <tr>
-              <td style="padding: 20px; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">
+              <td style="padding: 30px; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">
                 Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
                 <br><br>
                 Donec nulla ante, cursus sit amet egestas ut, facilisis ut neque. Nullam sed est lorem. Aenean pharetra metus nisl, eu lacinia ante cursus quis. Integer facilisis elementum mi, sed auctor leo posuere sed. Nulla facilisi.
@@ -247,23 +247,24 @@
   
       <!-- Two Columns, With Padding ==> Stacked Layout : BEGIN -->
       <tr>
-        <td style="border-bottom: 1px solid #cccccc;">
-          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid" style="padding: 0 20px;">
+        <td style="border-bottom: 1px solid #e5e5e5;">
+          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid" style="padding: 0 30px;">
             <tr>
-              <td height="20" style="font-size: 0; line-height: 0;">&nbsp;</td>
+              <td height="30" style="font-size: 0; line-height: 0;" class="empty-spacer">&nbsp;</td>
             </tr>
             <tr>
-              <td valign="top" style="padding-right: 20px;" class="hh-force-col-center">
+              <td valign="top" style="padding-right: 30px;" class="hh-force-col-center">
                 <img src="http://placehold.it/200/888888/7777777" alt="alt text" height="200" width="200" border="0" style="display: block;margin: auto;" class="hh-force-col-center">
               </td>
+              <td style="font-size: 0; line-height: 0; display: none;" class="hh-spacer">&nbsp;</td>
               <td valign="top" class="hh-force-col">
                 <table cellspacing="0" cellpadding="0" border="0" width="100%">
                   <tr>
                     <td style="font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">
                       <div style="font-size: 22px;line-height: 1;" class="hh-center">Two Columns, Padded</div><br>
                       Two columns, each with  padding on all sides. Columns stack on narrow screens, maintaining said padding.<br><br>
-                      <a href="#" style="text-decoration:none;">
-                        <table border="0" cellpadding="12" cellspacing="0" style="background-color: #444444; border-radius: 4px;">
+                      <a href="#" style="text-decoration:none;" class="button">
+                        <table border="0" cellpadding="12" cellspacing="0" style="background-color: #444444; border-radius: 4px;" class="button">
                           <tr>
                             <td align="center" class="hh-fluid" style="font-size:14px;line-height: 1; color:#ffffff; font-family:sans-serif;">
                               Imageless Button
@@ -277,7 +278,7 @@
               </td>
             </tr>
             <tr>
-              <td height="20" style="font-size: 0; line-height: 0;">&nbsp;</td>
+              <td height="30" style="font-size: 0; line-height: 0;">&nbsp;</td>
             </tr>
           </table>
         </td>
@@ -286,17 +287,17 @@
       
       <!-- Two Columns, One Column Without Padding ==> Stacked Layout : BEGIN -->
       <tr>
-        <td style="border-bottom: 1px solid #cccccc;">
+        <td style="border-bottom: 1px solid #e5e5e5;">
           <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid">
             <tr>
-              <td valign="top" class="force-col">
+              <td valign="top" class="hh-force-col">
                 <table cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td style="padding: 20px;font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">
+                    <td style="padding: 30px;font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444;">
                       <div style="font-size: 22px;line-height: 1;" class="hh-center">Two Columns, One Column Without Padding</div><br>
                       Two columns; one with padding on all sides and one without padding (good for flush images or columns with a background). Columns stack on narrow screens, maintaining said padding.<br><br>
                       <a href="#" style="text-decoration:none;">
-                        <table border="0" cellpadding="12" cellspacing="0" style="border: 3px solid #444444;">
+                        <table border="0" cellpadding="12" cellspacing="0" style="border: 2px solid #444444;" class="button">
                           <tr>
                             <td align="center" class="hh-fluid" style="font-size:12px;line-height: 1; color:#444444; letter-spacing: 1px; font-family:sans-serif;">
                               <strong>IMAGELESS BUTTON</strong>
@@ -308,8 +309,8 @@
                   </tr>
                 </table>
               </td>
-              <td valign="top" class="force-col-center">
-                <img src="http://placehold.it/280/888888/7777777" alt="alt text" height="280" width="280" border="0" style="display: block;margin: auto;" class="hh-fluid">
+              <td valign="top" class="hh-force-col-center">
+                <img src="http://placehold.it/250x350/888888/7777777" alt="alt text" height="350" width="250" border="0" style="display: block;margin: auto;" class="hh-fluid">
               </td>
             </tr>
           </table>
@@ -319,21 +320,23 @@
       
       <!-- Three Column ==> Stacked Wide Layout ==> Stacked Narrow Layout : BEGIN -->
       <tr>
-        <td style="padding: 15px;">
+        <td style="padding: 30px;">
           <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
             <tr>
-              <td width="180" style="padding-right: 15px;font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
-                <img src="http://placehold.it/180/888888/7777777" alt="alt text" align="center" height="180" width="180" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-r">
+              <td width="160" style="padding-right: 30px;font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
+                <img src="http://placehold.it/160/888888/7777777" alt="alt text" align="center" height="160" width="160" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-r">
                 <a href="#" style="color:#444444; font-weight:bold">1 of 3 Header</a><br>
                 These columns appear three across on wide screens...
               </td>
-              <td width="180" style="padding-right: 15px;font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
-                <img src="http://placehold.it/180/888888/7777777" alt="alt text" align="center" height="180" width="180" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-l">
+              <td style="font-size: 0; line-height: 0; display: none;" class="hh-spacer">&nbsp;</td>
+              <td width="160" style="padding-right: 30px;font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
+                <img src="http://placehold.it/160/888888/7777777" alt="alt text" align="center" height="160" width="160" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-l">
                 <a href="#" style="color:#444444; font-weight:bold">2 of 3 Header</a><br>
                 ...but on medium screens, the columns stack but their child text and image appear side by side... 
               </td>
-              <td width="180" style="font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
-                <img src="http://placehold.it/180/888888/7777777" alt="alt text" align="center" height="180" width="180" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-r">
+              <td style="font-size: 0; line-height: 0; display: none;" class="hh-spacer">&nbsp;</td>
+              <td width="160" style="font-family: sans-serif; font-size: 16px; line-height: 22px;color: #444444;" valign="top" class="force-col">
+                <img src="http://placehold.it/160/888888/7777777" alt="alt text" align="center" height="160" width="160" border="0" style="display: block;padding-bottom: 10px;" class="col-3-img-r">
                 <a href="#" style="color:#444444; font-weight:bold">3 of 3 Header</a><br>
 								...and finally everything stacks and centers on narrow screens.
               </td>

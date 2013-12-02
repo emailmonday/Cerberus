@@ -3,6 +3,8 @@ Cerberus
 
 A few responsive email patterns that go a long way when combined. Each code block can be used and reused to assemble emails.
 
+>Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.
+
 This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
 
 ***

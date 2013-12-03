@@ -9,7 +9,7 @@ This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s 
 
 ***
 
-###`_default.html`
+###`template-default.html`
 ![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-default.png)
 * Forces columns into rows
 * Uses fluid images
@@ -19,7 +19,7 @@ This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s 
 
 ***
 
-###`_fluid.html`
+###`template-fluid.html`
 ![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-fluid.png)
 * Works everywhere
 * Fluid layout using `max-width` to shrink email's width

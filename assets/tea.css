@@ -199,6 +199,28 @@ h3,
 .det ul {
 	float: right;
 	width: 40%;
+	list-style: none;
+}
+.good:before,
+.derp:before {
+	display: block;
+	float: left;
+	margin: 0 0 0 -25px;
+}
+.good:before {
+	content: "✔";
+}
+.derp:before {
+	content: "✘";
+}
+.det .title {
+	font-size: 0.78em;
+	margin-top: .325em;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.15em;
+	color: #444;
+	display: block;
 }
 .cta {
 	text-align: center;

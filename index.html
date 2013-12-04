@@ -42,7 +42,7 @@
         <h2>A few responsive email patterns that go a long way</h2>
         <p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>
         <h4>That's what Cerberus is.</h4>
-        <p>It'ss just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.</p>
+        <p>It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.</p>
         <p>There are two templates, one that relies media queries and one that does not.</p>
         <p>Cerberus is <a href="https://github.com/TedGoas/Responsive-Email-XX">Responsive Email XX</a>'s successor.
 
@@ -55,14 +55,24 @@
       	<div class="det cf">
 	      <h4>This template relies media queries to force table columns into rows and shrinks images, all while maintaining the layout's spacing, padding, and alignment.</h4>
       		<ul>
-      			<li>Works everywhere on desktop</li>
-      			<li>Works everywhere on narrow screen clients that support media queries</li>
-      			<li>Includes two breakpoints</li>
-      			<li>Forces columns into rows</li>
-      			<li>Uses fluid images</li>
-					</ul>
+      			<li class="title">Web</li>
+      			<li class="good">Gmail</li>
+      			<li class="good">Yahoo!</li>
+      			<li class="good">AOL Mail</li>
+      			<li class="good">Hotmail / Outlook.com</li>
+      			<li class="title">Desktop</li>
+      			<li class="good">Apple Mail 5/6</li>
+      			<li class="good">Outlook 2007/2010/2013</li>
+      			<li class="good">Thunderbird</li>
+      			<li class="title">Devices</li>
+      			<li class="good">iOS Mail (iPhone / iPod)</li>
+      			<li class="good">iOS Mail (iPad / iPad Mini)</li>
+      			<li class="good">Android Mail (Nexus)</li>
+      			<li class="derp">iOS Gmail</li>
+      			<li class="derp">Android Gmail</li>
+      		</ul>
 	        <p>When combined, these patterns go a long way. The HTML / CSS patterns used are supported in even the strictest email clients like Outlook and Gmail.</p>
-	        <p>The small screen layouts rely on media queries. Since  some clients like mobile Gmail strip out the <code>&lt;style&gt;</code> tag, a shrunk version of the desktop layout will display instead.</p>
+	        <p>The small screen layouts rely on media queries. Since some clients like mobile Gmail strip out the <code>&lt;style&gt;</code> tag, a shrunk version of the desktop layout will display instead.</p>
       	</div>
       	<div class="cta">
 	      	<a href="template-default.html" class="btn">View A Demo</a>
@@ -77,11 +87,24 @@
       	<div class="det cf">
 	      <h4>This template focuses on one layout that looks good on all screen sizes. Good for when media queries aren't available to detect device size and reconfigure the layout.</h4>
       		<ul>
-      			<li>Works everywhere</li>
-      			<li>Fluid layout using max-width to shrink email's width</li>
-      			<li>Fixed, wide layout for Outlook and Lotus 8</li>
-					</ul>
-	        <p>This layout uses percentage-based widths to shrink horizontally on narrow screens. It doesn't rely media queries or even the <code>&lt;style&gt;</code> tag.</p>
+      			<li class="title">Web</li>
+      			<li class="good">Gmail</li>
+      			<li class="good">Yahoo!</li>
+      			<li class="good">AOL Mail</li>
+      			<li class="good">Hotmail / Outlook.com</li>
+      			<li class="title">Desktop</li>
+      			<li class="good">Apple Mail 5/6</li>
+      			<li class="good">Outlook 2007/2010/2013</li>
+      			<li class="good">Thunderbird</li>
+      			<li class="title">Devices</li>
+      			<li class="good">iOS Mail (iPhone / iPod)</li>
+      			<li class="good">iOS Mail (iPad / iPad Mini)</li>
+      			<li class="good">Android Mail (Nexus)</li>
+      			<li class="good">iOS Gmail</li>
+      			<li class="good">Android Gmail</li>
+      		</ul>
+	        <p>This layout uses percentage-based widths and to shrink horizontally on narrow screens. All CSS styles are inline, with the exception of a single media query to contain wide widths in Apple Mail.</p>
+	        <p>Outlook and Lotus 8 have spotty support for a layout that shrinks on narrow screens, but since they're pretty much shackled to desktop world, we can get away with a fixed-width, wide layout.</p>
       	</div>
       	<div class="cta">
 	      	<a href="template-fluid.html" class="btn">View A Demo</a>

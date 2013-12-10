@@ -1,11 +1,17 @@
 Cerberus
 ========
 
-A few responsive email patterns that go a long way when combined. Each code block can be used and reused to assemble emails.
+###A few responsive email patterns that go a long way
 
->Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.
+Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.
 
-This is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
+**That's what Cerberus is.**
+
+It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.
+
+There are two templates, one that relies media queries and one that does not.
+
+I wrote [a blog post](http://www.tedgoas.com/blog/cerberus-responsive-email-templates/) that goes into more detail on why I made this. Cerberus is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
 
 ***
 

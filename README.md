@@ -27,7 +27,7 @@ I wrote [a blog post](http://www.tedgoas.com/blog/cerberus-responsive-email-temp
 
 ###`template-fluid.html`
 ![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-fluid.png)
-* Works everywhere
+* Works most everywhere, including Mobile Gmail and Android 4.4 Mail
 * Fluid layout using `max-width` to shrink email's width
 * Fixed, wide layout for Outlook and Lotus 8
 

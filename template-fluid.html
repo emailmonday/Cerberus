@@ -43,9 +43,14 @@
 			border-bottom: none !important;
 		}
 		
-		/* Apple Mail doesn't supper max-width, so we use media queries to constrain the email width. */
+    /* Styling the tel URL scheme */
+    a[href^=tel]{
+	    color:#000000 !important;
+    }
+  
+		/* Apple Mail doesn't support max-width, so we use media queries to constrain the email container width. */
 		@media only screen and (min-device-width: 601px) {
-			.content {
+			.email-container {
 				width: 600px !important;
 			}
 		}
@@ -65,7 +70,7 @@
   <!-- Beginning of Outlook-specific wrapper : END -->
 
   <!-- Email wrapper : BEGIN -->
-  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 600px;margin: auto;" class="email-wrapper">
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 600px;margin: auto;" class="email-container">
     <tr>
     	<td>
 

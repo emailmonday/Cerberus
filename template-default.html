@@ -5,14 +5,30 @@
   <meta name="viewport" content="initial-scale=1.0"> <!-- So that mobile webkit will display zoomed in -->
   <title></title> <!-- the <title> tag shows on email notifications on Android 4.4.  -->
   <style type="text/css">
+  	
+  	/* ensure that clients don’t add any padding or spaces around the email design and allow us to style emails for the entire width of the preview pane */
+		body,
+		#bodyTable {
+			height:100% !important;
+			width:100% !important;
+			margin:0;
+			padding:0;
+		}
+		
+		/* Ensures Webkit- and Windows-based clients don’t automatically resize the email text. */
+		body,
+		table,
+		td,
+		p,
+		a,
+		li,
+		blockquote {
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
 
-    /* Force Hotmail to display emails at full width */
-    .ReadMsgBody {
-			width: 100%;
-			background-color: #eeeeee;
-    }
-
-    /* Force Hotmail to display emails at full width */
+    /* Forces Hotmail to display emails at full width */
+    .ReadMsgBody
     .ExternalClass {
 			width: 100%;
 			background-color: #eeeeee;
@@ -33,70 +49,86 @@
 			border-spacing:0;
     }
 
-    /* Resolves the Outlook 2007, 2010, and Gmail td padding issue. */
-    table td {
+    /* Resolves the Outlook 2007, 2010, and Gmail td padding issue, and removes spacing around tables that Outlook adds. */
+    table,
+    td {
 			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+    }
+    
+    /* Corrects the way Internet Explorer renders resized images in emails. */
+    img {
+    	-ms-interpolation-mode: bicubic;
+    }
+    
+    /* Ensures images don’t have borders or text-decorations applied to them by default. */
+    img,
+    a img {
+    	border:0;
+    	outline:none;
+    	text-decoration:none;	    
     }
 
-    /* Yahoo auto-sensing link color and border */
+    /* Styles Yahoo's auto-sensing link color and border */
     .yshortcuts a {
 			border-bottom: none !important;
     }
     
-    /* Styling the tel URL scheme */
+    /* Styles the tel URL scheme */
     a[href^=tel]{
 	    color:#000000 !important;
     }
   
     /* Media queries for when the viewport is smaller than the default email width but not too narrow. */
-    @media screen and (max-device-width: 650px), screen and (max-width: 650px) {
+    @media screen and (max-device-width: 600px), screen and (max-width: 600px) {
 
-			/* Constrain email width for small screens */
+			/* Constrains email width for small screens */
 			table[class="email-container"] {
 				width: 100% !important;
 			}
-			/* Constrain tables for small screens */
+			/* Constrains tables for small screens */
 			table[class="fluid"] {
 				width: 100% !important;
 			}
 			
-			/* Force images to resize to full width of their container */
+			/* Forces images to resize to full width of their container */
 			img[class="fluid"],
 			img[class="force-col-center"] {
 				width: 100% !important;
 				max-width: 100% !important;
 				height: auto !important;
 			}
-			/* And center these ones */
+			/* And centers these ones */
 				img[class="force-col-center"] {
 				margin: auto !important;
 			}
 			
-			/* Force table cells into rows */
+			/* Forces table cells into rows */
 			td[class="force-col"],
 			td[class="force-col-center"] {
 				display: block !important;
 				width: 100% !important;
 				clear: both;
 			}
-			/* And center these ones */
+			/* And centers these ones */
 			td[class="force-col-center"] {
 				text-align: center !important;
 			}
 			
-			/* Force table cells into rows */
-			/* Float a previously stacked image to the left */
+			/* Forces table cells into rows */
+			/* Floats a previously stacked image to the left */
 			img[class="col-3-img-l"] {
 				float: left;
 				margin: 0 15px 15px 0;
 			}
-			/* Float a previously stacked image to the right */
+			/* Floats a previously stacked image to the right */
 			img[class="col-3-img-r"] {
 				float: right;
 				margin: 0 0 15px 15px;
 			}
 			
-			/* Make bulletproof buttons full width */
+			/* Makes buttons full width */
 			table[class="button"] {
 				width: 100% !important;
 			}
@@ -160,7 +192,7 @@
   </style>
 </head>
 <body bgcolor="#f4f4f4" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0;-webkit-text-size-adjust:none; -ms-text-size-adjust:none;background: #f4f4f4;">
-<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#f4f4f4" style="background: #f4f4f4;"><tr><td>
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#f4f4f4" style="background: #f4f4f4;" id="bodyTable"><tr><td>
 
 <!-- CSS Image background in Outlook : BEGIN -->
 <!-- Best used with absolute image paths -->
@@ -172,7 +204,7 @@
 <!-- CSS Image background in Outlook : END -->
 
   <!-- Logo Left, Nav Right, 100% Nav Bar : BEGIN -->
-  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="text-align: center; background: #555;">
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="text-align: center; background: #555555;">
     <tr>
       <td>
         <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="margin: auto;" class="email-container">
@@ -226,7 +258,7 @@
       <!-- Single Fluid Image, No Crop : BEGIN -->
       <tr>
         <td>
-          <img src="http://placehold.it/650x350/888888/7777777" alt="alt text" height="350" width="600" border="0" style="display: block;" class="fluid">
+          <img src="http://placehold.it/600x350/888888/7777777" alt="alt text" height="350" width="600" border="0" style="display: block;" class="fluid">
         </td>
       </tr>
       <!-- Single Fluid Image, No Crop : END -->
@@ -249,8 +281,8 @@
   
       <!-- Two Columns, With Padding ==> Stacked Layout : BEGIN -->
       <tr>
-        <td style="border-bottom: 1px solid #e5e5e5;">
-          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid" style="padding: 0 30px;">
+        <td style="border-bottom: 1px solid #e5e5e5;padding: 0 30px;">
+          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid">
             <tr>
               <td height="30" style="font-size: 0; line-height: 0;" class="empty-spacer">&nbsp;</td>
             </tr>

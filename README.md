@@ -35,11 +35,14 @@ I wrote [a blog post](http://www.tedgoas.com/blog/cerberus-responsive-email-temp
 
 ### Tools and Resources
 * [Guide to CSS Support](http://www.campaignmonitor.com/css) from Campaign Monitor.
-* [HTML Email Boilerplate](http://htmlemailboilerplate.com/) from Sean Powell.
 * [Bulletproof Email Background Images](http://backgrounds.cm/) from Stig Morten Myre.
 * [Image-Less Buttons](http://codepen.io/Omgitsonlyalex/pen/cKEyx) from Alex Ilhan.
-* [Placeholder Images](http://placehold.it/) by Brent Spore.
+* [A Guide to Bulletproof Buttons](https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design) by Litmus
 * [Responsive HTML Emails: a Different Strategy](http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/) by Fog Creek.
+* [Placeholder Images](http://placehold.it/) by Brent Spore.
+
+### Contributors
+* [Hilary Nelson](https://engineering.purdue.edu/people/hilary.m.nelson.1) for creating a mobile-first version and helping fix various bugs
 
 ### Download, Fork, Commit.
-If you can make this better, please download, fork, and submit a pull request. I'd love to work on this with a few folks and get it as solid as can be.
+If you can help make this better, please submit a bug or pull request. I'd love to work on this with a few folks and make it as solid as can be.

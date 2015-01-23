@@ -1,133 +1,187 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cerberus - Responsive Email Patterns</title>
-    <link rel="stylesheet" href="assets/tea.css">
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-    <![endif]--> 
-  </head>
-  <body>
-    <div id="wrapper">
-      
-      <header>
-        <hgroup>
-          <div>
-            <h1>Cerberus</h1>
-            <h2>A few simple, but solid patterns for responsive HTML emails. Even in Outlook.</h2>
-            <hr>
-          </div>
-        </hgroup>
-      </header>
-        
-      <div class="downloads">
-        <ul>
-          <li><a href="https://github.com/TedGoas/Cerberus/zipball/master">Download (ZIP)</a></li>
-          <li><a href="https://github.com/TedGoas/Cerberus/fork">Fork on GitHub</a></li>
-          <li><a href="https://github.com/TedGoas/Cerberus">View on GitHub</a></li>
-        </ul>
-      </div>
-      
-      <div class="content">
-        <blockquote>
-          <p><i>Cerberus - </i></p>
-          <p>Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.</p>
-        </blockquote>
-
-        <hr>
-
-        <h2>A few responsive email patterns that go a long way</h2>
-        <p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>
-        <h4>That's what Cerberus is.</h4>
-        <p>It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.</p>
-        <p>There are two templates, one that relies media queries and one that does not.</p>
-        <p>I wrote <a href="http://www.tedgoas.com/blog/cerberus-responsive-email-templates/">a blog post</a> that goes into more detail on why I made this. Cerberus is <a href="https://github.com/TedGoas/Responsive-Email-XX">Responsive Email XX</a>'s successor.
-
-				<hr>
-				<h4>The Author</h4>
-				<p>
-					Made by <a href="http://www.tedgoas.com">Ted Goas</a> in scenic New Jersey, U.S. If you like chatting about email and web design, say hi!<br>
-					<a href="https://twitter.com/tedgoas" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">@TedGoas</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cerberus - Responsive Email Patterns</title>
+  <link rel="stylesheet" href="assets/cerberus-docs.css">
+</head>
+<body>
+<div class="outside title cf">
+	<div class="inside">
+		<div class="title-text">
+			<h1>
+				<strong>Cerberus</strong>
+				A few simple, but solid patterns for responsive HTML emails. Even in Outlook and Gmail.
+			</h1>
+			<ul class="title-buttons-ul">
+				<li class="title-buttons-li">
+					<a href="https://github.com/TedGoas/Cerberus" class="button title-button button-solid"><i class="icon-github-circled"></i> View on GitHub</a>
+				</li>
+				<li class="title-buttons-li">
+					<a href="https://github.com/TedGoas/Cerberus/archive/master.zip" class="button title-button button-outline">Download 	Zip</a>
+				</li>
+			</ul>
+		</div>
+		<div class="title-figure">
+			<img src="assets/phone-outline.png" alt="phone outline">
+		</div>
+	</div>
+	<div class="blueprint"></div>
+</div>
+<div class="outside body">
+	<div class="inside cf">
+		<div class="toc">
+			<ul class="toc-ul">
+				<li class="toc-li">
+					<a href="#intro" class="toc-a">Introduction</a>
+				</li>
+				<li class="toc-li">
+					<a href="#things" class="toc-a">Things to know</a>
+				</li>
+				<li class="toc-li">
+					<a href="#templates" class="toc-a">The templates</a>
+				</li>
+				<li class="toc-li small">
+					<a href="#without-mq" class="toc-a">template-without-media-queries.html</a>
+				</li>
+				<li class="toc-li small">
+					<a href="#with-mq" class="toc-a">template-with-media-queries.html</a>
+				</li>
+				<li class="toc-li">
+					<a href="#support" class="toc-a">Client Support</a>
+				</li>
+				<li class="toc-li">
+					<a href="#contribute" class="toc-a">Contributing</a>
+				</li>
+				<li class="toc-li">
+					<a href="#credits" class="toc-a">Credits &amp; Resources</a>
+				</li>
+				<li class="toc-li">
+					<a href="#author" class="toc-a">Author</a>
+				</li>
+			</ul>
+		</div>
+		<div class="sections">
+			<blockquote>
+				<p>Cerberus - <br>
+					Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.
 				</p>
-				
-        <hr>
-
-	      <h3>template-default.html</h3>
-      	<div class="img">
-      		<img src="assets/wireframe-default.png" alt="Layout transformation wireframe">
-      	</div>
-      	<div class="det cf">
-	      <h4>This template relies media queries to force table columns into rows and shrinks images, all while maintaining the layout's spacing, padding, and alignment.</h4>
-      		<ul>
-      			<li class="title">Web</li>
-      			<li class="good">Gmail</li>
-      			<li class="good">Yahoo!</li>
-      			<li class="good">AOL Mail</li>
-      			<li class="good">Hotmail / Outlook.com</li>
-      			<li class="title">Desktop</li>
-      			<li class="good">Apple Mail 5/6</li>
-      			<li class="good">Outlook 2007/2010/2013</li>
-      			<li class="good">Thunderbird</li>
-      			<li class="title">Devices</li>
-      			<li class="good">iOS Mail (iPhone / iPod)</li>
-      			<li class="good">iOS Mail (iPad / iPad Mini)</li>
-      			<li class="good">Android Mail 4.3 (Nexus  &amp; HTC One)</li>
-      			<li class="derp">iOS Gmail</li>
-      			<li class="derp">Android Gmail</li>
-      			<li class="derp">Android Mail 4.4 (Nexus)</li>
-      		</ul>
-	        <p>When combined, these patterns go a long way. The HTML / CSS patterns used are supported in even the strictest email clients like Outlook and Gmail.</p>
-	        <p>The small screen layouts rely on media queries. Since some clients like mobile Gmail strip out the <code>&lt;style&gt;</code> tag, a shrunk version of the desktop layout will display instead.</p>
-	        <p>Android 4.4 (Kit Kat) Mail does not support <code>{display:block !important;}</code>, so we can't force table columns into rows. </p>
-      	</div>
-      	<div class="cta">
-	      	<a href="template-default.html" class="btn">View A Demo</a>
+			</blockquote>
+			<div class="section" id="intro">
+				<h2>Introduction</h2>
+				<p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>	
+				<p><strong>That's what Cerberus is.</strong>
+				<p>It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email.</p>	
+				<p>There are two templates, one that relies media queries and one that does not. Each is annotated and has good support among popular email clients. More on that here.</p>
+				<p>I wrote a blog post that goes into more detail on why I made this in the first place. Cerberus is Responsive Email XX's successor.</p>
+			</div>
+			<div class="section" id="things">
+				<h2>Things To Know</h2>
+				<ul>
+					<li>Cerberus is a small collection layout patterns for HTML email. The code is meant to be edited, adapted, and built upon.</li>
+					<li>The code is largely compartmentalized and annotated in an effort to explain what’s happening so you can add, edit, and remove code with confidence.</li>
+					<li>This has been tested in all “popular” email clients, but not every email client out there. <a href="#support">More on that here</a>.</li>
+				</ul>
+			</div>
+			<div class="section" id="templates">
+				<h2>The Templates</h2>	
+				<div id="without-mq" class="cf">
+					<figure class="figure-wireframe">
+						<img src="assets/wireframe-without-media-queries.png" width="700" height="350" class="figure">
+						<span class="caption">As the layout narrows, the email content reflows and resizes gracefully.</span>
+					</figure>
+					<h3>template-without-media-queries.html</h3>
+					<p>This template focuses on a fluid layout that sizes itself regardless of media query support. Good for when media queries aren't available to detect device size and reconfigure the layout.</p>
+					<p>This layout uses percentage-based widths and to shrink horizontally on narrow screens. All CSS styles are inline, with the exception of a single media query to contain wide widths in Apple Mail. Outlook has spotty support for layouts that shrink on narrow screens, but since they're pretty much shackled to desktop world, we can get away with a fixed-width, wide layout.</p>
+					<ul class="buttons-ul">
+						<li class="buttons-li">
+							<a href="template-without-media-queries.html" class="button sections-button button-solid">View A Demo</a>
+						</li>
+						<li class="buttons-li">
+							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/template-without-media-queries.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
+						</li>
+					</ul>
 				</div>
-        
-        <hr>
-
-	      <h3>template-fluid.html</h3>
-      	<div class="img">
-      		<img src="assets/wireframe-fluid.png" alt="Layout transformation wireframe">
-      	</div>
-      	<div class="det cf">
-	      <h4>This template focuses on one layout that looks good on all screen sizes. Good for when media queries aren't available to detect device size and reconfigure the layout.</h4>
-      		<ul>
-      			<li class="title">Web</li>
-      			<li class="good">Gmail</li>
-      			<li class="good">Yahoo!</li>
-      			<li class="good">AOL Mail</li>
-      			<li class="good">Hotmail / Outlook.com</li>
-      			<li class="title">Desktop</li>
-      			<li class="good">Apple Mail 5/6</li>
-      			<li class="good">Outlook 2007/2010/2013</li>
-      			<li class="good">Thunderbird</li>
-      			<li class="title">Devices</li>
-      			<li class="good">iOS Mail (iPhone / iPod)</li>
-      			<li class="good">iOS Mail (iPad / iPad Mini)</li>
-      			<li class="good">Android Mail 4.3 / 4.4 (Nexus  &amp; HTC One)</li>
-      			<li class="good">iOS Gmail</li>
-      			<li class="good">Android Gmail</li>
-      		</ul>
-	        <p>This layout uses percentage-based widths and to shrink horizontally on narrow screens. All CSS styles are inline, with the exception of a single media query to contain wide widths in Apple Mail.</p>
-	        <p>Outlook and Lotus 8 have spotty support for a layout that shrinks on narrow screens, but since they're pretty much shackled to desktop world, we can get away with a fixed-width, wide layout.</p>
-      	</div>
-      	<div class="cta">
-	      	<a href="template-fluid.html" class="btn">View A Demo</a>
+				<hr>
+				<div id="with-mq" class="cf">
+					<figure class="figure-wireframe">
+						<img src="assets/wireframe-with-media-queries.png" width="700" height="350" class="figure">
+						<span class="caption">The email layout changes at breakpoints using media queries.</span>
+					</figure>
+					<h3>template-with-media-queries.html</h3>
+					<p>This template uses media queries to reconfigure the layout for different screen sizes. Good for when you want more control over the email layout.</p>
+					<p>This template relies media queries to force table columns into rows and make the layout fluid. Mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to Gmail, Inbox, and Android 4.4 Mail.</p>
+					<ul class="buttons-ul">
+						<li class="buttons-li">
+							<a href="template-with-media-queries.html" class="button sections-button button-solid">View A Demo</a>
+						</li>
+						<li class="buttons-li">
+							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/template-with-media-queries.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
+						</li>
+					</ul>
 				</div>
-        
-        <hr>
-
-      <footer>
-        <p>
-          <!-- Keeping this line would be very considerate, but is not required. -->
-          <a href="https://github.com/house/tea">Tea Theme</a> created by <a href="http://twitter.com/house">Allison House</a> and adapted by <a href="http://twitter.com/tedgoas">Ted Goas</a>
-        </p>
-      </footer>
-    </div>
-  </body>
+			</div>
+			<div class="section" id="support">
+				<h2>Client Support</h2>
+				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns.</p>
+				<div class="row cf">
+					<ul class="col-1-3">
+						<li class="li-title">Desktop</li>
+						<li>Outlook 2007/11/13 (Windows)</li>
+						<li>Outlook 2009 (Mac)</li>
+						<li>Apple Mail</li>
+						<li>Mailbox</li>
+					</ul>
+					<ul class="col-1-3">
+						<li class="li-title">Web</li>
+						<li>Gmail</li>
+						<li>Outlook.com / Windows Live Mail</li>
+						<li>Yahoo</li>
+						<li>Aol</li>
+						<li>Outlook Web Access</li>
+					</ul>
+					<ul class="col-1-3">
+						<li class="li-title">Mobile</li>
+						<li>Mail (iOS)</li>
+						<li>Gmail (iOS, Android 4.4)</li>
+						<li>Mail (Android 4.4)</li>
+						<li>Inbox (iOS)</li>
+						<li>Mailbox (iOS)</li>
+					</ul>
+				</div>
+				<p class="warning">When I say “tested”, I mean “email doesn’t fall apart”. I don't mean “I found a way to make media queries work in Gmail”. They don’t.</p>
+				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please submit an issue!</p>
+				<p>For what it's worth, Litmus (who DOES test every email client out there) chose to include these templates in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
+			</div>
+			<div class="section" id="contribute">
+				<h2>Contributing</h2>
+				<p>If you would like to help, please <a href="https://twitter.com/tedgoas">@reply me on Twitter</a> or open an issue to discuss your ideas. I'm forever interested in reducing the entropy of this code.</p>
+			</div>
+			<div class="section" id="credits">
+				<h2>Credits &amp; Resources</h2>
+				<ul>
+					<li><a href="http://www.campaignmonitor.com/css">Guide to CSS Support</a> from Campaign Monitor.</li>
+					<li><a href="https://engineering.purdue.edu/people/hilary.m.nelson.1">Hilary Nelson</a> for creating a mobile-first version and helping fix various bugs</li>
+					<li><a href="http://codepen.io/Omgitsonlyalex/pen/cKEyx">Image-Less Buttons</a> from Alex Ilhan.</li>
+					<li><a href="https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design">A Guide to Bulletproof Buttons</a> by Litmus</li>
+					<li><a href="http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/">Responsive HTML Emails: a Different Strategy</a> by Fog Creek.</li>
+				</ul>
+			</div>
+			<div class="section" id="author">
+				<h2>Author</h2>
+				<p>Hi there, I’m Ted Goas, the core author and maintainer. I'm a designer &amp; front-end developer working on websites, web apps, and HTML emails. And I enjoy talking shop on Twitter.</p>
+				<p><a href="https://twitter.com/TedGoas" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TedGoas</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://github.com/imakewebthings/waypoints/blob/master/lib/jquery.waypoints.min.js"></script>
+<script>
+	
+</script>
+</body>
 </html>

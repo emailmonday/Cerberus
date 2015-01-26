@@ -66,7 +66,7 @@ strong {
 }
 a,
 a:visited {
-	color: #48b586;
+	color: #0095dd;
 }
 a:hover,
 a:focus,
@@ -120,7 +120,7 @@ hr {
 	background: -webkit-linear-gradient(top,  #215a78 0%,#207c6f 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top,  #215a78 0%,#207c6f 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #215a78 0%,#207c6f 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #57545d 0%,#3d3a41 100%); /* W3C */
+	background: linear-gradient(to bottom,  #215a78 0%,#207c6f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215a78', endColorstr='#207c6f',GradientType=0 ); /* IE6-9 */
 	color: #fff;
 	position: relative;
@@ -163,25 +163,22 @@ h1 strong {
 }
 .title-button.button-solid,
 .title-button.button-solid:visited {
-	background: #48b586;
-	color: #fff;
+	background: #fff;
+	color: #111;
 }
 .title-button.button-solid:hover,
 .title-button.button-solid:active,
 .title-button.button-solid:focus {
-	background: #fff;
-	color: #111;
 }
 .title-button.button-outline,
 .title-button.button-outline:visited {
-	color: #48b586;
-	border-color: #48b586;
+	color: #fff;
+	border-color: rgba(255,255,255,.5);
 }
 .title-button.button-outline:hover,
 .title-button.button-outline:active,
 .title-button.button-outline:focus {
-	border-color: #fff;
-	color: #fff;
+	background: rgba(255,255,255,.1);
 }
 .title-figure {
 	position: absolute;
@@ -215,7 +212,7 @@ h1 strong {
 .toc-a:hover,
 .toc-a:active,
 .toc-a:focus {
-	color: #48b586;
+	color: #0095dd;
 }
 .toc-li.small {
 	border-left: 2px solid #ddd;
@@ -238,7 +235,7 @@ h1 strong {
 	padding: 4.5em 0 3em;
 }
 blockquote {
-	border-left: 3px solid #48b586;
+	border-left: 3px solid #207c6f;
 	margin: 0 0 3em 0;
 	padding: 0 0 0 1.5em;
 }
@@ -288,7 +285,7 @@ blockquote p {
 .sections-button.button-solid:hover,
 .sections-button.button-solid:active,
 .sections-button.button-solid:focus {
-	background: #48b586;
+	background: #0095dd;
 }
 .sections-button.button-outline,
 .sections-button.button-outline:hover {
@@ -298,8 +295,8 @@ blockquote p {
 .sections-button.button-outline:hover,
 .sections-button.button-outline:active,
 .sections-button.button-outline:focus {
-	color: #48b586;
-	border-color: #48b586;
+	color: #0095dd;
+	border-color: #0095dd;
 }
 .figure-wireframe {
 	display: block;

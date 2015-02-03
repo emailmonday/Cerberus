@@ -30,11 +30,6 @@ table {
 .cf:after {
 	clear: both;
 }
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 .cf {
     *zoom: 1;
 }
@@ -101,13 +96,18 @@ hr {
 	margin: 3em 0 4.5em;
 	background: #f4f4f4;
 }
+.fluid {
+	max-width: 100% !important;
+	height: auto;
+}
 
 /* Base Layout */
 .outside {
 	text-align: center;
 }
 .inside {
-	margin: 0 10%;
+	margin: 0 auto;
+	width: 1100px;
 	text-align: left;
 	position: relative;
 }
@@ -159,7 +159,7 @@ h1 strong {
 }
 .title-buttons-li {
 	display: inline-block;
-	margin-right: .5em;	
+	margin: 0 .5em 1em 0;	
 }
 .title-button.button-solid,
 .title-button.button-solid:visited {
@@ -348,3 +348,37 @@ blockquote p {
 .icon-github-circled:before { content: '\e801'; } /* '' */
 .icon-twitter:before { content: '\e802'; } /* '' */
 .icon-code:before { content: '\e803'; } /* '' */
+
+/* Media QUeries */
+@media only screen and (max-width: 1100px) {
+	.inside {
+		width: 94%;
+		margin: 0 3%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.title-text {
+		width: 100%;
+		padding: 50px 0;
+		text-align: center;
+	}
+	.title-buttons-li {
+		margin: 0 .5em 1em;	
+	}
+	.title-figure {
+		display: none;
+	}
+	.toc {
+		display: none;
+	}
+	.sections {
+		width: 100%;
+		float: none;
+	}
+	.col-1-3 {
+		width: 100%;
+		margin: 0 0 3% 3%;
+		float: none;
+	}
+}

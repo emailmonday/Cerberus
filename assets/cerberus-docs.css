@@ -194,9 +194,11 @@ h1 strong {
 /* Docs (Body) */
 /* Table of Contents */
 .toc {
-	padding: 4.5em 0;
 	float: left;
 	width: 25%;
+}
+.toc-padding {
+	padding: 4.5em 0;
 }
 .toc-ul {
 	background: #f8f8f8;
@@ -212,10 +214,15 @@ h1 strong {
 	color: #111;
 	text-decoration: none;
 }
-.toc-a:hover,
-.toc-a:active,
-.toc-a:focus {
+.toc-a:hover {
 	color: #48b586;
+}
+.active,
+.active:visited,
+.active:hover,
+.active:active,
+.active:focus {
+	color: #48b586 ;
 }
 .toc-li.small {
 	border-left: 2px solid #ddd;

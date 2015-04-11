@@ -4,14 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cerberus - Patterns for Responsive HTML Email Templates</title>
+  <title>Cerberus - Responsive Email Patterns</title>
   <link rel="stylesheet" href="assets/cerberus-docs.css">
 </head>
 <body>
 <div class="outside title cf">
 	<div class="inside">
 		<div class="title-text">
-			<img src="assets/logo.png" alt="cerberus logo" width="75" height="64">
 			<h1>
 				<strong>Cerberus</strong>
 				A few simple, but solid patterns for responsive HTML emails. Even in Outlook and Gmail.
@@ -34,37 +33,35 @@
 <div class="outside body">
 	<div class="inside cf">
 		<div class="toc">
-			<div class="toc-padding">
-				<ul class="toc-ul">
-					<li class="toc-li">
-						<a href="#intro" class="toc-a" data-scroll-nav="0">Introduction</a>
-					</li>
-					<li class="toc-li">
-						<a href="#things" class="toc-a" data-scroll-nav="1">Things to know</a>
-					</li>
-					<li class="toc-li">
-						<a href="#templates" class="toc-a" data-scroll-nav="2">The templates</a>
-					</li>
-					<li class="toc-li small">
-						<a href="#without-mq" class="toc-a">template-without-media-queries.html</a>
-					</li>
-					<li class="toc-li small">
-						<a href="#with-mq" class="toc-a">template-with-media-queries.html</a>
-					</li>
-					<li class="toc-li">
-						<a href="#support" class="toc-a" data-scroll-nav="3">Client Support</a>
-					</li>
-					<li class="toc-li">
-						<a href="#contribute" class="toc-a" data-scroll-nav="4">Contributing</a>
-					</li>
-					<li class="toc-li">
-						<a href="#credits" class="toc-a" data-scroll-nav="5">Credits &amp; Resources</a>
-					</li>
-					<li class="toc-li">
-						<a href="#author" class="toc-a" data-scroll-nav="6">Author</a>
-					</li>
-				</ul>
-			</div>
+			<ul class="toc-ul">
+				<li class="toc-li">
+					<a href="#intro" class="toc-a">Introduction</a>
+				</li>
+				<li class="toc-li">
+					<a href="#things" class="toc-a">Things to know</a>
+				</li>
+				<li class="toc-li">
+					<a href="#templates" class="toc-a">The templates</a>
+				</li>
+				<li class="toc-li small">
+					<a href="#without-mq" class="toc-a">template-without-media-queries.html</a>
+				</li>
+				<li class="toc-li small">
+					<a href="#with-mq" class="toc-a">template-with-media-queries.html</a>
+				</li>
+				<li class="toc-li">
+					<a href="#support" class="toc-a">Client Support</a>
+				</li>
+				<li class="toc-li">
+					<a href="#contribute" class="toc-a">Contributing</a>
+				</li>
+				<li class="toc-li">
+					<a href="#credits" class="toc-a">Credits &amp; Resources</a>
+				</li>
+				<li class="toc-li">
+					<a href="#author" class="toc-a">Author</a>
+				</li>
+			</ul>
 		</div>
 		<div class="sections">
 			<blockquote>
@@ -72,7 +69,7 @@
 					Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.
 				</p>
 			</blockquote>
-			<div class="section" id="intro" data-scroll-index="0">
+			<div class="section" id="intro">
 				<h2>Introduction</h2>
 				<p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>	
 				<p><strong>That's what Cerberus is.</strong>
@@ -80,7 +77,7 @@
 				<p>There are two templates, one that relies media queries and one that does not. Each is annotated and has good support among popular email clients. More on that here.</p>
 				<p>I wrote a blog post that goes into more detail on why I made this in the first place. Cerberus is Responsive Email XX's successor.</p>
 			</div>
-			<div class="section" id="things" data-scroll-index="1">
+			<div class="section" id="things">
 				<h2>Things To Know</h2>
 				<ul>
 					<li>Cerberus is a small collection layout patterns for HTML email. The code is meant to be edited, adapted, and built upon.</li>
@@ -88,7 +85,7 @@
 					<li>This has been tested in all “popular” email clients, but not every email client out there. <a href="#support">More on that here</a>.</li>
 				</ul>
 			</div>
-			<div class="section" id="templates" data-scroll-index="2">
+			<div class="section" id="templates">
 				<h2>The Templates</h2>	
 				<div id="without-mq" class="cf">
 					<figure class="figure-wireframe">
@@ -126,9 +123,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="section" id="support" data-scroll-index="3">
+			<div class="section" id="support">
 				<h2>Client Support</h2>
-				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns.</p>
+				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns. Litmus tests are available for <a href="https://litmus.com/pub/2f27214">template-with-media-queries</a> and <a href="https://litmus.com/pub/13545f9">template-without-media-queries</a>, but I've focused on the following clients:</p>
 				<div class="row cf">
 					<ul class="col-1-3">
 						<li class="li-title">Desktop</li>
@@ -158,11 +155,11 @@
 				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please submit an issue!</p>
 				<p>For what it's worth, Litmus (who DOES test every email client out there) chose to include these templates in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
 			</div>
-			<div class="section" id="contribute" data-scroll-index="4">
+			<div class="section" id="contribute">
 				<h2>Contributing</h2>
 				<p>If you would like to help, please <a href="https://twitter.com/tedgoas">@reply me on Twitter</a> or open an issue to discuss your ideas. I'm forever interested in reducing the entropy of this code.</p>
 			</div>
-			<div class="section" id="credits" data-scroll-index="5">
+			<div class="section" id="credits">
 				<h2>Credits &amp; Resources</h2>
 				<ul>
 					<li><a href="http://www.campaignmonitor.com/css">Guide to CSS Support</a> from Campaign Monitor.</li>
@@ -172,7 +169,7 @@
 					<li><a href="http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/">Responsive HTML Emails: a Different Strategy</a> by Fog Creek.</li>
 				</ul>
 			</div>
-			<div class="section" id="author" data-scroll-index="6">
+			<div class="section" id="author">
 				<h2>Author</h2>
 				<p>Hi there, I’m Ted Goas, the core author and maintainer. I'm a designer &amp; front-end developer working on websites, web apps, and HTML emails. And I enjoy talking shop on Twitter.</p>
 				<p><a href="https://twitter.com/TedGoas" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TedGoas</a>
@@ -182,7 +179,9 @@
 	</div>
 </div>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="assets/scrollIt.js"></script>
-<script src="assets/jquery.sticky.js"></script>
+<script src="https://github.com/imakewebthings/waypoints/blob/master/lib/jquery.waypoints.min.js"></script>
+<script>
+	
+</script>
 </body>
 </html>

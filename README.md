@@ -1,48 +1,41 @@
-Cerberus
-========
+# Cerberus Responsive Email Patterns
 
-###A few responsive email patterns that go a long way
+<a href="http://tedgoas.github.io/Cerberus/"><img src="logo.svg" align="left" hspace="10" vspace="6"></a>
 
 Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.
 
 **That's what Cerberus is.**
 
-It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email. Everything has good email client support, including Outlook, Android, and even mobile Gmail.
+It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email.
 
-There are two templates, one that relies media queries and one that does not.
-
-I wrote [a blog post](http://www.tedgoas.com/blog/cerberus-responsive-email-templates/) that goes into more detail on why I made this. Cerberus is [Responsive Email XX](https://github.com/TedGoas/Responsive-Email-XX)'s successor.
+## **[Learn More and See Examples](http://tedgoas.github.io/Cerberus/)** ##
 
 ***
 
-###`template-default.html`
-![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-default.png)
-* Forces columns into rows
-* Uses fluid images
-* Includes two breakpoints
-* Works most everywhere for desktop
-* Relies on media queries for narrow screens
+## Contents
+
+**`template-without-media-queries.html`** - This template focuses on a fluid layout that sizes itself regardless of media query support. Good for when media queries aren't available to detect device size and reconfigure the layout.
+
+**`template-with-media-queries.html`** - This template uses media queries to reconfigure the layout for different screen sizes. Good for when you want more control over the email layout.
 
 ***
 
-###`template-fluid.html`
-![wireframe](https://raw.github.com/TedGoas/Cerberus/master/assets/wireframe-fluid.png)
-* Works most everywhere, including Mobile Gmail and Android 4.4 Mail
-* Fluid layout using `max-width` to shrink email's width
-* Fixed, wide layout for Outlook and Lotus 8
+## Author
+
+Hi there, I’m Ted Goas, the core author and maintainer. I'm a designer & front-end developer working on websites, web apps, and HTML emails. And I enjoy [talking shop on Twitter](https://twitter.com/TedGoas).
 
 ***
 
-### Tools and Resources
-* [Guide to CSS Support](http://www.campaignmonitor.com/css) from Campaign Monitor.
-* [Bulletproof Email Background Images](http://backgrounds.cm/) from Stig Morten Myre.
-* [Image-Less Buttons](http://codepen.io/Omgitsonlyalex/pen/cKEyx) from Alex Ilhan.
-* [A Guide to Bulletproof Buttons](https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design) by Litmus
-* [Responsive HTML Emails: a Different Strategy](http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/) by Fog Creek.
-* [Placeholder Images](http://placehold.it/) by Brent Spore.
+## License
 
-### Contributors
-* [Hilary Nelson](https://engineering.purdue.edu/people/hilary.m.nelson.1) for creating a mobile-first version and helping fix various bugs
+Let's go with something simple and permissive, shall we?
 
-### Download, Fork, Commit.
-If you can help make this better, please submit a bug or pull request. I'd love to work on this with a few folks and make it as solid as can be.
+[The MIT License (MIT)](http://choosealicense.com/licenses/mit/).
+
+Copyright (c) 2015 Ted Goas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

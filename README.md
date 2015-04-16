@@ -1,6 +1,6 @@
 # Cerberus Responsive Email Patterns
 
-<a href="http://tedgoas.github.io/Cerberus/"><img src="logo.svg" align="left" hspace="10" vspace="6"></a>
+<a href="http://tedgoas.github.io/Cerberus/"><img src="http://tedgoas.github.io/Cerberus/assets/logo.png" alt="Cerberus logo" width="75" height="64" align="left" hspace="10" vspace="6"></a>
 
 Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.
 

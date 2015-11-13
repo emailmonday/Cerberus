@@ -1,22 +1,35 @@
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,700|Roboto+Slab);
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,800|Muli' rel='stylesheet' type='text/css'>
 
 /* Reset */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, code, del, dfn, em, img, ins, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, table, tr, th, td, article, aside, canvas, figure, figcaption, footer, header, nav, section, summary {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, nav, section {
-	display: block;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
 }
 body {
 	line-height: 1;
+  margin:0;
+  padding:0;
 }
 ol, ul {
 	list-style: none;
+	padding: 0;
 }
 table {
 	border-collapse: collapse;
@@ -24,34 +37,34 @@ table {
 }
 .cf:before,
 .cf:after {
-	content: " ";
+	content: "";
 	display: table;
 }
 .cf:after {
 	clear: both;
 }
-.cf {
-    *zoom: 1;
-}
 
 /* Core CSS */
 body {
-	font-family: 'Roboto', sans-serif;
-	color: #555;
-	font-size: 15px;
-	line-height: 1.3;
+	font-family: 'Muli', sans-serif;
+	color: #666;
+	font-size: 17px;
+	line-height: 1.4;
 }
 h2 {
-	font-size: 1.5em;
-	color: #111;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 1.75em;
+	text-transform: uppercase;
+	color: #333;
 	margin-bottom: 1.5em;
-	font-weight: 400;
 }
 h3 {
-	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 1.4em;
 	color: #111;
 	margin-bottom: 1.5em;
-	font-weight: 700;
 }
 p {
 	margin-bottom: 1.5em;
@@ -76,14 +89,12 @@ code {
 	font-weight: bold;
 }
 .button {
-	font-weight: 700;
 	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: .05em;
+	letter-spacing: .025em;
 	border-radius: 3px;
 	text-decoration: none;
-	line-height: 14px;
-	font-size: 14px;
+	line-height: 1;
+	font-size: 15px;
 	padding: 15px 25px;
 	border: 1px solid transparent;
 	transition: all 150ms ease-in;
@@ -143,7 +154,7 @@ hr {
 }
 h1 {
 	font-size: 1.5em;
-	font-weight: 300;
+	font-weight: 100;
 	line-height: 1.2;
 }
 h1 strong {
@@ -198,21 +209,24 @@ h1 strong {
 	width: 25%;
 }
 .toc-padding {
-	padding: 4.5em 0;
+	padding: 2.5em 0;
 }
 .toc-ul {
-	background: #f8f8f8;
-	border: 4px double #eee;
-	padding-bottom: 15px;
+	border-top: 4px double #ddd;
+	padding: 2.5em 1em;
 }
 .toc-li {
-	padding: 15px 20px 0;
+	padding: 8px 0;
 }
 .toc-a,
 .toc-a:visited {
-	font-size: 14px;
-	color: #111;
-	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: #222;
+	text-decoration: none
 }
 .toc-a:hover {
 	color: #48b586;
@@ -225,13 +239,12 @@ h1 strong {
 	color: #48b586 ;
 }
 .toc-li.small {
-	border-left: 2px solid #ddd;
+	border-left: 2px solid #eee;
 	padding-left: 10px;
-	margin-left: 20px;
 	line-height: 1;
 }
 .toc-li.small a {
-	font-size: 11px;
+	font-size: 12px;
 }
 
 /* Sections */
@@ -241,8 +254,8 @@ h1 strong {
 	float: right;
 }
 .section {
-	border-top: 6px double #f4f4f4;
-	padding: 4.5em 0 3em;
+	border-top: 4px double #ddd;
+	padding: 4.5em 0;
 }
 blockquote {
 	border-left: 3px solid #48b586;
@@ -250,8 +263,8 @@ blockquote {
 	padding: 0 0 0 1.5em;
 }
 blockquote p {
-	font-size: 2em;
-	font-weight: 100;
+	font-size: 1.5em;
+	font-weight: 300;
 	margin: 0;
 	color: #999;
 }
@@ -264,14 +277,23 @@ blockquote p {
 }
 .row {
 	width: 100%;
-	padding-top: 1.5em;
+	padding-top: 1em;
 	margin-bottom: 1.5em;
 	background: #f8f8f8;
+}
+.col-1-2 {
+	width: 48%;
+	margin-left: 2%;
+	float: left;
 }
 .col-1-3 {
 	width: 30%;
 	margin-left: 3%;
 	float: left;
+}
+.col-1-2 li,
+.col-1-3 li {
+	font-size: .85em;
 }
 .sections .li-title {
 	list-style: none;
@@ -383,6 +405,7 @@ blockquote p {
 		width: 100%;
 		float: none;
 	}
+	.col-1-2,
 	.col-1-3 {
 		width: 100%;
 		margin: 0 0 3% 3%;

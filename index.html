@@ -46,10 +46,13 @@
 						<a href="#templates" class="toc-a" data-scroll-nav="2">The templates</a>
 					</li>
 					<li class="toc-li small">
-						<a href="#without-mq" class="toc-a">template-without-media-queries.html</a>
+						<a href="#fluid" class="toc-a">Fluid Template</a>
 					</li>
 					<li class="toc-li small">
-						<a href="#with-mq" class="toc-a">template-with-media-queries.html</a>
+						<a href="#responsive" class="toc-a">Responsive Template</a>
+					</li>
+					<li class="toc-li small">
+						<a href="#hybrid" class="toc-a">Hybrid Template</a>
 					</li>
 					<li class="toc-li">
 						<a href="#support" class="toc-a" data-scroll-nav="3">Client Support</a>
@@ -69,78 +72,98 @@
 		<div class="sections">
 			<blockquote>
 				<p>Cerberus - <br>
-					Between desktop, mobile, and Outlook, HTML email is a three-headed dog from hell.
+					Between mobile, Gmail, and Outlook, HTML email is a three-headed dog from hell.
 				</p>
 			</blockquote>
 			<div class="section" id="intro" data-scroll-index="0">
 				<h2>Introduction</h2>
 				<p>Coding regular emails is hard enough by itself. Making them responsive shouldn't add to the headache. A few simple, but solid patterns are all that's needed to optimize emails for small screens.</p>	
 				<p><strong>That's what Cerberus is.</strong>
-				<p>It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email.</p>	
-				<p>There are two templates, one that relies media queries and one that does not. Each is annotated and has good support among popular email clients. More on that here.</p>
+				<p>It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, combined, and nested to build an email.</p>	
+				<p>Each template is annotated and has good support among popular email clients.</p>
 				<p>I <a href="http://www.tedgoas.com/blog/cerberus-responsive-email-templates/">wrote a blog post</a> that goes into more detail on why I made this in the first place. Cerberus is <a href="https://github.com/TedGoas/Responsive-Email-XX">Responsive Email XX</a>'s successor.</p>
 			</div>
 			<div class="section" id="things" data-scroll-index="1">
 				<h2>Things To Know</h2>
 				<ul>
 					<li>Cerberus is a small collection layout patterns for HTML email. The code is meant to be edited, adapted, and built upon.</li>
-					<li>The code is largely compartmentalized and annotated in an effort to explain what’s happening so you can add, edit, and remove code with confidence.</li>
+					<li>The code is largely compartmentalized and annotated in an effort to explain what’s happening so you can add, edit, and remove code with some confidence.</li>
 					<li>This has been tested in all “popular” email clients, but not every email client out there. <a href="#support">More on that here</a>.</li>
 				</ul>
 			</div>
 			<div class="section" id="templates" data-scroll-index="2">
 				<h2>The Templates</h2>	
-				<div id="without-mq" class="cf">
+				<div id="fluid" class="cf">
 					<figure class="figure-wireframe">
-						<img src="assets/wireframe-without-media-queries.png" width="700" height="350" class="figure fluid">
+						<img src="assets/wireframe-fluid.png" width="800" height="425" class="figure fluid">
 						<span class="caption">As the layout narrows, the email content reflows and resizes gracefully.</span>
 					</figure>
-					<h3>template-without-media-queries.html</h3>
-					<p>This template focuses on a fluid layout that sizes itself regardless of media query support. Good for when media queries aren't available to detect device size and reconfigure the layout.</p>
-					<p>This layout uses percentage-based widths and to shrink horizontally on narrow screens. All CSS styles are inline, with the exception of a single media query to contain wide widths in Apple Mail. Outlook has spotty support for layouts that shrink on narrow screens, but since they're pretty much shackled to desktop world, we can get away with a fixed-width, wide layout.</p>
+					<h3>Fluid Template</h3>
+					<p>Good for simple layouts such as transactional and single column emails.</p>
+					<p>This template focuses on a fluid layout that sizes itself using percentage-based widths to shrink horizontally on narrow screens. This email layout does not reconfigure at different screen sizes.</p>
+					<p>If you want a basic template to handle rich text and images, this is a good baseline.</p>
 					<ul class="buttons-ul">
 						<li class="buttons-li">
-							<a href="template-without-media-queries.html" class="button sections-button button-solid">View A Demo</a>
+							<a href="cerberus-fluid.html" class="button sections-button button-solid">View A Demo</a>
 						</li>
 						<li class="buttons-li">
-							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/template-without-media-queries.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
+							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
 						</li>
 					</ul>
 				</div>
 				<hr>
-				<div id="with-mq" class="cf">
+				<div id="responsive" class="cf">
 					<figure class="figure-wireframe">
-						<img src="assets/wireframe-with-media-queries.png" width="700" height="350" class="figure fluid">
+						<img src="assets/wireframe-responsive.png" width="800" height="425" class="figure fluid">
 						<span class="caption">The email layout changes at breakpoints using media queries.</span>
 					</figure>
-					<h3>template-with-media-queries.html</h3>
-					<p>This template uses media queries to reconfigure the layout for different screen sizes. Good for when you want more control over the email layout.</p>
-					<p>This template relies media queries to force table columns into rows and make the layout fluid. Mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to Gmail, Inbox, and Android 4.4 Mail.</p>
+					<h3>Responsive Template</h3>
+					<p>Good for more complicated, shape-shifting email layouts that work on <em>some</em> mobile clients.</p>
+					<p>This template uses media queries to reconfigure the layout for different screen sizes for email clients that support media queries. However, mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to Gmail, Inbox, and some Android 4.* Mail clients (<a href="http://stylecampaign.com/blog/2012/10/responsive-email-support/">bigger list</a>).</p>
+					<p>If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.</p>
 					<ul class="buttons-ul">
 						<li class="buttons-li">
-							<a href="template-with-media-queries.html" class="button sections-button button-solid">View A Demo</a>
+							<a href="cerberus-responsive.html" class="button sections-button button-solid">View A Demo</a>
 						</li>
 						<li class="buttons-li">
-							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/template-with-media-queries.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
+							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
+						</li>
+					</ul>
+				</div>
+				<hr>
+				<div id="hybrid" class="cf">
+					<figure class="figure-wireframe">
+						<img src="assets/wireframe-hybrid.png" width="800" height="425" class="figure fluid">
+						<span class="caption">The email layout stacks without media queries.</span>
+					</figure>
+					<h3>Hybrid Template</h3>
+					<p>This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support. At its core, it uses max-width and min-width to impose rigid baselines (allowing some movement) and imposes a fixed, wide width for Outlook who is shackled to desktop anyway. Once a mobile-friendly baseline is set, media queries progressively enhance the email further in clients that support it.</p>
+					<p>If you have some email design experience, this template optimizes every popular email client. All the extra Outlook and Gmail code can make these templates quite large and your maths have to be spot on for multi-column layouts.</p>
+					<ul class="buttons-ul">
+						<li class="buttons-li">
+							<a href="cerberus-hybrid.html" class="button sections-button button-solid">View A Demo</a>
+						</li>
+						<li class="buttons-li">
+							<a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html" class="button sections-button button-outline"><i class="icon-code"></i>  View Raw</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="section" id="support" data-scroll-index="3">
 				<h2>Client Support</h2>
-				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns. Litmus tests are available for <a href="https://litmus.com/pub/2f27214">template-with-media-queries</a> and <a href="https://litmus.com/pub/13545f9">template-without-media-queries</a>, but I've focused on the following clients:</p>
+				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns. <!--Litmus tests are available for <a href="https://litmus.com/pub/2f27214">template-with-media-queries</a> and <a href="https://litmus.com/pub/13545f9">template-without-media-queries</a>, but -->I've focused on the following clients:</p>
 				<div class="row cf">
 					<ul class="col-1-3">
 						<li class="li-title">Desktop</li>
-						<li>Outlook 2007/11/13 (Windows)</li>
-						<li>Outlook 2009 (Mac)</li>
+						<li>Outlook 2000/02/03/07/10/13 (Windows)</li>
+						<li>Outlook 2011/16 (Mac)</li>
 						<li>Apple Mail</li>
 						<li>Thunderbird</li>
 					</ul>
 					<ul class="col-1-3">
 						<li class="li-title">Web</li>
 						<li>Gmail</li>
-						<li>Outlook.com / Windows Live Mail</li>
+						<li>Outlook.com</li>
 						<li>Yahoo</li>
 						<li>Aol</li>
 						<li>Outlook Web Access</li>
@@ -150,27 +173,40 @@
 						<li>Mail (iOS)</li>
 						<li>Gmail (iOS, Android 4.4)</li>
 						<li>Mail (Android 4.4)</li>
+						<li>Mailbox (iOS)</li>
 						<li>Inbox (iOS)</li>
 						<li>Yahoo (iOS)</li>
 					</ul>
 				</div>
-				<p class="warning">When I say “tested”, I mean “email doesn’t fall apart”. I don't mean “I found a way to make media queries work in Gmail”. They don’t.</p>
-				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please submit an issue!</p>
+				<p class="warning">When I say “tested”, I mean “email doesn’t fall apart”. I don't mean “I found a way to make media queries work in Gmail” or "Everything is pixel perfect in Outlook."</p>
+				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please <a href="https://github.com/TedGoas/Cerberus/issues">submit an issue</a>!</p>
 				<p>For what it's worth, Litmus (who DOES test every email client out there) chose to include these templates in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
 			</div>
 			<div class="section" id="contribute" data-scroll-index="4">
 				<h2>Contributing</h2>
-				<p>If you would like to help, please <a href="https://twitter.com/tedgoas">@reply me on Twitter</a> or open an issue to discuss your ideas. I'm forever interested in reducing the entropy of this code.</p>
+				<p>If you would like to help, please <a href="https://twitter.com/tedgoas">@reply me on Twitter</a> or <a href="https://github.com/TedGoas/Cerberus/issues">open an issue</a> to discuss your idea. I'm forever interested in reducing the entropy of this code.</p>
 			</div>
 			<div class="section" id="credits" data-scroll-index="5">
 				<h2>Credits &amp; Resources</h2>
-				<ul>
-					<li><a href="http://www.campaignmonitor.com/css">Guide to CSS Support</a> from Campaign Monitor.</li>
-					<li><a href="https://engineering.purdue.edu/people/hilary.m.nelson.1">Hilary Nelson</a> for creating a mobile-first version and helping fix various bugs</li>
-					<li><a href="http://codepen.io/Omgitsonlyalex/pen/cKEyx">Image-Less Buttons</a> from Alex Ilhan.</li>
-					<li><a href="https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design">A Guide to Bulletproof Buttons</a> by Litmus</li>
-					<li><a href="http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/">Responsive HTML Emails: a Different Strategy</a> by Fog Creek.</li>
-				</ul>
+				<div class="row cf">
+					<div class="col-1-2">
+						<ul>
+							<li class="li-title">General Email Design</li>
+							<li><a href="http://www.campaignmonitor.com/css">CSS Support in Email</a></li>
+							<li><a href="https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design">Bulletproof Buttons</a></li>
+							<li><a href="http://backgrounds.cm/">Bulletproof Background Images</a></li>
+							<li><a href="https://www.campaignmonitor.com/dev-resources/guides/mobile/">Responsive Email Design with Media Queries</a></li>
+						</ul>
+					</div>
+					<div class="col-1-2">
+						<ul>
+							<li class="li-title">Hybrid Email Design</li>
+							<li><a href="http://blog.fogcreek.com/responsive-html-emails-a-different-strategy/">Responsive HTML Emails: a Different Strategy</a></li>
+							<li><a href="https://github.com/fcarneiro/tedc15_template">Fabio Carneiro's TEDC15 talk files</a></li>
+							<li><a href="http://ryanfield.ca/fly-brid/">Fly-Brid Email Generator</a></li>
+						</ul>
+					</div>
+				</div>	
 			</div>
 			<div class="section" id="author" data-scroll-index="6">
 				<h2>Author</h2>

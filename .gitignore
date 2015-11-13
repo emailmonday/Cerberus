@@ -1,5 +1,6 @@
 *.old
 *.psd
+old-versions
 
 # OS generated files #
 ######################

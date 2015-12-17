@@ -63,9 +63,11 @@
             border-bottom: none !important;
         }
         
-        /* What it does: Another work-around for iOS meddling in triggered links. */
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
         a[x-apple-data-detectors] {
             color:inherit !important;
+            text-decoration: underline !important;
         }
       
     </style>

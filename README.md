@@ -6,25 +6,23 @@ Coding regular emails is hard enough by itself. Making them responsive shouldn't
 
 **That's what Cerberus is.**
 
-It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, reused, and nested to build an email.
+It's just a few responsive email patterns that go a long way. The code blocks are compartmentalized so that they may be used, combined, and nested to build an email.
+
+Each template is annotated and has good support among popular email clients.
 
 ## **[Learn More and See Examples](http://tedgoas.github.io/Cerberus/)** ##
 
-***
-
 ## Contents
 
-**`template-without-media-queries.html`** - This template focuses on a fluid layout that sizes itself regardless of media query support. Good for when media queries aren't available to detect device size and reconfigure the layout.
+**`cerberus-fluid.html`** - Good for simple layouts such as transactional and single column emails.
 
-**`template-with-media-queries.html`** - This template uses media queries to reconfigure the layout for different screen sizes. Good for when you want more control over the email layout.
+**`cerberus-responsive.html`** - Good for more complicated, shape-shifting email layouts that work on _some_ mobile clients.
 
-***
+**`cerberus-hybrid.html`** - This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support.
 
 ## Author
 
 Hi there, I’m Ted Goas, the core author and maintainer. I'm a designer & front-end developer working on websites, web apps, and HTML emails. And I enjoy [talking shop on Twitter](https://twitter.com/TedGoas).
-
-***
 
 ## License
 

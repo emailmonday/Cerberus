@@ -1,0 +1,33 @@
+{
+  "name": "Cerberus",
+  "description": "A few simple, but solid patterns for responsive HTML emails. Even in Outlook and Gmail.",
+  "main": [
+    "cerberus-fluid.html",
+    "cerberus-hybrid.html",
+    "cerberus-responsive.html"
+  ],
+  "keywords": [
+    "email",
+    "html email",
+    "hybrid email",
+    "email template",
+    "responsive email",
+    "email code",
+    "email design",
+    "newsletter"
+  ],
+  "authors": [
+    "Ted Goas <ted@tedgoas.com>"
+  ],
+  "homepage": [
+    "http://tedgoas.github.io/Cerberus/"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "/archived-versions",
+    "/assets",
+    "index.html",
+    "LICENSE"
+  ],
+  "private": false
+}

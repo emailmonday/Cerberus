@@ -20,6 +20,9 @@ Each template is annotated and has good support among popular email clients.
 
 **`cerberus-hybrid.html`** - This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support.
 
+
+[![forthebadge](http://forthebadge.com/images/badges/validated-html2.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
+
 ## Author
 
 Hi there, I’m Ted Goas, the core author and maintainer. I'm a designer & front-end developer working on websites, web apps, and HTML emails. And I enjoy [talking shop on Twitter](https://twitter.com/TedGoas).

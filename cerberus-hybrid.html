@@ -158,6 +158,11 @@
         </div>
         <!-- Visually Hidden Preheader Text : END -->
 
+        <!--    
+            Set the email width. Defined in two places:
+            1. max-width for all clients set with Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
         <div style="max-width: 680px;">
             <!--[if (gte mso 9)|(IE)]>
             <table cellspacing="0" cellpadding="0" border="0" width="680" align="center">
@@ -186,7 +191,7 @@
                 </tr>
                 <!-- Hero Image, Flush : END -->
 
-                <!-- 1 Column Text : BEGIN -->
+                <!-- 1 Column Text + Button : BEGIN -->
                 <tr>
                     <td>
                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -210,10 +215,11 @@
                         </table>
                     </td>
                 </tr>
-                <!-- 1 Column Text : BEGIN -->
+                <!-- 1 Column Text + Button : BEGIN -->
 
                 <!-- Background Image with Text : BEGIN -->
                 <tr>
+                    <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
                     <td background="http://placehold.it/680x230/222222/666666" bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
                         <!--[if gte mso 9]>
                         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
@@ -247,7 +253,7 @@
                 </tr>
                 <!-- Background Image with Text : END -->
                
-                <!-- Two Even Columns : BEGIN -->
+                <!-- 2 Even Columns : BEGIN -->
                 <tr>
                     <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
                         <!--[if mso]>
@@ -322,9 +328,9 @@
                         <![endif]-->
                     </td>
                 </tr>
-                <!-- Two Even Columns : END -->
+                <!-- 2 Even Columns : END -->
 
-                <!-- Three Even Columns : BEGIN -->
+                <!-- 3 Even Columns : BEGIN -->
                 <tr>
                     <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;">
                         <!--[if mso]>
@@ -410,7 +416,6 @@
                                     </div>
                                     <!--[if mso]>
                                     </td>
-
 									</tr>
 									</table>
 									<![endif]-->
@@ -424,7 +429,7 @@
                         <![endif]-->
                     </td>
                 </tr>
-                <!-- Three Even Columns : END -->
+                <!-- 3 Even Columns : END -->
                 
                 <!-- Thumbnail Left, Text Right : BEGIN -->
                 <tr>

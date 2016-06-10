@@ -153,10 +153,10 @@
 
         <!--    
             Set the email width. Defined in two places:
-            1. max-width for all clients set with Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
         -->
-        <div style="max-width: 680px;">
+        <div style="max-width: 680px; margin: auto;">
             <!--[if (gte mso 9)|(IE)]>
             <table cellspacing="0" cellpadding="0" border="0" width="680" align="center">
             <tr>
@@ -426,6 +426,7 @@
                 
                 <!-- Thumbnail Left, Text Right : BEGIN -->
                 <tr>
+	                <!-- dir=ltr is where the magic happens. This can be changed to dir=rtl to swap the alignment on wide while maintaining stack order on narrow. -->
                     <td dir="ltr" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;">
                         <!--[if mso]>
                         <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
@@ -495,6 +496,7 @@
 
                 <!-- Thumbnail Right, Text Left : BEGIN -->
                 <tr>
+	                <!-- dir=rtl is where the magic happens. This can be changed to dir=ltr to swap the alignment on wide while maintaining stack order on narrow. -->
                     <td dir="rtl" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;">
                         <!--[if mso]>
                         <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">

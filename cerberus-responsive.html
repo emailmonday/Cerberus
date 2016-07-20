@@ -78,6 +78,11 @@
             color:inherit !important;
             text-decoration: underline !important;
         }
+
+	/* What it does: Removes download icon from images in gmail */
+	* img[tabindex="0"] + div {
+		display: none !important;
+	}
       
     </style>
     

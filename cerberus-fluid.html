@@ -1,38 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
-	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-	<!-- Web Font / @font-face : BEGIN -->
-	<!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
-	
-	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
-	<!--[if mso]>
-		<style>
-			* {
-				font-family: sans-serif !important;
-			}
-		</style>
-	<![endif]-->
-	
-	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
-	<!--[if !mso]><!-->
-		<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
-	<!--<![endif]-->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
+    
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+        <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
 
-	<!-- Web Font / @font-face : END -->
-	
-  	<!-- CSS Reset -->
+    <!-- Web Font / @font-face : END -->
+    
+      <!-- CSS Reset -->
     <style>
 
-		/* What it does: Remove spaces around the email design added by some email clients. */
-		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
         html,
         body {
-	        margin: 0 auto !important;
+            margin: 0 auto !important;
             padding: 0 !important;
             height: 100% !important;
             width: 100% !important;
@@ -121,11 +121,11 @@
 
             <!-- Email Header : BEGIN -->
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
-				<tr>
-					<td style="padding: 20px 0; text-align: center">
-						<img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0">
-					</td>
-				</tr>
+                <tr>
+                    <td style="padding: 20px 0; text-align: center">
+                        <img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0" style="background: #dddddd; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                    </td>
+                </tr>
             </table>
             <!-- Email Header : END -->
             
@@ -134,9 +134,9 @@
                 
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
-					<td bgcolor="#ffffff">
-						<img src="http://placehold.it/600x300" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px;">
-					</td>
+                    <td bgcolor="#ffffff">
+                        <img src="http://placehold.it/600x300" width="600" height="300" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; background: #dddddd; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                    </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
 
@@ -144,25 +144,25 @@
                 <tr>
                     <td bgcolor="#ffffff">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        	<tr>
-	                            <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
-	                                Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
-	                                <br><br>
-	                                <!-- Button : Begin -->
-	                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
-	                                    <tr>
-	                                        <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-	                                            <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-				                                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff">A Button</span>&nbsp;&nbsp;&nbsp;&nbsp;
-				                                </a>
-	                                        </td>
-	                                    </tr>
-	                                </table>
-	                                <!-- Button : END -->
-	                                <br>
-	                                Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
-	                            </td>
-								</tr>
+                            <tr>
+                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                                    Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+                                    <br><br>
+                                    <!-- Button : Begin -->
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                                        <tr>
+                                            <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
+                                                <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff">A Button</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Button : END -->
+                                    <br>
+                                    Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+                                </td>
+                                </tr>
                         </table>
                     </td>
                 </tr>
@@ -177,7 +177,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
                                         <tr>
                                             <td style="text-align: center; padding: 0 10px;">
-                                                <img src="http://placehold.it/200" width="200" alt="" style="border: 0;width: 100%;max-width: 200px;" class="center-on-narrow">
+                                                <img src="http://placehold.it/200" width="200" height="200" alt="alt_text" class="center-on-narrow" style="border: 0;width: 100%;max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
                                             </td>
                                         </tr>
                                         <tr>
@@ -191,7 +191,7 @@
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
                                         <tr>
                                             <td style="text-align: center; padding: 0 10px;">
-                                                <img src="http://placehold.it/200" width="200" alt="" style="border: 0;width: 100%;max-width: 200px;" class="center-on-narrow">
+                                                <img src="http://placehold.it/200" width="200" height="200" alt="alt_text" class="center-on-narrow" style="border: 0;width: 100%;max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
                                             </td>
                                         </tr>
                                         <tr>
@@ -210,7 +210,7 @@
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
                     <td height="40" style="font-size: 0; line-height: 0;">
-	                    &nbsp;
+                        &nbsp;
                     </td>
                 </tr>
                 <!-- Clear Spacer : END -->
@@ -219,11 +219,11 @@
                 <tr>
                     <td bgcolor="#ffffff">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        	<tr>
-	                            <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
-	                                Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
-	                            </td>
-								</tr>
+                            <tr>
+                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555;">
+                                    Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+                                </td>
+                                </tr>
                         </table>
                     </td>
                 </tr>

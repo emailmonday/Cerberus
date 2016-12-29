@@ -26,7 +26,7 @@
 
     <!-- Web Font / @font-face : END -->
     
-      <!-- CSS Reset -->
+	<!-- CSS Reset -->
     <style>
 
         /* What it does: Remove spaces around the email design added by some email clients. */
@@ -85,6 +85,15 @@
             text-decoration: none !important;
         }
       
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+    
     </style>
     
     <!-- Progressive Enhancements -->
@@ -118,7 +127,7 @@
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
         -->
-        <div style="max-width: 600px; margin: auto;">
+        <div style="max-width: 600px; margin: auto;" class="email-container">
             <!--[if mso]>
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
             <tr>

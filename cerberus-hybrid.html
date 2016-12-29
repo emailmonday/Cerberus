@@ -8,7 +8,7 @@
     <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- Web Font / @font-face : BEGIN -->
-	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
     
     <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
     <!--[if mso]>
@@ -85,6 +85,15 @@
             text-decoration: none !important;
         }
       
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+    
     </style>
     
     <!-- Progressive Enhancements -->
@@ -137,9 +146,8 @@
             table.center-on-narrow {
                 display: inline-block !important;
             }
-                
         }
-    
+
     </style>
 
 </head>
@@ -158,7 +166,7 @@
             2. MSO tags for Desktop Windows Outlook enforce a 680px width.
             Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.  
         -->
-        <div style="max-width: 680px; margin: auto;">
+        <div style="max-width: 680px; margin: auto;" class="email-container">
             <!--[if mso]>
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
             <tr>

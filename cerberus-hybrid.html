@@ -75,10 +75,19 @@
         
         /* What it does: A work-around for iOS meddling in triggered links. */
         .mobile-link--footer a,
-        a[x-apple-data-detectors] {
-            color:inherit !important;
-            text-decoration: underline !important;
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
         }
+
+        /* What it does: A work-around for Gmail meddling in triggered links. */
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
         
         /* What it does: Prevents underlining the button text in Windows 10 */
         .button-link {
@@ -602,10 +611,10 @@
             <!-- Email Footer : BEGIN -->
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
                 <tr>
-                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;">
+                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
                         <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion>
                         <br><br>
-                        Company Name<br><span class="mobile-link--footer">123 Fake Street, SpringField, OR, 97477 US</span><br><span class="mobile-link--footer">(123) 456-7890</span>
+                        Company Name<br>123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890
                         <br><br>
                         <unsubscribe style="color:#888888; text-decoration:underline;">unsubscribe</unsubscribe>
                     </td>

@@ -126,7 +126,7 @@
 					</figure>
 					<h3>Responsive Template</h3>
 					<p>Good for more complicated, shape-shifting email layouts that work on <em>some</em> mobile clients.</p>
-					<p>This template uses media queries to reconfigure the layout for different screen sizes for email clients that support media queries. However, mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to Gmail, Inbox, and some Android 4.* Mail clients (<a href="http://stylecampaign.com/blog/2012/10/responsive-email-support/">bigger list</a>).</p>
+					<p>This template uses media queries to reconfigure the layout for different screen sizes for email clients that support media queries. However, mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to some versions of Gmail&nbsp;(<a href="https://litmus.com/blog/gmail-to-support-responsive-email-design">still</a>) and Yahoo, as well as a number of international email clients (<a href="https://emails.hteumeuleu.com/should-we-stop-inlining-styles-in-emails-8c3b64f0d407#.57mlzfimq">more info on that here</a>).</p>
 					<p>If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.</p>
 					<ul class="buttons-ul">
 						<li class="buttons-li">
@@ -145,7 +145,7 @@
 					</figure>
 					<h3>Hybrid Template</h3>
 					<p>This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support. At its core, it uses max-width and min-width to impose rigid baselines (allowing some movement) and imposes a fixed, wide width for Outlook who is shackled to desktop anyway. Once a mobile-friendly baseline is set, media queries progressively enhance the email further in clients that support it.</p>
-					<p>If you have some email design experience, this template optimizes every popular email client. All the extra Outlook and Gmail code can make these templates quite large and your maths have to be spot on for multi-column layouts.</p>
+					<p>If you have some email design experience, this template optimizes every popular email client. All the extra Outlook code can make these templates quite large and your maths have to be spot on for multi-column layouts.</p>
 					<ul class="buttons-ul">
 						<li class="buttons-li">
 							<a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-hybrid.html" class="button sections-button button-solid">View A Demo</a>
@@ -163,11 +163,11 @@
 			</div>
 			<div class="section" id="support" data-scroll-index="4">
 				<h2>Client Support</h2>
-				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns. <!--Litmus tests are available for <a href="https://litmus.com/pub/2f27214">template-with-media-queries</a> and <a href="https://litmus.com/pub/13545f9">template-without-media-queries</a>, but -->I've focused on the following clients:</p>
+				<p>Cerberus is tested in the most popular email clients <a href="http://emailclientmarketshare.com/">as reported by Litmus</a> and my own email campaigns. I've focused on the following clients:</p>
 				<div class="row cf">
 					<ul class="col-1-3">
 						<li class="li-title">Desktop</li>
-						<li>Outlook 2000/02/03/07/10/13 (Windows)</li>
+						<li>Outlook 2000/02/03/07/10/13/16 (Windows)</li>
 						<li>Outlook 2011/16 (Mac)</li>
 						<li>Apple Mail</li>
 						<li>Thunderbird</li>
@@ -178,21 +178,28 @@
 						<li>Outlook.com</li>
 						<li>Yahoo</li>
 						<li>Aol</li>
-						<li>Outlook Web Access</li>
+						<li>Office 365 Web (Desktop)</li>
+						<li>Comcast</li>
+						<li>Web.de</li>
+						<li>GMX.de</li>
+						<li>freenet.de</li>
+						<li>T-Online.de</li>
+						<li>Mail.ru</li>
 					</ul>
 					<ul class="col-1-3">
 						<li class="li-title">Mobile</li>
 						<li>Mail (iOS)</li>
-						<li>Gmail (iOS, Android 4.4)</li>
-						<li>Mail (Android 4.4)</li>
-						<li>Mailbox (iOS)</li>
+						<li>Gmail (iOS, Android)</li>
 						<li>Inbox (iOS)</li>
+						<li>Mail (Android)</li>
+						<li>Mailbox (iOS)</li>
 						<li>Yahoo (iOS)</li>
+						<li>Outlook (iOS)</li>
 					</ul>
 				</div>
-				<p class="warning">When I say “tested”, I mean “email doesn’t fall apart”. I don't mean “I found a way to make media queries work in Gmail” or "Everything is pixel perfect in Outlook."</p>
+				<p class="warning">When I say “tested”, I mean “email doesn’t fall apart”. I don't mean  "Everything is pixel perfect in Outlook" or “I found a way to make media queries work everywhere.” They don't</p>
 				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please <a href="https://github.com/TedGoas/Cerberus/issues">submit an issue</a>!</p>
-				<p>For what it's worth, Litmus (who DOES test every email client out there) chose to include these templates in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
+				<p>For what it's worth, Litmus (who <em>does</em> test every email client) includes Cerberus in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
 			</div>
 			<div class="section" id="css-inliners">
 				<h2>A Word on CSS Inliners</h2>

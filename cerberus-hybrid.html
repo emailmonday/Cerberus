@@ -173,6 +173,12 @@
             table.center-on-narrow {
                 display: inline-block !important;
             }
+
+            /* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+				line-height: 22px !important;
+			}
         }
 
     </style>
@@ -211,7 +217,7 @@
             <!-- Email Header : END -->
 
             <!-- Email Body : BEGIN -->
-            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;" class="email-container">
 
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>

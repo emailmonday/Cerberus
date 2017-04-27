@@ -104,7 +104,7 @@
 
         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
         /* Create one of these media queries for each additional viewport size you'd like to fix */
-        /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
             .email-container {
                 min-width: 375px !important;
@@ -178,6 +178,12 @@
                 display: inline-block !important;
             }
 
+            /* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+				line-height: 22px !important;
+			}
+			
         }
 
     </style>

@@ -21,12 +21,12 @@
 
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
     <!--[if !mso]><!-->
-        <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
     <!--<![endif]-->
 
     <!-- Web Font / @font-face : END -->
 
-    <!-- CSS Reset -->
+    <!-- CSS Reset : BEGIN -->
     <style>
 
         /* What it does: Remove spaces around the email design added by some email clients. */
@@ -47,7 +47,7 @@
 
         /* What it does: Centers email on Android 4.4 */
         div[style*="margin: 16px 0"] {
-            margin:0 !important;
+            margin: 0 !important;
         }
 
         /* What it does: Stops Outlook from adding extra spacing to tables. */
@@ -74,8 +74,8 @@
         }
 
         /* What it does: A work-around for email clients meddling in triggered links. */
-        *[x-apple-data-detectors],	/* iOS */
-        .x-gmail-data-detectors, 	/* Gmail */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
         .x-gmail-data-detectors *,
         .aBn {
             border-bottom: 0 !important;
@@ -95,8 +95,8 @@
         }
         /* If the above doesn't work, add a .g-img class to any image in question. */
         img.g-img + div {
-            display:none !important;
-           }
+            display: none !important;
+        }
 
         /* What it does: Prevents underlining the button text in Windows 10 */
         .button-link {
@@ -113,75 +113,77 @@
         }
 
     </style>
+    <!-- CSS Reset : END -->
 
-    <!-- Progressive Enhancements -->
+    <!-- Progressive Enhancements : BEGIN -->
     <style>
 
-        /* What it does: Hover styles for buttons */
-        .button-td,
-        .button-a {
-            transition: all 100ms ease-in;
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: all 100ms ease-in;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #555555 !important;
+        border-color: #555555 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 480px) {
+
+        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+        .fluid {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
-        .button-td:hover,
-        .button-a:hover {
-            background: #555555 !important;
-            border-color: #555555 !important;
+
+        /* What it does: Forces table cells into full-width rows. */
+        .stack-column,
+        .stack-column-center {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            direction: ltr !important;
+        }
+        /* And center justify these ones. */
+        .stack-column-center {
+            text-align: center !important;
         }
 
-        /* Media Queries */
-        @media screen and (max-width: 480px) {
-
-            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
-            .fluid {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: auto !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-
-            /* What it does: Forces table cells into full-width rows. */
-            .stack-column,
-            .stack-column-center {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                direction: ltr !important;
-            }
-            /* And center justify these ones. */
-            .stack-column-center {
-                text-align: center !important;
-            }
-
-            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
-            .center-on-narrow {
-                text-align: center !important;
-                display: block !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                float: none !important;
-            }
-            table.center-on-narrow {
-                display: inline-block !important;
-            }
-
-            /* What it does: Adjust typography on small screens to improve readability */
-			.email-container p {
-				font-size: 17px !important;
-				line-height: 22px !important;
-			}
+        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+        .center-on-narrow {
+            text-align: center !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
         }
+        table.center-on-narrow {
+            display: inline-block !important;
+        }
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 17px !important;
+            line-height: 22px !important;
+        }
+    }
 
     </style>
+    <!-- Progressive Enhancements : END -->
 
     <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
     <!--[if gte mso 9]>
-	<xml>
-		<o:OfficeDocumentSettings>
-			<o:AllowPNG/>
-			<o:PixelsPerInch>96</o:PixelsPerInch>
-		</o:OfficeDocumentSettings>
-	</xml>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
     <![endif]-->
 
 </head>
@@ -189,8 +191,8 @@
     <center style="width: 100%; background: #222222; text-align: left;">
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
-			(Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
         </div>
         <!-- Visually Hidden Preheader Text : END -->
 
@@ -616,7 +618,7 @@
 
                 <!-- Clear Spacer : BEGIN -->
                 <tr>
-					<td aria-hidden="true" height="40" style="font-size: 0; line-height: 0;">
+                    <td aria-hidden="true" height="40" style="font-size: 0; line-height: 0;">
                         &nbsp;
                     </td>
                 </tr>
@@ -640,7 +642,7 @@
             <!-- Email Body : END -->
 
             <!-- Email Footer : BEGIN -->
-			<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; line-height:18px;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px; font-family: sans-serif; color: #888888; line-height:18px;">
                 <tr>
                     <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
                         <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion>
@@ -660,16 +662,16 @@
             <![endif]-->
         </div>
 
-		<!-- Full Bleed Background Section : BEGIN -->
-		<table role="presentation" bgcolor="#709f2b" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-			<tr>
-				<td valign="top" align="center">
-			        <div style="max-width: 680px; margin: auto;" class="email-container">
-			            <!--[if mso]>
-			            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
-			            <tr>
-			            <td>
-			            <![endif]-->
+        <!-- Full Bleed Background Section : BEGIN -->
+        <table role="presentation" bgcolor="#709f2b" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+            <tr>
+                <td valign="top" align="center">
+                    <div style="max-width: 680px; margin: auto;" class="email-container">
+                        <!--[if mso]>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
+                        <tr>
+                        <td>
+                        <![endif]-->
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
@@ -677,16 +679,16 @@
                                 </td>
                             </tr>
                         </table>
-			            <!--[if mso]>
-			            </td>
-			            </tr>
-			            </table>
-			            <![endif]-->
-			        </div>
-				</td>
-			</tr>
-		</table>
-		<!-- Full Bleed Background Section : END -->
+                        <!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- Full Bleed Background Section : END -->
 
     </center>
 </body>

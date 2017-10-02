@@ -1,0 +1,27 @@
+{
+  "name": "Cerberus",
+  "description": "A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.",
+  "version": "3.0",
+  "keywords": [
+    "responsive-email",
+    "html-email",
+    "newsletter",
+    "email",
+    "email-boilerplate",
+    "email-template",
+    "hybrid-email",
+    "cerberus"
+  ],
+  "homepage": "http://tedgoas.github.io/Cerberus/",
+  "author": "Ted Goas (https://twitter.com/TedGoas",
+  "contributors": [
+    "GitHub Contributors: https://github.com/TedGoas/Cerberus/graphs/contributors"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TedGoas/Cerberus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TedGoas/Cerberus/issues"
+  }
+}

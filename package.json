@@ -1,7 +1,7 @@
 {
   "name": "Cerberus",
   "description": "A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.",
-  "version": "3.0",
+  "version": "3.0.0",
   "keywords": [
     "responsive-email",
     "html-email",

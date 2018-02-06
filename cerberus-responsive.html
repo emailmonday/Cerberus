@@ -105,19 +105,25 @@
 
         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
         /* Create one of these media queries for each additional viewport size you'd like to fix */
-        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
             .email-container {
                 min-width: 375px !important;
             }
         }
-
-	    @media screen and (max-width: 480px) {
-	        /* What it does: Forces Gmail app to display email full width */
-	        div > u ~ div .gmail {
-		        min-width: 100vw;
-	        }
-		}
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            .email-container {
+                min-width: 414px !important;
+            }
+        }
 
     </style>
     <!-- CSS Reset : END -->

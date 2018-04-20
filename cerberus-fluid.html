@@ -75,8 +75,7 @@
 
         /* What it does: A work-around for email clients meddling in triggered links. */
         *[x-apple-data-detectors],  /* iOS */
-        .x-gmail-data-detectors,    /* Gmail */
-        .x-gmail-data-detectors *,
+        .unstyle-auto-detected-links *,
         .aBn {
             border-bottom: 0 !important;
             cursor: default !important;
@@ -352,10 +351,10 @@
             <!-- Email Footer : BEGIN -->
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <tr>
-                    <td style="padding: 40px 10px; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;" class="x-gmail-data-detectors">
+                    <td style="padding: 40px 10px; font-family: sans-serif; font-size: 12px; line-height: 140%; text-align: center; color: #888888;">
                         <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
                         <br><br>
-                        Company Name<br>123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890
+						Company Name<br><span class="unstyle-auto-detected-links">123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890</span>
                         <br><br>
                         <unsubscribe style="color: #888888; text-decoration: underline;">unsubscribe</unsubscribe>
                     </td>

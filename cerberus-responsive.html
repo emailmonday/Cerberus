@@ -92,15 +92,20 @@
             line-height: inherit !important;
         }
 
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
         /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
         .a6S {
            display: none !important;
            opacity: 0.01 !important;
-       }
-       /* If the above doesn't work, add a .g-img class to any image in question. */
-       img.g-img + div {
-           display: none !important;
-       }
+		}
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img + div {
+		   display: none !important;
+		}
 
         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
         /* Create one of these media queries for each additional viewport size you'd like to fix */

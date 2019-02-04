@@ -57,15 +57,12 @@
             mso-table-rspace: 0pt !important;
         }
 
-        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        /* What it does: Fixes webkit padding issue. */
         table {
             border-spacing: 0 !important;
             border-collapse: collapse !important;
             table-layout: fixed !important;
             margin: 0 auto !important;
-        }
-        table table table {
-            table-layout: auto;
         }
 
         /* What it does: Uses a better rendering method when resizing images in IE. */
@@ -131,25 +128,18 @@
         }
 
     </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
     <!-- CSS Reset : END -->
-	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
-	<!--[if mso]>
-	<style type="text/css">
-		ul,
-		ol {
-			margin: 0 !important;
-		}
-		li {
-			margin-left: 30px !important;
-		}
-		li.list-item-first {
-			margin-top: 0 !important;
-		}
-		li.list-item-last {
-			margin-bottom: 10px !important;
-		}
-	</style>
-	<![endif]-->
 
     <!-- Progressive Enhancements : BEGIN -->
     <style>
@@ -177,16 +167,6 @@
 
     </style>
     <!-- Progressive Enhancements : END -->
-
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
 
 </head>
 <!--
@@ -229,7 +209,7 @@
             <![endif]-->
 
 	        <!-- Email Body : BEGIN -->
-	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto;">
+	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
 		        <!-- Email Header : BEGIN -->
 	            <tr>
 	                <td style="padding: 20px 0; text-align: center">
@@ -287,11 +267,11 @@
 
                 <!-- 2 Even Columns : BEGIN -->
                 <tr>
-                    <td height="100%" valign="top" width="100%" style="padding: 0 10px 40px 10px; background-color: #ffffff;">
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;">
+                    <td style="padding: 0 10px 40px 10px; background-color: #ffffff;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                                 <td valign="top" width="50%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: center; padding: 0 10px;">
                                                 <img src="https://via.placeholder.com/200" width="200" height="" alt="alt_text" border="0" style="width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
@@ -305,7 +285,7 @@
                                     </table>
                                 </td>
                                 <td valign="top" width="50%">
-                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                         <tr>
                                             <td style="text-align: center; padding: 0 10px;">
                                                 <img src="https://via.placeholder.com/200" width="200" height="" alt="alt_text" border="0" style="width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
@@ -350,7 +330,7 @@
             <!-- Email Body : END -->
 
             <!-- Email Footer : BEGIN -->
-	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto;">
+	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
                 <tr>
                     <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;">
                         <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
@@ -373,7 +353,7 @@
         <!-- Full Bleed Background Section : BEGIN -->
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;">
             <tr>
-                <td valign="top">
+                <td>
                     <div align="center" style="max-width: 600px; margin: auto;" class="email-container">
                         <!--[if mso]>
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">

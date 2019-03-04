@@ -76,8 +76,8 @@
         }
 
         /* What it does: A work-around for email clients meddling in triggered links. */
-        *[x-apple-data-detectors],  /* iOS */
-        .unstyle-auto-detected-links *,
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
         .aBn {
             border-bottom: 0 !important;
             cursor: default !important;

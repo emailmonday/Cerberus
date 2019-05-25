@@ -11,7 +11,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
   margin:0;
@@ -24,8 +24,8 @@ time, mark, audio, video {
 }
 body {
 	line-height: 1;
-  margin:0;
-  padding:0;
+	margin:0;
+	padding:0;
 }
 ol, ul {
 	list-style: none;
@@ -47,7 +47,7 @@ table {
 /* Core CSS */
 body {
 	font-family: 'Muli', sans-serif;
-	color: #666;
+	color: #555;
 	font-size: 17px;
 	line-height: 1.4;
 }
@@ -56,7 +56,7 @@ h2 {
 	font-weight: 800;
 	font-size: 1.75em;
 	text-transform: uppercase;
-	color: #333;
+	color: #111;
 	margin-bottom: 1.5em;
 }
 h3 {
@@ -70,7 +70,7 @@ p {
 	margin-bottom: 1.5em;
 }
 strong {
-	color: #111;	
+	color: #111;
 }
 a,
 a:visited {
@@ -149,7 +149,7 @@ hr {
 	padding: 100px 0;
 	position: relative;
 	z-index: 1;
-	float: left; 
+	float: left;
 	width: 50%;
 }
 h1 {
@@ -170,7 +170,7 @@ h1 strong {
 }
 .title-buttons-li {
 	display: inline-block;
-	margin: 0 .5em 1em 0;	
+	margin: 0 .5em 1em 0;
 }
 .title-button.button-solid,
 .title-button.button-solid:visited {
@@ -306,7 +306,7 @@ blockquote p {
 }
 .sections .buttons-li {
 	display: inline-block;
-	margin: 0 .5em 0 0;	
+	margin: 0 .5em 0 0;
 	list-style: none;
 }
 .sections-button.button-solid,
@@ -386,6 +386,52 @@ blockquote p {
 	}
 }
 
+a.htmlio-ad {
+	margin-top: 2.5em;
+	text-decoration: none;
+	border: 1px solid #eee;
+	display: grid;
+	justify-content: center;
+	flex-direction: column;
+	grid-template-columns: 180px auto;
+	transition: 75ms all ease-in;
+}
+a.htmlio-ad:hover,
+a.htmlio-ad:focus,
+a.htmlio-ad:active {
+	background: #e6dee1;
+	border-color: #ee5291;
+}
+a.htmlio-ad:hover .htmlio-ad-text .link,
+a.htmlio-ad:focus .htmlio-ad-text .link,
+a.htmlio-ad:active .htmlio-ad-text .link {
+	color: #ee5291
+}
+
+.htmlio-ad-img {
+	line-height: 0;
+}
+.htmlio-ad-text {
+	padding: 15px;
+}
+.htmlio-ad-text h3 {
+	text-decoration: none;
+	font-size: 1.1em;
+	margin: 0 0 .67em;
+}
+.htmlio-ad-text p {
+	font-size: .9em;
+	margin: 0;
+}
+.htmlio-ad-text .regular-p {
+	color: #333;
+	text-decoration: none;
+	margin-bottom: .67em;
+}
+.htmlio-ad-text .link {
+	text-decoration: underline;
+}
+
 @media only screen and (max-width: 700px) {
 	.title-text {
 		width: 100%;
@@ -393,7 +439,7 @@ blockquote p {
 		text-align: center;
 	}
 	.title-buttons-li {
-		margin: 0 .5em 1em;	
+		margin: 0 .5em 1em;
 	}
 	.title-figure {
 		display: none;
@@ -410,5 +456,12 @@ blockquote p {
 		width: 100%;
 		margin: 0 0 3% 3%;
 		float: none;
+	}
+	a.htmlio-ad {
+		flex-direction: row;
+		grid-template-columns: none;
+	}
+	.htmlio-ad-img {
+		padding: 10px 0 0 10px;
 	}
 }

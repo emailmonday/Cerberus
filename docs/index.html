@@ -63,6 +63,9 @@
 						<a href="#support" class="toc-a">Client Support</a>
 					</li>
 					<li class="toc-li">
+						<a href="#issues" class="toc-a">Known Issues</a>
+					</li>
+					<li class="toc-li">
 						<a href="#css-inliners" class="toc-a">CSS Inliners</a>
 					</li>
 					<li class="toc-li">
@@ -204,6 +207,13 @@
 				<p class="warning">There are multiple versions of Gmail. Cerberus works pretty well in all of them. Rémi Parmentier created <a href="https://cdn-images-1.medium.com/max/1400/1*JGe_A7b8LiHZfeSGzNZE9w.png">an excellent graphic</a> explaining Gmail’s capabilities in <a href="https://emails.hteumeuleu.com/trying-to-make-sense-of-gmail-css-support-after-the-2016-update-53c15151063a">this article</a>.</p>
 				<p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please <a href="https://github.com/TedGoas/Cerberus/issues">submit an issue</a>!</p>
 				<p>For what it’s worth, Litmus (who <em>does</em> test every email client) includes Cerberus in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.</p>
+			</div>
+			<div class="section" id="issues">
+				<h2>Known Issues</h2>
+				<p>Not necessarily a bug with the code in this repo, but a few things that could trip you up.</p>
+				<ul>
+					<li>Some <abbr title="Email service providers">ESPs</abbr> don’t like URLs in HTML comments (<a href="https://github.com/TedGoas/Cerberus/issues/222">example issue</a>). In this case, you can remove the URLs or even the entire HTML comment.</li>
+				</ul>
 			</div>
 			<div class="section" id="css-inliners">
 				<h2>A Word on CSS Inliners</h2>

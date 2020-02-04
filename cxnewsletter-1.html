@@ -157,8 +157,8 @@
 	    }
 	    .button-td-primary:hover,
 	    .button-a-primary:hover {
-	        background: #555555 !important;
-	        border-color: #555555 !important;
+	        background: #0c397e !important;
+	        border-color: #0c397e !important;
 	    }
 
 	    /* Media Queries */
@@ -181,8 +181,8 @@
 	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
 	3. mso conditional: For Windows 10 Mail
 -->
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-	<center style="width: 100%; background-color: #222222;">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f6f6f6;">
+	<center style="width: 100%; background-color: #f6f6f6;">
     <!--[if mso | IE]>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
     <tr>
@@ -207,7 +207,7 @@
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
         -->
-        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+        <div style="max-width: 600px; margin: 20px auto;" class="email-container">
             <!--[if mso]>
             <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
             <tr>
@@ -217,45 +217,55 @@
 	        <!-- Email Body : BEGIN -->
 	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
 		        <!-- Email Header : BEGIN -->
-	            <tr>
+	            <!-- <tr>
 	                <td style="padding: 20px 0; text-align: center">
 	                    <img src="https://via.placeholder.com/200x50" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
 	                </td>
-	            </tr>
+	            </tr> -->
 		        <!-- Email Header : END -->
 
                 <!-- Hero Image, Flush : BEGIN -->
-                <tr>
+                <!-- <tr>
                     <td style="background-color: #ffffff;">
                         <img src="https://via.placeholder.com/1200x600" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
                     </td>
-                </tr>
+                </tr> -->
                 <!-- Hero Image, Flush : END -->
 
-                <!-- 1 Column Text + Button : BEGIN -->
+                <!-- Header : BEGIN -->
                 <tr>
-                    <td style="background-color: #ffffff;">
+                    <td style="background-color: #ffffff; border-radius: 4px;">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; font-weight: normal;">Praesent laoreet malesuada&nbsp;cursus.</h1>
-                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                    <p style="margin: 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #00b14f; font-weight: bold;">Grab</p>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #161a1d; font-weight: bold;">Consumer Experience</p>
+                                    
                                 </td>
                             </tr>
+                            
+                        </table>
+                    </td>
+                </tr>
+                <!-- Header : END -->
+
+                <!-- Intro : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 0 20px;">
-                                    <!-- Button : BEGIN -->
-                                    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
-                                        <tr>
-                                            <td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;">
-											     <a class="button-a button-a-primary" href="https://google.com/" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;">Primary Button</a>
-											</td>
-                                        </tr>
-                                    </table>
-                                    <!-- Button : END -->
+                                <td style="padding: 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #697078; font-weight: bold;">Issue #1</h2>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">Happy new year 2020! Welcome to the latest issue of CX newsletter. In this edition of our newsletter we want to reflect on 2019 and what projects will be working on this year.
+                                    </p>
+                                    
                                 </td>
+                                <tr>
+                                    <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
+                                </tr>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
                                     <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
                                     <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
@@ -265,11 +275,98 @@
 									</ul>
                                     <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
                                 </td>
+                            </tr> -->
+                        </table>
+                    </td>
+                </tr>
+                <!-- Intro : END -->
+                <!-- Section 1 : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 0 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #161a1d; font-weight: 300;">Looking back</h2>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">2019H1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;"><b>TL;DR:</b> Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
+                            </tr>
+                            <!-- <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
+                                    <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
+										<li style="margin:0 0 10px 30px;" class="list-item-first">A list item.</li>
+										<li style="margin:0 0 10px 30px;">Another list item here.</li>
+										<li style="margin: 0 0 0 30px;" class="list-item-last">Everyone gets a list item, list items for everyone!</li>
+									</ul>
+                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr> -->
+                        </table>
+                    </td>
+                </tr>
+                <!-- Section 1 : END -->
+
+                <!-- Section 2 : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 0 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #161a1d; font-weight: 300;">Banner</h2>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">Dynamic deals discovery</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px;">
+                                <img src="https://lh4.googleusercontent.com/F1W2DVxwo1OnB6PSpCn9TK6VA66aUeZe9gzL5C50i-_QxjCZ42oVHVCY5MQX4ESqTBGPYTfUo06_YfV0iUuoXm_ntyPEtHDaDxTZ5zsLSrnsohtpyCumDGhtxmCj5iX8ENDgz1q4" width="680" height="" alt="alt_text" border="0" style="width: 100%; max-width: 680px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">Our users want to know about interesting deals, offers and campaigns on the homepage, but such messages usually go into the feed, sometimes only visible if users scroll down the app. As Grab, we want to highlight various messages such as campaigns promotions, product announcements and critical business messages, all of which compete for limited and dynamic real estate today.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <h3 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 24px; color: #333333; font-weight: 300;">By the digits</h3>
+                                    <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
+										<li style="margin:0 0 10px 30px;" class="list-item-first">A list item.</li>
+										<li style="margin:0 0 10px 30px;">Another list item here.</li>
+										<li style="margin: 0 0 0 30px;" class="list-item-last">Everyone gets a list item, list items for everyone!</li>
+									</ul>
+                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px;">
+                                    <!-- Button : BEGIN -->
+                                    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; width: 100%;">
+                                        <tr>
+                                            <td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;">
+											     <a class="button-a button-a-primary" href="https://google.com/" style="background: #0b95da; border: 1px solid #0b95da; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px; text-align: center;">Project Link &nbsp;&#x2192;</a>
+											</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Button : END -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
                             </tr>
                         </table>
                     </td>
                 </tr>
-                <!-- 1 Column Text + Button : END -->
+                <!-- Section 2 : END -->
 
                 <!-- 2 Even Columns : BEGIN -->
                 <tr>

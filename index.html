@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: forces Samsung Android mail clients to use the entire viewport */
+        #MessageViewBody, #MessageWebViewDiv{
+            width: 100% !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    /* What it does: Hover styles for buttons */
+	    .button-td,
+	    .button-a {
+	        transition: all 100ms ease-in;
+	    }
+	    .button-td-primary:hover,
+	    .button-a-primary:hover {
+	        background: #0c397e !important;
+	        border-color: #0c397e !important;
+	    }
+
+	    /* Media Queries */
+	    @media screen and (max-width: 600px) {
+
+	        /* What it does: Adjust typography on small screens to improve readability */
+	        .email-container p {
+	            font-size: 17px !important;
+	        }
+
+	    }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f6f6f6;">
+	<center style="width: 100%; background-color: #f6f6f6;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <tr>
+    <td>
+    <![endif]-->
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+        <!-- Preview Text Spacing Hack : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+	        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        </div>
+        <!-- Preview Text Spacing Hack : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px; margin: 20px auto;" class="email-container">
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <tr>
+            <td>
+            <![endif]-->
+
+	        <!-- Email Body : BEGIN -->
+	        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+		        <!-- Email Header : BEGIN -->
+	            <!-- <tr>
+	                <td style="padding: 20px 0; text-align: center">
+	                    <img src="https://via.placeholder.com/200x50" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                </td>
+	            </tr> -->
+		        <!-- Email Header : END -->
+
+                <!-- Hero Image, Flush : BEGIN -->
+                <!-- <tr>
+                    <td style="background-color: #ffffff;">
+                        <img src="https://via.placeholder.com/1200x600" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+                    </td>
+                </tr> -->
+                <!-- Hero Image, Flush : END -->
+
+                <!-- Header : BEGIN -->
+                <tr>
+                    <td style="background-color: #002E27; border-radius: 4px 4px 0 0;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <p style="margin: 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #00b14f; font-weight: bold;">Grab</p>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #fff; font-weight: bold;">Consumer Experience</p>
+                                    
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </td>
+                </tr>
+                <!-- Header : END -->
+                
+                <!-- Intro : BEGIN -->
+                <tr>
+                    <td style="background-color: #00b14f;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 10px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
+                                    <h2 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #fff; font-weight: bold;">Issue #1</h2>
+                                    <!-- <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">Happy new year 2020! Welcome to the latest issue of CX newsletter. In this edition of our newsletter we want to reflect on 2019 and what projects will be working on this year.
+                                    </p> -->
+                                    
+                                </td>
+                                <!-- <tr>
+                                    <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                        <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
+                                </tr> -->
+                            </tr>
+                            <!-- <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #333333; font-weight: bold;">Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</h2>
+                                    <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
+										<li style="margin:0 0 10px 30px;" class="list-item-first">A list item.</li>
+										<li style="margin:0 0 10px 30px;">Another list item here.</li>
+										<li style="margin: 0 0 0 30px;" class="list-item-last">Everyone gets a list item, list items for everyone!</li>
+									</ul>
+                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr> -->
+                        </table>
+                    </td>
+                </tr>
+                <!-- Intro : END -->
+
+                <!-- Section 1 : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 32px; line-height: 48px; color: #161a1d; font-weight: 300;">A year of learning</h2>
+                                    <!-- <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">2019H1</p> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">Welcome to Consumer Experience’s (CX) first edition, where we’d like to take this opportunity to share our experiences, learnings and insights from past experiments, as we pursue our team mission to optimise consumer convenience, value for money and relationships.</p>
+                                    <p>CX has two work streams to address key customer problems as we work towards being the most preferred app in SE Asia.</p>
+                                </td>
+                            </tr>
+                            <!-- Section 1: 2 Columns: BEGIN -->
+                            <tr>
+                                <td style="padding: 40px 10px 40px 10px; background-color: #ffffff;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="90%">
+                                                    <tr>
+                                                        <td width="200" height="" style="text-align: center; padding: 0 10px; width: 200px; height: 200px; max-width: 200px; background-color: #fff;margin: 0 auto; display: table-cell; vertical-align: middle; border: 2px solid #161a1d;">
+                                                            <h1 style="color: #161a1d; margin: 0; padding: 0;font-family: sans-serif;">High Intent</h1>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: center; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                                                            <p style="margin: 0;">Helping customers with faster ways to transact.</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="90%">
+                                                    <tr>
+                                                        <td style="text-align: center; padding: 0 10px; width: 200px; height: 200px; max-width: 200px; background-color: #fff; margin: 0 auto; display: table-cell; vertical-align: middle; border: 2px solid #161a1d;">
+                                                            <h1 style="color: #161a1d; margin: 0; padding: 0;font-family: sans-serif;">Discovery</h1>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: center; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                                                            <p style="margin: 0;">Seamless, contextual and personalised discovery of value.</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- Section 1: 2 Columns: END -->
+                            <tr>
+                                <td style="padding: 0 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">As we look into ways to optimise fastest ways to transact and help consumers discover and try new services, we’ve met and spoke to a lot of our end users on ground to understand their daily needs. Their participation has resulted in our continuous efforts to experiment, learn by measuring how behaviour changes impacts our business.</p>
+                                </td>
+                            </tr>
+                            <!-- Button : BEGIN -->
+                            <tr>
+                                <td style="padding:20px;">
+                                    
+                                    <table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; width: 100%;">
+                                        <tr>
+                                            <td class="" style="border-radius: 4px;">
+                                                <a class="" href="https://wiki.grab.com/display/GRABPAX/CX+Experiments+Summary" target="_blanks" style="font-family: sans-serif; font-size: 18px; line-height: 18px; text-decoration: none; padding: 10px 0; color: #0b95da; display: block; border-radius: 4px; text-align: left;"><strong><span style="color: #697078;">&#x2794;&nbsp;</span>CX Experiments Summary</strong></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="" style="border-radius: 4px;">
+                                                <a class="" href="https://docs.google.com/spreadsheets/d/1SP1LQE19titrzCg4MmxCu4Mwf8nQW5y-dWeoxdqImGU/edit#gid=1058090560" target="_blank" style="font-family: sans-serif; font-size: 18px; line-height: 18px; text-decoration: none; padding: 10px 0; color: #0b95da; display: block; border-radius: 4px; text-align: left;"><strong><span style="color: #697078;">&#x2794;&nbsp;</span>CX Design Strategy & Research</strong></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                
+                                   
+                                </td>
+                            </tr>
+                             <!-- Button : END -->
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Section 1 : END -->
+
+                <!-- Section 2 : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 0 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 32px; line-height: 48px; color: #161a1d; font-weight: 300;">Designing for intent</h2>
+                                    <h3 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #00b14f; font-weight: 300;">Universal Search</h3>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">by High Intent</p>
+                                </td>
+                            </tr>
+                            <!-- 3 Even Columns : BEGIN -->
+                            <tr>
+                                <td style="padding: 20px 20px 40px 20px; background-color: #ffffff;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <!-- Column 1: BEGIN -->
+                                            <td valign="top" width="33%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="font-family: sans-serif; font-size: 16px; line-height: 20px; color: #697078; padding: 10px 0; font-weight: 500;">
+                                                        <p style="margin: 0;">Adoption <br>rate</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                          <h1 style="color: #161a1d; margin: 0; padding: 0;font-family: sans-serif;">8%</h1>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column 1: END -->
+                                            <!-- Column 1: BEGIN -->
+                                            <td valign="top" width="33%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="font-family: sans-serif; font-size: 16px; line-height: 20px; color: #697078; padding: 10px 0; font-weight: 500;">
+                                                        <p style="margin: 0;">GMV <br>per pax</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h1 style="color: #161a1d; margin: 0; padding: 0;font-family: sans-serif;">+1.2%</h1>
+                                                        </td>
+                                                    </tr>
+                                                 </table>
+                                            </td>
+                                            <!-- Column 1: END -->
+                                            <!-- Column 1: BEGIN -->
+                                            <td valign="top" width="33%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="font-family: sans-serif; font-size: 16px; line-height: 20px; color: #697078; padding: 10px 0; font-weight: 500;">
+                                                        <p style="margin: 0;">Successful <br> Results</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h1 style="color: #161a1d; margin: 0; padding: 0;font-family: sans-serif;">97.8%</h1>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column 1: END -->
+                                            
+                                        </tr>
+                                    </table>
+                                 </td>
+                            </tr>
+                            <!-- 3 Even Columns : END -->
+                            <tr>
+                                <td style="padding: 0 20px 20px 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">As Southeast Asia look to Grab to serve their daily essentials, they need a faster way to navigate or discover the ever growing list of services available on our platform. With our initial experiment on Universal Search, consumers are able to select a ride destination directly from the Home screen, reducing the number of clicks from X to Y. They can also now search quickly for their favorite restaurants to order food. Soon, they will also be able to search all the <strong>Offers</strong> available, as well as movies, malls, and nearby places.</p>
+                                </td>
+                            </tr>
+                            <!-- Image, Flush : BEGIN -->
+                            <tr>
+                                <td style="background-color: #ffffff;">
+                                    <img src="https://doc-0g-0s-docs.googleusercontent.com/docs/securesc/uvie0sq5a4rmc2v56ro2a3bui9ld79t8/9tg5ctbk0v1e4jad575s5sq367a8i147/1581488100000/17584340847777354352/17584340847777354352/1ft0ugWj8GOiCxW2JLq6oYKeDDX4vNs1W?h=15411376337988514272&e=view&authuser=0" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+                                </td>
+                            </tr>
+                            <!-- Image, Flush : END -->
+                            <!-- Quotation : BEGIN -->
+                            <!-- Quotation : END -->
+                            
+                         </table>
+                    </td>
+                </tr>
+                <!-- Section 2 : END -->
+
+                <!-- Section 3: BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 40px 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 32px; line-height: 48px; color: #161a1d; font-weight: 300;">Anticipating customer’s needs 
+                                    </h2>
+                                    <h3 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #00b14f; font-weight: 300;">Shortcuts</h3>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">by High Intent</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <hr style="border:0; border-bottom: 1px solid #d7dce4;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Section 3: END -->
+               
+                <!-- Section 4: BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 0px 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <p style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 16px; line-height: 30px; color: #697078; font-weight: 300;">Another year of continuous learning and improvements.
+                                    </p>
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 32px; line-height: 48px; color: #161a1d; font-weight: 300;">A simpler and faster everyday life
+                                    </h2>
+                                    <h3 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #00b14f; font-weight: 300;">IA Exercise</h3>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">by High Intent</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">As we continue to serve more daily essential services, Grab’s home screen vision required us to revisit our approach to how we help customers learn about Grab’s services while helping them complete their tasks faster than ever before. Project.Name kicked off last October to help us understand how our Partner Customers could serve our customers throughout the Acquire, Growth and Mature business life cycles. </p>
+                                    <p>We envision a future where customers will always understand what they see and where to find what they need, thereby improving the overall conversion across all services. We conducted extensive validation exercises which included card-sorting, IA testing, user research and surveys, as well as cross-TF and user workshops.</p>
+                                </td>
+                            </tr>
+                            <!-- Image, Flush : BEGIN -->
+                            <tr>
+                                <td style="background-color: #ffffff;">
+                                    <img src="https://doc-08-0s-docs.googleusercontent.com/docs/securesc/uvie0sq5a4rmc2v56ro2a3bui9ld79t8/vku0o6nlo6jl55l18v0vbuqbmm1dnf9n/1581488100000/17584340847777354352/17584340847777354352/19OMDjgHNAoKkO9zl539UUWRVXD6F4qKA?e=view&h=15411376337988514272&authuser=0&nonce=9jjo8g6uhuc7m&user=17584340847777354352&hash=gudt4iiog0slcjik1nnnngciqrd418e8" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+                                </td>
+                            </tr>
+                            <!-- Image, Flush : END -->
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 22px; color: #242A2E; font-weight: bold;">What we learned</h2>
+                                    <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
+										<li style="margin:0 0 10px 30px;" class="list-item-first">Customers are confused by various places to find save money on the homepage - Subscriptions, Challenges, Feed, Inbox</li>
+										<li style="margin:0 0 10px 30px;">Customer’s mental model clashes between the desire to complete a task (Book a ride, Order food) and exploring Grab’s services (Feed)</li>
+                                        <li style="margin: 0 0 10px 30px;" class="list-item-last">Activity status contains critical information, and both visibility and accessibility should be improved</li>
+                                        <li style="margin: 0 0 0 30px;" class="list-item-last">According to Grabbers, Search, Top 3 services and QR code scanner are the most important tools on the homepage and should be most accessible by a single hand reach, or by hand gestures (Eg. Swipe right to open camera and Pay as a potential solution).</li>
+									</ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Section 4: END -->
+
+                <!-- Section 5: BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff; border-radius: 4px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 0px 20px 0 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 32px; line-height: 48px; color: #161a1d; font-weight: 300;">Always delivering value
+                                    </h2>
+                                    <h3 style="margin: 0 0 0 0; font-family: sans-serif; font-size: 20px; line-height: 24px; color: #00b14f; font-weight: 300;">Project Avengers</h3>
+                                    <p style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 20px; line-height: 30px; color: #697078; font-weight: 300;">by Discovery</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #242A2E;">
+                                    <p style="margin: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia facere, neque distinctio molestias quibusdam deleniti consequuntur velit iure asperiores quia recusandae nisi et libero dolores voluptate qui animi cupiditate quisquam. </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Section 5: END -->
+
+                
+                            
+                <!-- Clear Spacer : BEGIN -->
+                <tr>
+                    <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Clear Spacer : END -->
+
+                <!-- 1 Column Text : BEGIN -->
+                <!-- <tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr> -->
+                <!-- 1 Column Text : END -->
+
+            </table>
+            <!-- Email Body : END -->
+
+            <!-- Email Footer : BEGIN -->
+	        <!-- <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+                <tr>
+                    <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #888888;">
+                        <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+                        <br><br>
+						Company Name<br><span class="unstyle-auto-detected-links">123 Fake Street, SpringField, OR, 97477 US<br>(123) 456-7890</span>
+                        <br><br>
+                        <unsubscribe style="color: #888888; text-decoration: underline;">unsubscribe</unsubscribe>
+                    </td>
+                </tr>
+            </table> -->
+            <!-- Email Footer : END -->
+
+            <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+
+        <!-- Full Bleed Background Section : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;">
+            <tr>
+                <td>
+                    <!-- <div align="center" style="max-width: 600px; margin: auto;" class="email-container"> -->
+                        <!--[if mso]>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+                        <tr>
+                        <td>
+                        <![endif]-->
+                        <!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding: 20px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
+                                    <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                                </td>
+                            </tr>
+                        </table> -->
+                        <!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    <!-- </div> -->
+                </td>
+            </tr>
+        </table>
+        <!-- Full Bleed Background Section : END -->
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>

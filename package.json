@@ -19,9 +19,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/TedGoas/Cerberus.git"
+    "url": "git+https://github.com/TedGoas/Cerberus.git"
   },
   "bugs": {
     "url": "https://github.com/TedGoas/Cerberus/issues"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js' --directory --port 7777 --browser 'Firefox Developer Edition'"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "run-script-os": "^1.0.3"
   }
 }

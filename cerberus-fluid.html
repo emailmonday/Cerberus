@@ -8,6 +8,16 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
     <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
     <!-- Web Font / @font-face : BEGIN -->
     <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
 
@@ -134,17 +144,6 @@
         }
 
     </style>
-
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
-
     <!-- CSS Reset : END -->
 
     <!-- Progressive Enhancements : BEGIN -->

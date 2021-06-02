@@ -90,8 +90,13 @@
         table {
             border-spacing: 0 !important;
             border-collapse: collapse !important;
-            table-layout: fixed !important;
             margin: 0 auto !important;
+        }
+        /* What it does: Prevents Mailchimp from inlining these styles. */
+        @media all {
+            table {
+                table-layout: fixed !important;
+            }
         }
 
         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */

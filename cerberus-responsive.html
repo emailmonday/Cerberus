@@ -92,7 +92,7 @@
             border-collapse: collapse !important;
             margin: 0 auto !important;
         }
-        /* What it does: Prevents Mailchimp from inlining these styles. */
+        /* What it does: Prevents styles from being inlined. */
         @media all {
             table {
                 table-layout: fixed !important;
@@ -109,18 +109,21 @@
             -ms-interpolation-mode:bicubic;
         }
 
-        /* What it does: A work-around for email clients meddling in triggered links. */
-        a[x-apple-data-detectors],  /* iOS */
-        .unstyle-auto-detected-links a,
-        .aBn {
-            border-bottom: 0 !important;
-            cursor: default !important;
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important;
+        /* What it does: Prevents styles from being inlined. */
+        @media all {
+            /* What it does: A work-around for email clients meddling in triggered links. */
+            a[x-apple-data-detectors],  /* iOS */
+            .unstyle-auto-detected-links a,
+            .aBn {
+                border-bottom: 0 !important;
+                cursor: default !important;
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
         }
 
         /* What it does: Prevents Gmail from changing the text color in conversation threads. */
@@ -171,11 +174,14 @@
         .button-a {
             transition: all 100ms ease-in;
         }
-	    .button-td-primary:hover,
-	    .button-a-primary:hover {
-	        background: #555555 !important;
-	        border-color: #555555 !important;
-	    }
+        /* What it does: Prevents styles from being inlined. */
+        @media all {
+    	    .button-td-primary:hover,
+    	    .button-a-primary:hover {
+    	        background: #555555 !important;
+    	        border-color: #555555 !important;
+    	    }
+        }
 
         /* Media Queries */
         @media screen and (max-width: 600px) {

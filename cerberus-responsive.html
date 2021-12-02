@@ -211,6 +211,42 @@
             }
         }
 
+        /* Dark Mode Styles : BEGIN */
+        @media (prefers-color-scheme: dark) {
+            .email-bg {
+                background: #111111 !important;
+            }
+            .darkmode-bg {
+                background: #222222 !important;
+            }
+            h1,
+            h2,
+            h3,
+            p,
+            li,
+            .darkmode-text,
+            .email-container a:not([class]) {
+                color: #F7F7F9 !important;
+            }
+            td.button-td-primary,
+            td.button-td-primary a {
+                background: #ffffff !important;
+                border-color: #ffffff !important;
+                color: #222222 !important;
+            }
+            td.button-td-primary:hover,
+            td.button-td-primary a:hover {
+                background: #cccccc !important;
+                border-color: #cccccc !important;
+            }
+            .footer td {
+                color: #aaaaaa !important;
+            }
+            .darkmode-fullbleed-bg {
+                background-color: #0F3016 !important;
+            }
+        }
+        /* Dark Mode Styles : END */
     </style>
     <!-- Progressive Enhancements : END -->
 
@@ -221,10 +257,10 @@
 	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
 	3. mso conditional: For Windows 10 Mail
 -->
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-  <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #222222;">
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;" class="email-bg">
+  <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #222222;" class="email-bg">
     <!--[if mso | IE]>
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;" class="email-bg">
     <tr>
     <td>
     <![endif]-->
@@ -254,7 +290,7 @@
 
             <!-- Hero Image, Flush : BEGIN -->
             <tr>
-                <td style="background-color: #ffffff;">
+                <td style="background-color: #ffffff;" class="darkmode-bg">
                     <img src="https://via.placeholder.com/1200x600" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
                 </td>
             </tr>
@@ -262,7 +298,7 @@
 
             <!-- 1 Column Text + Button : BEGIN -->
             <tr>
-                <td style="background-color: #ffffff;">
+                <td style="background-color: #ffffff;" class="darkmode-bg">
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
                             <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
@@ -322,7 +358,7 @@
 
 	        <!-- 2 Even Columns : BEGIN -->
 	        <tr>
-	            <td style="padding: 10px; background-color: #ffffff;">
+	            <td style="padding: 10px; background-color: #ffffff;" class="darkmode-bg">
 	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                    <tr>
 	                        <!-- Column : BEGIN -->
@@ -365,7 +401,7 @@
 
 	        <!-- 3 Even Columns : BEGIN -->
 	        <tr>
-	            <td style="padding: 10px; background-color: #ffffff;">
+	            <td style="padding: 10px; background-color: #ffffff;" class="darkmode-bg">
 	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                    <tr>
 	                        <!-- Column : BEGIN -->
@@ -424,7 +460,7 @@
 
 	        <!-- Thumbnail Left, Text Right : BEGIN -->
 	        <tr>
-	            <td dir="ltr" width="100%" style="padding: 10px; background-color: #ffffff;">
+	            <td dir="ltr" width="100%" style="padding: 10px; background-color: #ffffff;" class="darkmode-bg">
 	                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                    <tr>
 	                        <!-- Column : BEGIN -->
@@ -467,7 +503,7 @@
 
 	        <!-- Thumbnail Right, Text Left : BEGIN -->
 	        <tr>
-	            <td dir="rtl" width="100%" style="padding: 10px; background-color: #ffffff;">
+	            <td dir="rtl" width="100%" style="padding: 10px; background-color: #ffffff;" class="darkmode-bg">
 	                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 	                    <tr>
 	                        <!-- Column : BEGIN -->
@@ -518,11 +554,11 @@
 
 	        <!-- 1 Column Text : BEGIN -->
 	        <tr>
-	            <td style="background-color: #ffffff;">
+	            <td style="background-color: #ffffff;" class="darkmode-bg">
 	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                    <tr>
 	                        <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-	                            Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.
+	                            <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
 	                        </td>
 	                    </tr>
 	                </table>
@@ -534,7 +570,7 @@
 	    <!-- Email Body : END -->
 
 	    <!-- Email Footer : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;" class="email-container">
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;" class="footer">
 	        <tr>
 	            <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #ffffff;">
 	                <webversion style="color: #ffffff; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
@@ -548,7 +584,7 @@
 	    <!-- Email Footer : END -->
 
 	    <!-- Full Bleed Background Section : BEGIN -->
-	    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;">
+	    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;" class="darkmode-fullbleed-bg">
 	        <tr>
 	            <td>
 	                <div align="center" style="max-width: 600px; margin: auto;" class="email-container">

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{% block page_title %}Codespace Boilerplate{% endblock %}</title>
+<meta name="description" content="{% block page_description %}A simple boilerplate project to kickstart your project{% endblock %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{{ get_url(path="favicon.png") | safe }}">
+<link rel="stylesheet" href="{{ get_url(path="design.css") | safe }}">
+</head>
+<body id="page-{% block page_id %}home{% endblock %}">
+<div class="container">
+
+  {% block content %}
+    <h1>Product Name</h1>
+    <p>This is the description of this amazing new product that is coming soon. Leave your email address and be the first to hear when we launch.</p>
+    <!--
+    Mailchimp Form
+    1. Create a Mailchimp account on mailchimp.com
+    2. Navigate to 'Audience'
+    3. Navigate to 'Signup forms'
+    4. Navigate to 'Embedded forms'
+    5. Copy the form 'Action' atribute from the html and paste it in the 'Action attribute below.
+    -->
+    <div id="mc_embed_signup">
+      <form action="---->ADD YOUR MAILCHIMP URL HERE<-----" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <input type="email" value="" name="EMAIL" class="required email" placeholder="hello@example.com" id="mce-EMAIL">
+        <input type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="button">
+        <div id="mce-responses">
+      		<div class="response" id="mce-error-response" style="display:none">You are already subscribed.</div>
+      		<div class="response" id="mce-success-response" style="display:none">Thank you for subscribing!</div>
+      	</div>
+      </form>
+    </div>
+    <!--End Mailchimp Form-->
+  {% endblock content %}
+
+</div><!--/container-->
+<footer><a href="https://codespace.co"><img src="{{ get_url(path="images/codespace.svg") | safe }}"/></a></footer>
+<script type='text/javascript' src='{{ get_url(path="scripts/mailchimp-form-validation.js") | safe }}'></script>
+</body>
+</html>

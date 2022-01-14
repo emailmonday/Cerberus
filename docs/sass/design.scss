@@ -1,0 +1,152 @@
+/*=========================================================================
+    CSS RESET
+=========================================================================*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*=========================================================================
+    VARIABLES
+=========================================================================*/
+
+$color-CTA:           rgba(000,122,255,1.00);
+$color-gray-100:      rgba(000,016,036,1.00);
+$color-gray-90:       rgba(000,016,036,0.90);
+$color-gray-60:       rgba(000,016,036,0.60);
+$color-gray-30:       rgba(000,016,036,0.30);
+$color-gray-12:       rgba(000,016,036,0.12);
+$color-gray-4:        rgba(000,016,036,0.04);
+
+/*=========================================================================
+    MAIN LAYOUT
+=========================================================================*/
+
+body {
+  color: $color-gray-60;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+}
+
+.container{
+  max-width: 36em;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+}
+
+
+h1{
+  margin-bottom: 1rem;
+  color: $color-gray-100;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+p{
+  margin-bottom: 3rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+/*=========================================================================
+    MAILCHIMP FORM STYLING
+=========================================================================*/
+
+form{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  input{
+    height: 3rem;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    color: $color-gray-90;
+    font-size: 1.1rem;
+    line-height: 3rem;
+
+    &[type=email]{
+      grid-column: 1 / span 5;
+      grid-row: 1 / 2;
+      background: $color-gray-12;
+    }
+    &[type=submit]{
+      grid-column: 6 / span 2;
+      grid-row: 1 / 2;
+      margin-left: 0.5rem;
+      min-width: 10rem;
+      background: $color-CTA;
+      color: #fff;
+      cursor: pointer;
+
+      &:active{
+        box-shadow: inset 0 0 0 100rem $color-gray-12;
+      }
+    }
+  }
+
+  div.mce_inline_error{
+    grid-column: 1 / span 7;
+    grid-row: 2 / 3;
+    margin: 1rem 0 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #FFF7DB;
+    color: #A27D00;
+    font-size: 80%;
+
+    &::before{
+      display: inline-block;
+      margin-right: 0.5rem;
+      content: '⚠️';
+    }
+  }
+
+  #mce-responses{
+    grid-column: 1 / span 7;
+    grid-row: 2 / 3;
+
+    .response{
+      margin: 1rem 0 0;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: #f6f6f6;
+      font-size: 80%;
+
+      &#mce-error-response{
+        background: #FFF7DB;
+        color: #A27D00;
+
+        &::before{
+          display: inline-block;
+          margin-right: 0.5rem;
+          content: '⚠️';
+        }
+
+        a{display: none}
+      }
+
+      &#mce-success-response{
+        background: #DBFDFA;
+        color: #009287;
+
+        &::before{
+          display: inline-block;
+          margin-right: 0.5rem;
+          content: '🎉';
+        }
+      }
+    }
+  }
+}

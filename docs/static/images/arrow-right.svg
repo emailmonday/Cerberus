@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow Right</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Iconset-Copy" transform="translate(-464.000000, -290.000000)" fill="#007AFF">
+            <g id="Group-5" transform="translate(-5.000000, -4.000000)">
+                <g id="Chevron-right" transform="translate(406.000000, 244.000000)">
+                    <path d="M60.2,55.2 L60.2,65.9 C60.2,66.5075132 59.7075133,67 59.1,67 C58.4924868,67 58,66.5075132 58,65.9 L58,54.1 C58,53.4924868 58.4924868,53 59.1,53 L70.9,53 C71.5075132,53 72,53.4924868 72,54.1 C72,54.7075133 71.5075132,55.2 70.9,55.2 L60.2,55.2 Z" transform="translate(65.000000, 60.000000) rotate(135.000000) translate(-65.000000, -60.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

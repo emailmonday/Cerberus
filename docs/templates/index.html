@@ -1,42 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
 <head>
-<meta charset="utf-8">
-<title>{% block page_title %}Codespace Boilerplate{% endblock %}</title>
-<meta name="description" content="{% block page_description %}A simple boilerplate project to kickstart your project{% endblock %}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="{{ get_url(path="favicon.png") | safe }}">
-<link rel="stylesheet" href="{{ get_url(path="design.css") | safe }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block page_title %}Cerberus - Patterns for Responsive HTML Email Templates{% endblock %}</title>
+  <link rel="stylesheet" href="{{ get_url(path="design.css") | safe }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="description" content="{% block page_description %}A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.{% endblock %}">
+  <meta property="og:title" content="Cerberus - Patterns for Responsive HTML Email Templates">
+  <meta property="og:description" content="A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.">
+  <meta property="og:image" content="https://tedgoas.github.io/Cerberus/images/og-image.png">
+  <meta property="og:image:alt" content="Image description">
+  <meta property="og:locale" content="en_EN">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://tedgoas.github.io/Cerberus">
+  <link rel="canonical" href="https://tedgoas.github.io/Cerberus">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ get_url(path="favicon.png") | safe }}">
+
 </head>
 <body id="page-{% block page_id %}home{% endblock %}">
-<div class="container">
+  <div class="site">
+    <nav class="sitenav">
+      <div class="mobile-header">
+        <a href="/" rel="home"><img src="{{ get_url(path="images/logo-cerberus-light.svg") | safe }}" alt="Cerberus logo." class="logo dark-hide"></a>
+        <a href="/" rel="home"><img src="{{ get_url(path="images/logo-cerberus-dark.svg") | safe }}" alt="Cerberus logo." class="logo light-hide"></a>
+        <button class="mobile-menu" onclick="siteNav()">Menu <div class="menu-icon"><span class="icon-bar bar1"></span><span class="icon-bar bar2"></span><span class="icon-bar bar3"></span></div></button>
+      </div>
+      <ul class="reset" id="sitenav-ul">
+        <li><a href="" class="current">Home</a></li>
+        <li><a href="">The Templates</a></li>
+        <li><a href="">Components</a></li>
+        <li><a href="">Hybrid vs. Responsive</a></li>
+        <li><a href="">Outlook Conditional CSS</a></li>
+        <li><a href="">Dark Mode</a></li>
+        <li><a href="">Best Practices</a></li>
+        <li><a href="">Contributing</a></li>
+        <li class="first-minor minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58214 0 0 3.67143 0 8.20357C0 11.8286 2.29286 14.9 5.47143 15.9857C5.87143 16.0607 6.01786 15.8071 6.01786 15.5893C6.01786 15.3929 6.01071 14.8786 6.00714 14.1929C3.78214 14.6893 3.31071 13.0929 3.31071 13.0929C2.94643 12.1464 2.42143 11.8929 2.42143 11.8929C1.69643 11.3821 2.475 11.3929 2.475 11.3929C3.27857 11.45 3.7 12.2393 3.7 12.2393C4.41429 13.4929 5.57143 13.1321 6.02857 12.9214C6.1 12.3929 6.30714 12.0286 6.53571 11.825C4.76071 11.6179 2.89286 10.9143 2.89286 7.77143C2.89286 6.875 3.20357 6.14286 3.71429 5.57143C3.63214 5.36429 3.35714 4.52857 3.79286 3.4C3.79286 3.4 4.46429 3.17857 5.99286 4.23929C6.63214 4.05714 7.31429 3.96786 7.99643 3.96429C8.675 3.96786 9.36071 4.05714 10 4.23929C11.5286 3.17857 12.1964 3.4 12.1964 3.4C12.6321 4.52857 12.3571 5.36429 12.275 5.57143C12.7857 6.14643 13.0964 6.87857 13.0964 7.77143C13.0964 10.9214 11.225 11.6143 9.44286 11.8179C9.72857 12.0714 9.98571 12.5714 9.98571 13.3357C9.98571 14.4321 9.975 15.3179 9.975 15.5857C9.975 15.8036 10.1179 16.0607 10.525 15.9786C13.7107 14.8964 16 11.825 16 8.20357C16 3.67143 12.4179 0 8 0Z" fill="currentColor"/></svg>
+          View on Github
+        </a></li>
+        <li class="minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.66666 6.66666L7.99999 9.99999L11.3333 6.66666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 10V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Zip
+        </a></li>
+        <li class="minor"><a href="https://github.com/sponsors/TedGoas"><img src="{{ get_url(path="images/icon-heart.svg") | safe }}" alt="" height="16" width="16" border="0"> Sponsor Me</a></li>
+      </ul>
+    </nav>
 
-  {% block content %}
-    <h1>Product Name</h1>
-    <p>This is the description of this amazing new product that is coming soon. Leave your email address and be the first to hear when we launch.</p>
-    <!--
-    Mailchimp Form
-    1. Create a Mailchimp account on mailchimp.com
-    2. Navigate to 'Audience'
-    3. Navigate to 'Signup forms'
-    4. Navigate to 'Embedded forms'
-    5. Copy the form 'Action' atribute from the html and paste it in the 'Action attribute below.
-    -->
-    <div id="mc_embed_signup">
-      <form action="---->ADD YOUR MAILCHIMP URL HERE<-----" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <input type="email" value="" name="EMAIL" class="required email" placeholder="hello@example.com" id="mce-EMAIL">
-        <input type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="button">
-        <div id="mce-responses">
-      		<div class="response" id="mce-error-response" style="display:none">You are already subscribed.</div>
-      		<div class="response" id="mce-success-response" style="display:none">Thank you for subscribing!</div>
-      	</div>
-      </form>
-    </div>
-    <!--End Mailchimp Form-->
-  {% endblock content %}
-
-</div><!--/container-->
-<footer><a href="https://codespace.co"><img src="{{ get_url(path="images/codespace.svg") | safe }}"/></a></footer>
-<script type='text/javascript' src='{{ get_url(path="scripts/mailchimp-form-validation.js") | safe }}'></script>
+    <article>
+      {% block content %}
+      <header>
+        <h1 class="">Cerberus</h1>
+        <p>A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client.</p>
+        <div class="email-logos">
+          <img src="{{ get_url(path="images/gmail.svg") | safe }}" alt="Gmail.">
+          <img src="{{ get_url(path="images/apple.svg") | safe }}" alt="Apple.">
+          <img src="{{ get_url(path="images/outlook.svg") | safe }}" alt="Outlook.">
+          <img src="{{ get_url(path="images/yahoo.svg") | safe }}" alt="Yahoo!.">
+          <img src="{{ get_url(path="images/android.svg") | safe }}" alt="Android.">
+          <img src="{{ get_url(path="images/aol-light.svg") | safe }}" alt="Aol." class="dark-hide">
+          <img src="{{ get_url(path="images/aol-dark.svg") | safe }}" alt="Aol." class="light-hide">
+        </div>
+        <p>Because between mobile, Gmail, and Outlook, HTML email is a <span class="nowrap">three-headed dog</span> from hell.</p>
+      </header>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>Coding regular emails is hard enough by itself. Making them responsive and accessible shouldn’t add to the headache. A few simple, but solid patterns are all that’s needed to optimize emails for small screens and assistive technologies.</p>
+        <p><strong>That’s what Cerberus is.</strong> It’s just a few email patterns that go a long way.</p>
+        <p>The code blocks are compartmentalized so they may be used, removed, combined, and nested to build an email. Each template is annotated with code comments explaining what’s happening so you can add, edit, and remove code with some confidence.</p>
+        <p>Here's an example of a <a href="#">button</a>:</p>
+        <figure>
+          <pre><code class="language-html" data-lang="HTML">&lt;!-- Button : BEGIN --&gt;
+&lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;"&gt;
+  &lt;tr&gt;
+    &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;"&gt;
+      &lt;a class="button-a button-a-primary" href="#" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;Button Text&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;!-- Button : END --&gt;</code></pre>
+          <div class="example example-padded">
+            <style>
+              .ex-button:hover,
+              .ex-button:focus {
+                background: #555555 !important;
+              }
+              @media (prefers-color-scheme: dark) {
+                .ex-button {
+                  background: #ffffff !important;
+                  color: #222222 !important;
+                }
+                .ex-button:hover {
+                  background: #cccccc !important;
+                }
+              }
+            </style>
+            <a href="#" class="ex-button" style="background: #222; color: #fff; padding: 13px 17px; display: inline-block; border-radius: 4px; text-decoration: none; transition: all 100ms ease-in;">Button Text</a>
+          </div>
+        </figure>
+        <p>Cerberus is plain 'ol HTML and CSS, so it an be used in any framework or email service provider (ESP), though it's not written <em>for</em> any specific framework or ESP.</p>
+        <p>I <a href="http://www.tedgoas.com/blog/cerberus-responsive-email-templates/">wrote a blog post</a> that goes into more detail on why I made this in the first place.</p>
+      </section>
+      <section id="support">
+        <h2>Email Client Support</h2>
+        <p>Cerberus is tested in the most popular email clients as reported by Litmus and my own email campaigns. I’ve focused on the following clients:</p>
+        <div class="email-client-support">
+          <div class="three-columns">
+            <ul class="reset">
+              <li><strong>Desktop</strong></li>
+              <li>Outlook 2000/02/03/07/10/13/16/18 <small>(Windows)</small></li>
+              <li>Windows 10 Mail</li>
+              <li>Outlook 2011/16 <small>(Mac)</small></li>
+              <li>Apple Mail 9/10</li>
+              <li>Thunderbird</li>
+            </ul>
+            <ul class="reset">
+              <li><strong>Mobile</strong></li>
+              <li>iOS Mail <small>(iPhone + iPad)</small></li>
+              <li>Gmail <small>(iOS + Android, all account types)</small></li>
+              <li>Mail <small>(Android 6.0)</small></li>
+              <li>Yahoo <small>(iOS)</small></li>
+              <li>Outlook <small>(iOS)</small></li>
+              <li>Alto Mail <small>(iOS)</small></li>
+            </ul>
+            <ul class="reset">
+              <li><strong>Web Browser</strong></li>
+              <li>Gmail <small>(IMAP, GSuite)</small></li>
+              <li>Outlook.com</li>
+              <li>Yahoo</li>
+              <li>AOL</li>
+              <li>Office 365 Web</li>
+              <li>Comcast</li>
+              <li>Web.de</li>
+              <li>GMX.de</li>
+              <li>freenet.de</li>
+              <li>T-Online.de</li>
+              <li>Mail.ru</li>
+              <li>Terra Mail</li>
+            </ul>
+          </div>
+          <small>There are multiple versions of Gmail. Cerberus works pretty well in all of them. <a href="https://twitter.com/HTeuMeuLeu/">Rémi Parmentier</a> created <a href="https://cdn-images-1.medium.com/max/1400/1*JGe_A7b8LiHZfeSGzNZE9w.png">an excellent graphic</a> explaining <a href="https://emails.hteumeuleu.com/trying-to-make-sense-of-gmail-css-support-after-the-2016-update-53c15151063a">Gmail’s capabilities across products</a>.</small>
+        </div>
+        <aside data-emoji="💁🏻">When I say “tested”, I mean “email doesn’t fall apart”. I don’t mean "Everything is pixel perfect in Outlook" or “It looks the same after it’s been forwarded” or “I found a way to make media queries work everywhere.” They don’t.</aside>
+        <p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please <a href="https://github.com/TedGoas/Cerberus/issues">submit an issue</a>!</p>
+        <p>For what it’s worth, Litmus (who <i>does</i> test every email client) includes Cerberus in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.
+      </section>
+      <section id="author">
+        <h2>Author</h2>
+        <p>👋 I’m Ted Goas, the core author and maintainer. I’m a product designer & front-end developer with a soft spot for HTML emails. Some day I'd love to combine my professional craft and hobby to work on an email platform.<br>
+        <a href="https://twitter.com/TedGoas">@tedgoas</a> • <a href="https://www.tedgoas.com/">tedgoas.com</a>
+        </p>
+      </section>
+      <section id="thanks">
+        <h2>Special thanks</h2>
+        <ul>
+          <li>Site logo by <a href="https://danstiop.com">Dan Stiop</a></li>
+          <li>Everyone in <a href="https://email.geeks.chat/">Email Geeks Chat</a></li>
+        </ul>
+        <a href="https://gumroad.com/a/29078643" class="htmlio-ad">
+          <div class="htmlio-ad-img">
+            <img src="{{ get_url(path="images/htmlio-180x150.png") | safe }}" alt="" width="180" height="150">
+          </div>
+          <div class="htmlio-ad-text">
+            <h4>Ready Made HTML Email Templates</h4>
+            <p>If you’d prefer something that’s ready out of the box, I vouch for htmlemail.io. Responsive email templates, fully tested, and ready for your ESP or codebase. I know Lee personally and he knows his stuff!</p>
+            <p class="link">10 Responsive Emails Designed for Startups & Developers →</p>
+          </div>
+        </a>
+      </section>
+      {% endblock content %}
+    </article>
+    <div class="on-this-page"></div>
+  </div>
+  <script type='text/javascript' src='{{ get_url(path="scripts/scripts.js") | safe }}'></script>
+  <script>hljs.highlightAll();</script>
+  <!-- MicroAnalytics -->
 </body>
 </html>

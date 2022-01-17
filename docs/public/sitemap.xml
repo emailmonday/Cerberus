@@ -7,17 +7,37 @@
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/about-copy/</loc>
+            <loc>http://127.0.0.1:1111/best-practices/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/about/</loc>
+            <loc>http://127.0.0.1:1111/components/</loc>
             
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1111/content/</loc>
+            <loc>http://127.0.0.1:1111/contributing/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/dark-mode/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/hybrid-responsive/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/outlook/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1111/templates/</loc>
             
         </url>
     

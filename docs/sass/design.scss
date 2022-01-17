@@ -231,20 +231,28 @@ body::before {
 .sitenav a:active {
   color: var(--link);
 }
-.sitenav a.current {
+#page-home .sitenav-home,
+#page-templates .sitenav-templates,
+#page-components .sitenav-components,
+#page-hybrid-responsive .sitenav-hybrid-responsive,
+#page-outlook .sitenav-outlook,
+#page-dark-mode .sitenav-dark-mode,
+#page-best-practices .sitenav-best-practices,
+#page-contributing .sitenav-contributing {
   position: relative;
   display: flex;
   align-items: center;
   color: var(--link);
-}
-.sitenav a.current::before {
-  display: block;
-  content: "";
-  border-radius: 50%;
-  height: 7px;
-  width: 7px;
-  margin-right: var(--spacing4);
-  background-color: var(--link);
+
+  &::before {
+    display: block;
+    content: "";
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+    margin-right: var(--spacing4);
+    background-color: var(--link);
+  }
 }
 .first-minor  {
   margin-top: var(--spacing12);

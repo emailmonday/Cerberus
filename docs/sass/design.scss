@@ -34,6 +34,13 @@ picture {
   display: block;
   object-fit: contain;
 }
+table {
+  margin:0;
+  padding:0;
+  border:none;
+  border-collapse:collapse;
+  border-spacing:0;
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -51,6 +58,7 @@ picture {
   /* Open Color */
   --pink:         #e64980;
   --purple:       #9c36b5;
+  --teal:         #087f5b;
   --light-yellow: #fff3bf;
   --yellow:       #ffe066;
   /* Tailwind Slate */
@@ -86,7 +94,7 @@ picture {
   --spacing96:      9.6rem;
   --spacing128:     12.8rem;
   --margin-bottom:  var(--spacing16);
-  --section-spacer: var(--spacing24);
+  --section-spacer: var(--spacing36);
 
   /* Font Sizes */
   --fs-xs:      0.875rem;
@@ -158,14 +166,12 @@ a:active {
 a:visited {
   color: var(--link-visited);
 }
-article section {
-  padding-bottom: var(--section-spacer);
+article h2 {
+  padding-top: var(--section-spacer);
+  margin: var(--section-spacer) 0 calc(var(--section-spacer)/2);
   border-top: 1px solid var(--gray-lightest);
 }
-article section h2 {
-  padding-top: var(--section-spacer);
-}
-article section h3 {
+article h3 {
   padding-top: calc(var(--section-spacer) * .67);
 }
 code {
@@ -237,8 +243,7 @@ body::before {
 #page-hybrid-responsive .sitenav-hybrid-responsive,
 #page-outlook .sitenav-outlook,
 #page-dark-mode .sitenav-dark-mode,
-#page-best-practices .sitenav-best-practices,
-#page-contributing .sitenav-contributing {
+#page-best-practices .sitenav-best-practices {
   position: relative;
   display: flex;
   align-items: center;
@@ -247,12 +252,22 @@ body::before {
   &::before {
     display: block;
     content: "";
+    height: 14px;
+    width: 8px;
+    position: absolute;
+    left: -14px;
+    top: 7px;
+    background: url("images/icon-active.svg") no-repeat;
+  }
+  /*&::before {
+    display: block;
+    content: "";
     border-radius: 50%;
     height: 7px;
     width: 7px;
     margin-right: var(--spacing4);
     background-color: var(--link);
-  }
+  }*/
 }
 .first-minor  {
   margin-top: var(--spacing12);
@@ -275,7 +290,7 @@ body::before {
 /* Nav :: END */
 /* Article :: BEGIN */
 header {
-  padding: var(--spacing48) 0 var(--section-spacer);
+  padding-top: var(--spacing48);
 }
 header h1 {
   font-size: var(fs-xxl);
@@ -297,6 +312,15 @@ header p {
 }
 code {
   font-family: var(--ff-mono);
+}
+code:not(.hljs) {
+  font-size: var(--fs-xs);
+  padding: var(--spacing2) var(--spacing4);
+  background: var(--gray-lightest);
+  background: rgba(0,0,0,.08);
+  color: var(--teal);
+  opacity: .8;
+  border-radius: 4px;
 }
 pre {
   white-space: pre-wrap;
@@ -339,12 +363,38 @@ figure pre code {
 .example-padded {
   padding: var(--spacing16);
 }
+.data-table {
+  width: 100%;
+  margin-bottom: var(--spacing36);
+  font-size: var(--fs-sm);
+
+  th,
+  td {
+    padding: var(--spacing8) var(--spacing4);
+    line-height: var(--lh-sm);
+  }
+  th {
+    text-align: left;
+    border-bottom: 2px solid var(--gray-lighter);
+  }
+  td {
+    border-bottom: 1px solid var(--gray-lighter);
+  }
+  code {
+    white-space: nowrap;
+  }
+}
 aside {
   border-radius: 4px;
   background-color: var(--bg-aside);
   border: 1px solid var(--border-aside);
   padding: var(--spacing8);
   margin-bottom: var(--margin-bottom);
+
+  img {
+    display: block;
+    margin-top: var(--spacing8);
+  }
 }
 aside[data-emoji] {
   position: relative;
@@ -429,6 +479,11 @@ aside[data-emoji]::before {
 .on-this.page a:active {
   color: var(--link);
 }
+.on-this-page .toc-H3 {
+  font-size: var(--fs-xs);
+  margin-left: var(--spacing8);
+}
+/*
 .on-this-page a.current {
   position: relative;
   display: flex;
@@ -444,6 +499,7 @@ aside[data-emoji]::before {
   margin-right: var(--spacing4);
   background-color: var(--link);
 }
+*/
 /* On This Page :: END */
 
 /* Responsive styles :: BEGIN */
@@ -552,6 +608,7 @@ aside[data-emoji]::before {
   :root {
     --pink:         #e64980;
     --purple:       #da77f2;
+    --teal:         #63e6be;
     --light-yellow: #854D0E;
     --yellow:       #713F12;
     --gray-lightest:#0F172A;
@@ -572,6 +629,9 @@ aside[data-emoji]::before {
   .dark-fill-white {
     fill: var(--gray-dark);
   }
+  code:not(.hljs) {
+    background: var(--gray-lighter);
+  }
 }
 /* Dark Mode :: END */
 
@@ -582,5 +642,5 @@ aside[data-emoji]::before {
   License: ~ MIT (or more permissive) [via base16-schemes-source]
   Maintainer: @highlightjs/core-team
   Version: 2021.09.0
-*/.hljs{color:#e9e9f4;background:#282936}.hljs ::selection,.hljs::selection{background-color:#4d4f68;color:#e9e9f4}.hljs-comment{color:#626483}.hljs-tag{color:#62d6e8}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#e9e9f4}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#ea51b2}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#b45bcf}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#00f769}.hljs-strong{font-weight:700;color:#00f769}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#ebff87}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#a1efe4}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#62d6e8}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#b45bcf}.hljs-emphasis{color:#b45bcf;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#00f769}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+*/.hljs{color:#e9e9f4;background:#282936}.hljs ::selection,.hljs::selection{background-color:#4d4f68;color:#e9e9f4}.hljs-comment{color:#94A3B8;opacity:0.8;}.hljs-tag{color:#62d6e8}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#e9e9f4}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#ea51b2}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#b45bcf}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#00f769}.hljs-strong{font-weight:700;color:#00f769}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#ebff87}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#a1efe4}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#62d6e8}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#b45bcf}.hljs-emphasis{color:#b45bcf;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#00f769}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
 /* Code Highlighting :: END */

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
 
-  <meta name="description" content=" About John Doe, a good human ">
+  <meta name="description" content=" A guide to adding, using, and removing dark mode support to Cerberus&#x27;s email templates using the prefers-color-scheme CSS media feature and utility classes. ">
   <meta property="og:title" content="Cerberus - Patterns for Responsive HTML Email Templates">
   <meta property="og:description" content="A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.">
   <meta property="og:image" content="https://tedgoas.github.io/Cerberus/images/og-image.png">
@@ -41,7 +41,6 @@
         <li><a href="/outlook" class="sitenav-outlook">Outlook Conditional CSS</a></li>
         <li><a href="/dark-mode" class="sitenav-dark-mode">Dark Mode</a></li>
         <li><a href="/best-practices" class="sitenav-best-practices">Best Practices</a></li>
-        <li><a href="/contributing" class="sitenav-contributing">Contributing</a></li>
         <li class="first-minor minor"><a href="">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58214 0 0 3.67143 0 8.20357C0 11.8286 2.29286 14.9 5.47143 15.9857C5.87143 16.0607 6.01786 15.8071 6.01786 15.5893C6.01786 15.3929 6.01071 14.8786 6.00714 14.1929C3.78214 14.6893 3.31071 13.0929 3.31071 13.0929C2.94643 12.1464 2.42143 11.8929 2.42143 11.8929C1.69643 11.3821 2.475 11.3929 2.475 11.3929C3.27857 11.45 3.7 12.2393 3.7 12.2393C4.41429 13.4929 5.57143 13.1321 6.02857 12.9214C6.1 12.3929 6.30714 12.0286 6.53571 11.825C4.76071 11.6179 2.89286 10.9143 2.89286 7.77143C2.89286 6.875 3.20357 6.14286 3.71429 5.57143C3.63214 5.36429 3.35714 4.52857 3.79286 3.4C3.79286 3.4 4.46429 3.17857 5.99286 4.23929C6.63214 4.05714 7.31429 3.96786 7.99643 3.96429C8.675 3.96786 9.36071 4.05714 10 4.23929C11.5286 3.17857 12.1964 3.4 12.1964 3.4C12.6321 4.52857 12.3571 5.36429 12.275 5.57143C12.7857 6.14643 13.0964 6.87857 13.0964 7.77143C13.0964 10.9214 11.225 11.6143 9.44286 11.8179C9.72857 12.0714 9.98571 12.5714 9.98571 13.3357C9.98571 14.4321 9.975 15.3179 9.975 15.5857C9.975 15.8036 10.1179 16.0607 10.525 15.9786C13.7107 14.8964 16 11.825 16 8.20357C16 3.67143 12.4179 0 8 0Z" fill="currentColor"/></svg>
           View on Github
@@ -58,7 +57,57 @@
     <article>
       
 <article><h1 id="dark-mode">Dark Mode</h1>
-<p>About lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu feugiat sapien. Aenean ligula nunc, laoreet id sem in, interdum bibendum felis. Donec vel dui neque. Praesent ac sem ut justo volutpat rutrum a imperdiet tellus. Nam lobortis massa non hendrerit hendrerit. Vivamus porttitor dignissim turpis, eget aliquam urna tincidunt non. Aliquam et fringilla turpis. Nullam eros est, eleifend in ornare sed, hendrerit eget est. Aliquam tellus felis, suscipit vitae ex vel, fringilla tempus massa. Nulla facilisi. Pellentesque lobortis consequat lectus. Maecenas ac libero elit.</p>
+<p>Cerberus includes patterns for dark mode using the <code>prefers-color-scheme</code> media feature to detect if the user’s operating system has requested a light or dark color theme.</p>
+<h2 id="overview">Overview</h2>
+<p>Cerberus defines dark mode styles in each template’s <head>. These styles can override styles for components (like buttons and text) and create utility classes that can be applied anywhere in a template’s HTML.</p>
+<h2 id="examples">Examples</h2>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      @media (prefers-color-scheme: dark) {
+        .darkmode-bg {
+          background: #222222 !important;
+        }
+        p {
+          color: #F7F7F9 !important;
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td style="background-color: #F7F7F9; color: #111;" class="darkmode-bg"&gt;
+          &lt;p&gt;Some text goes here.&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <div class="example example-padded">
+      <table width="100%">
+        <tr>
+          <td width="50%" style="padding: 20px; text-align: center;">
+            Text in light mode
+          </td>
+          <td width="50%" style="background-color: #000; color: #eee; padding: 20px; text-align: center;">
+            Text in dark mode
+          </td>
+        </tr>
+      </table>  
+    </div>
+  </figure>
+<p>In this example, the color of the <code>&lt;p&gt;</code> tag is automatically changed and the background of the <code>&lt;td&gt;</code> is changed using a utility class.</p>
+<p>Cerberus provides a pattern for creating and applying dark mode styles. These dark mode patterns are meant to be edited and built upon.</p>
+<h2 id="removing-dark-mode">Removing Dark Mode</h2>
+<p>If you’d rather not include dark mode, you can safely remove the dark mode styles inside the <code>&lt;head&gt;</code>:</p>
+<pre><code class="language-css" data-lang="CSS">/* Dark Mode Styles : BEGIN */
+@media (prefers-color-scheme: dark) {
+  …
+}
+/* Dark Mode Styles : END */</code></pre>
 </article>
 
     </article>

@@ -289,6 +289,9 @@ body::before {
 }
 /* Nav :: END */
 /* Article :: BEGIN */
+article {
+  padding-bottom: var(--section-spacer);
+}
 header {
   padding-top: var(--spacing48);
 }

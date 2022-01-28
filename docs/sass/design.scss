@@ -359,6 +359,10 @@ figure pre code {
   border-bottom-left-radius: 4px;
   border: 1px solid var(--gray-lighter);
   border-top: 0;
+
+  * {
+    font-family: sans-serif;
+  }
 }
 .example-padded {
   padding: var(--spacing16);

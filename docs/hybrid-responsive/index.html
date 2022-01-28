@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> The Templates </title>
-  <meta name="description" content=" Cerberus includes fluid, responsive, and hybrid templates, which descriptions and use cases for each. ">
+  <title> Hybrid vs. Responsive </title>
+  <meta name="description" content=" Hybrid email design is similar to responsive email design, but without the use of media queries. Instead, the hybrid design uses fluid tables and images with max-width properties to create email layouts. ">
   <link rel="stylesheet" href="http://127.0.0.1:1111/design.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   <link rel="shortcut icon" href="http://127.0.0.1:1111/favicon.png">
 
 </head>
-<body id="page-templates">
+<body id="page-hybrid-responsive">
   <div class="site">
     <nav class="sitenav">
       <div class="mobile-header">
@@ -56,36 +56,46 @@
 
     <article>
       
-<article><h1 id="the-templates">The Templates</h1>
-<h2 id="fluid-template">Fluid Template</h2>
-<p><img src="/images/template-fluid.svg" alt="example image" title="Fluid email template." /></p>
-<p>This template focuses on a fluid layout that sizes itself using percentage-based widths to shrink horizontally on narrow screens. This email layout does not reconfigure at different screen sizes.</p>
-<p>Good for simple transactional emails and single column layouts. If you want a basic template to handle rich text and images, this is a good baseline.</p>
-<h2 id="responsive-template">Responsive Template</h2>
-<p><img src="/images/template-responsive.svg" alt="example image" title="Responsive email template." /></p>
-<p>Good for more complicated, shape-shifting email layouts that work on <em>some</em> mobile clients.</p>
-<p>This template uses media queries to reconfigure the layout for different screen sizes for email clients that support media queries. However, mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to some versions of Gmail (<a href="https://litmus.com/blog/gmail-to-support-responsive-email-design">still</a>) and Yahoo, as well as a number of international email clients (<a href="https://emails.hteumeuleu.com/should-we-stop-inlining-styles-in-emails-8c3b64f0d407#.57mlzfimq">more info on that here</a>).</p>
-<p>If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.</p>
-<h2 id="hybrid-template">Hybrid Template</h2>
-<p><img src="/images/template-hybrid.svg" alt="example image" title="Hybrid email template." /></p>
-<p>This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support. At its core, it uses max-width and min-width to impose rigid baselines (allowing some movement) and imposes a fixed, wide width for Outlook who is shackled to the desktop anyway. Once a mobile-friendly baseline is set, media queries progressively enhance the email further in clients that support it.</p>
-<p>If you have some email design experience, this template optimizes every popular email client. All the extra Outlook code can make these templates quite large and your maths have to be spot on for multi-column layouts.</p>
-<h2 id="archived-templates">Archived Templates</h2>
-<p>Templates in the archived-versions folder are not currently being maintained and should be considered unsupported and deprecated. They are kept around for historical purposes. 💫</p>
-<h2 id="known-issues">Known Issues</h2>
-<p>Not necessarily bugs with the code in this repo, but a few things that could trip you up.</p>
-<ul>
-<li>Some ESPs don’t like URLs in HTML comments (<a href="https://github.com/TedGoas/Cerberus/issues/222">example</a>). In this case, you can remove the URLs or even the entire HTML comment.</li>
-</ul>
-<h3 id="css-inliners">CSS Inliners</h3>
-<p>I recommend against using a CSS inliner with Cerberus. Here’s why:</p>
-<ul>
-<li>Cerberus is supposed to be simple and should not require a dependency like a CSS inliner.</li>
-<li>The placement of Cerberus’s CSS is already optimized. The CSS in the <head> is meant only for email clients that parse CSS in this location. It doesn’t need to be inlined.</li>
-<li>There are some CSS selectors like :hover that don’t inline so well and cause errors in some CSS inliners.</li>
-<li>Inlining leads to code bloat. Not only does this impact download speeds, but some email clients like Gmail and iOS Outlook truncate messages after they exceed a certain file size.</li>
-</ul>
-<p>I’m a fan of using snippets, available in most code editors. I understand CSS inliners help many folks, but if you use one with Cerberus, please do so at your own risk. I recommend <a href="https://htmlemail.io/inline/">Lee Munroe’s CSS inliner</a> and hear good things about <a href="https://github.com/Mange/roadie">Roadie</a>.</p>
+<article><h1 id="hybrid-vs-responsive">Hybrid vs. Responsive</h1>
+<h2 id="responsive">Responsive</h2>
+<p>Media queries are a standard way to optimize layouts for small screen sizes on the web. In the email world, though, there are some small screen scenarios where media queries aren’t supported (eg. <a href="https://cdn-images-1.medium.com/max/2000/1*JGe_A7b8LiHZfeSGzNZE9w.png">some Gmail Apps</a>) or only partially supported (eg. some Android device native mail apps).</p>
+<table class="data-table">
+  <tr><th>Class</th><th>Description</th></tr>
+  <tr><td><code>stack-column</code></td><td>Makes table columns 100% wide and stacks them in source order.</td></tr>
+  <tr><td><code>stack-column-center</code></td><td>Makes table columns 100% wide, stacks them in source order, and centers everything inside.</td></tr>
+</table>
+<aside data-emoji="💁🏻">
+  Media queries are a standard way to optimize layouts for small screen sizes on the web. In the email world, though, there are some small screen scenarios where media queries aren’t supported (eg. <a href="https://cdn-images-1.medium.com/max/2000/1*JGe_A7b8LiHZfeSGzNZE9w.png">some Gmail Apps</a> or only partially supported (eg. some Android device native mail apps).
+</aside>
+<h2 id="hybrid">Hybrid</h2>
+<p>Hybrid design uses <code>inline-block</code>, <code>max-width</code>, <code>min-width</code>, and <a href="https://stackoverflow.design/email/base/mso#ghost-tables">ghost tables</a> stack columns without media queries while imposing a fixed, desktop width for Outlook.</p>
+<pre><code class="language-html" data-lang="HTML">&lt;tr&gt;
+  &lt;td&gt;
+    &lt;!--[if mso]&gt;
+    &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+    &lt;tr&gt;
+    &lt;td width="300"&gt;
+    &lt;![endif]--&gt;
+    &lt;div style="display:inline-block; width:100%; min-width:200px; max-width:300px;"&gt;
+      Column 1
+    &lt;/div&gt;
+    &lt;!--[if mso]&gt;
+    &lt;/td&gt;
+    &lt;td width="300"&gt;
+    &lt;![endif]--&gt;
+    &lt;div style="display:inline-block; width:100%; min-width:200px; max-width:300px;"&gt;
+      Column 2
+    &lt;/div&gt;
+    &lt;!--[if mso]&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;![endif]--&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+<p>In this example, the two columns will display side-by-side on wide, desktop displays and stack on top of each other in narrow, mobile displays.</p>
+<p>Once a hybrid baseline is set, media queries can be used to fine-tune a responsive email layout further in email clients that support it.</p>
+<p>🙏 <a href="https://github.com/fcarneiro/tedc15_template">Fabio Carneiro’s TEDC15 talk files</a>, as well as <a href="http://labs.actionrocket.co/the-hybrid-coding-approach">Action Rocket's</a> and <a href="http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919">Nicole Merlin's</a> articles on hybrid email design.</p>
 </article>
 
     </article>
@@ -94,5 +104,5 @@
   <script type='text/javascript' src='http://127.0.0.1:1111/scripts/scripts.js'></script>
   <script>hljs.highlightAll();</script>
   <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
-<script src="/livereload.js?port=1024&amp;mindelay=10"></script></body>
+<script src="/livereload.js?port=1025&amp;mindelay=10"></script></body>
 </html>

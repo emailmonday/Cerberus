@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block page_title %}Cerberus - Patterns for Responsive HTML Email Templates{% endblock %}</title>
-  <meta name="description" content="{% block page_description %}A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.{% endblock %}">
-  <link rel="stylesheet" href="{{ get_url(path="design.css") | safe }}">
+  <title> The Templates </title>
+  <meta name="description" content=" Cerberus includes fluid, responsive, and hybrid templates, which descriptions and use cases for each. ">
+  <link rel="stylesheet" href="http://127.0.0.1:1111/design.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content="Cerberus - Patterns for Responsive HTML Email Templates">
   <meta property="og:description" content="A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.">
-  <meta property="og:image" content="{{ get_url(path="images/og-image.png") | safe }}" />
+  <meta property="og:image" content="http://127.0.0.1:1111/images/og-image.png" />
   <meta property="og:image:alt" content="Cerberus: A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client.">
   <meta property="og:locale" content="en_EN">
   <meta property="og:type" content="website">
@@ -22,15 +22,15 @@
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="shortcut icon" href="{{ get_url(path="favicon.png") | safe }}">
+  <link rel="shortcut icon" href="http://127.0.0.1:1111/favicon.png">
 
 </head>
-<body id="page-{% block page_id %}home{% endblock %}">
+<body id="page-templates">
   <div class="site">
     <nav class="sitenav">
       <div class="mobile-header">
-        <a href="/" rel="home"><img src="{{ get_url(path="images/logo-cerberus-light.svg") | safe }}" alt="Cerberus logo." class="logo dark-hide"></a>
-        <a href="/" rel="home"><img src="{{ get_url(path="images/logo-cerberus-dark.svg") | safe }}" alt="Cerberus logo." class="logo light-hide"></a>
+        <a href="/" rel="home"><img src="http://127.0.0.1:1111/images/logo-cerberus-light.svg" alt="Cerberus logo." class="logo dark-hide"></a>
+        <a href="/" rel="home"><img src="http://127.0.0.1:1111/images/logo-cerberus-dark.svg" alt="Cerberus logo." class="logo light-hide"></a>
         <button class="mobile-menu" onclick="siteNav()">Menu <div class="menu-icon"><span class="icon-bar bar1"></span><span class="icon-bar bar2"></span><span class="icon-bar bar3"></span></div></button>
       </div>
       <ul class="reset" id="sitenav-ul">
@@ -50,138 +50,49 @@
           <path d="M8 10V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Download Zip
         </a></li>
-        <li class="minor"><a href="https://github.com/sponsors/TedGoas"><img src="{{ get_url(path="images/icon-heart.svg") | safe }}" alt="" height="16" width="16" border="0"> Sponsor Me</a></li>
+        <li class="minor"><a href="https://github.com/sponsors/TedGoas"><img src="http://127.0.0.1:1111/images/icon-heart.svg" alt="" height="16" width="16" border="0"> Sponsor Me</a></li>
       </ul>
     </nav>
 
     <article>
-      {% block content %}
-      <header>
-        <h1 class="">Cerberus</h1>
-        <p>A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client.</p>
-        <div class="email-logos">
-          <img src="{{ get_url(path="images/gmail.svg") | safe }}" alt="Gmail.">
-          <img src="{{ get_url(path="images/apple.svg") | safe }}" alt="Apple.">
-          <img src="{{ get_url(path="images/outlook.svg") | safe }}" alt="Outlook.">
-          <img src="{{ get_url(path="images/yahoo.svg") | safe }}" alt="Yahoo!.">
-          <img src="{{ get_url(path="images/android.svg") | safe }}" alt="Android.">
-          <img src="{{ get_url(path="images/aol-light.svg") | safe }}" alt="Aol." class="dark-hide">
-          <img src="{{ get_url(path="images/aol-dark.svg") | safe }}" alt="Aol." class="light-hide">
-        </div>
-        <p>Because between mobile, Gmail, and Outlook, HTML email is a <span class="nowrap">three-headed dog</span> from hell.</p>
-      </header>
-      <h2>Overview</h2>
-      <p>Coding regular emails is hard enough by itself. Making them responsive and accessible shouldn’t add to the headache. A few simple, but solid patterns are all that’s needed to optimize emails for small screens and assistive technologies.</p>
-      <p><strong>That’s what Cerberus is.</strong> It’s just a few email patterns that go a long way.</p>
-      <p>The code blocks are compartmentalized so they may be used, removed, combined, and nested to build an email. Each template is annotated with code comments explaining what’s happening so you can add, edit, and remove code with some confidence.</p>
-      <p>Here's an example of a <a href="#">button</a>:</p>
-      <figure>
-        <pre><code class="language-html" data-lang="HTML">&lt;!-- Button : BEGIN --&gt;
-&lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;"&gt;
-&lt;tr&gt;
-  &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;"&gt;
-    &lt;a class="button-a button-a-primary" href="#" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;Button Text&lt;/a&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;!-- Button : END --&gt;</code></pre>
-        <div class="example example-padded">
-          <style>
-            .ex-button:hover,
-            .ex-button:focus {
-              background: #555555 !important;
-            }
-            @media (prefers-color-scheme: dark) {
-              .ex-button {
-                background: #ffffff !important;
-                color: #222222 !important;
-              }
-              .ex-button:hover {
-                background: #cccccc !important;
-              }
-            }
-          </style>
-          <a href="#" class="ex-button" style="background: #222; color: #fff; padding: 13px 17px; display: inline-block; border-radius: 4px; text-decoration: none; transition: all 100ms ease-in;">Button Text</a>
-        </div>
-      </figure>
-      <p>Cerberus is plain 'ol HTML and CSS, so it an be used in any framework or email service provider (ESP), though it's not written <em>for</em> any specific framework or ESP.</p>
-      <p>I <a href="http://www.tedgoas.com/blog/cerberus-responsive-email-templates/">wrote a blog post</a> that goes into more detail on why I made this in the first place.</p>
-      <h2>Email Client Support</h2>
-      <p>Cerberus is tested in the most popular email clients as reported by Litmus and my own email campaigns. I’ve focused on the following clients:</p>
-      <div class="email-client-support">
-        <div class="three-columns">
-          <ul class="reset">
-            <li><strong>Desktop</strong></li>
-            <li>Outlook 2000/02/03/07/10/13/16/18 <small>(Windows)</small></li>
-            <li>Windows 10 Mail</li>
-            <li>Outlook 2011/16 <small>(Mac)</small></li>
-            <li>Apple Mail 9/10</li>
-            <li>Thunderbird</li>
-          </ul>
-          <ul class="reset">
-            <li><strong>Mobile</strong></li>
-            <li>iOS Mail <small>(iPhone + iPad)</small></li>
-            <li>Gmail <small>(iOS + Android, all account types)</small></li>
-            <li>Mail <small>(Android 6.0)</small></li>
-            <li>Yahoo <small>(iOS)</small></li>
-            <li>Outlook <small>(iOS)</small></li>
-            <li>Alto Mail <small>(iOS)</small></li>
-          </ul>
-          <ul class="reset">
-            <li><strong>Web Browser</strong></li>
-            <li>Gmail <small>(IMAP, GSuite)</small></li>
-            <li>Outlook.com</li>
-            <li>Yahoo</li>
-            <li>AOL</li>
-            <li>Office 365 Web</li>
-            <li>Comcast</li>
-            <li>Web.de</li>
-            <li>GMX.de</li>
-            <li>freenet.de</li>
-            <li>T-Online.de</li>
-            <li>Mail.ru</li>
-            <li>Terra Mail</li>
-          </ul>
-        </div>
-        <small>There are multiple versions of Gmail. Cerberus works pretty well in all of them. <a href="https://twitter.com/HTeuMeuLeu/">Rémi Parmentier</a> created <a href="https://cdn-images-1.medium.com/max/1400/1*JGe_A7b8LiHZfeSGzNZE9w.png">an excellent graphic</a> explaining <a href="https://emails.hteumeuleu.com/trying-to-make-sense-of-gmail-css-support-after-the-2016-update-53c15151063a">Gmail’s capabilities across products</a>.</small>
-      </div>
-      <aside data-emoji="💁🏻">When I say “tested”, I mean “email doesn’t fall apart”. I don’t mean "Everything is pixel perfect in Outlook" or “It looks the same after it’s been forwarded” or “I found a way to make media queries work everywhere.” They don’t.</aside>
-      <p>Any client not listed above should be considered untested. If you feel I’ve left out a popular email client or can suggest a non-destabilizing fix for one, please <a href="https://github.com/TedGoas/Cerberus/issues">submit an issue</a>!</p>
-      <p>For what it’s worth, Litmus (who <i>does</i> test every email client) includes Cerberus in its <a href="https://litmus.com/email-builder">Email Builder</a>, so there’s that.
-      <h2>Contributing</h2>
-      <p>If you would like to help, please @reply me on Twitter or open an issue to discuss your idea. I’m forever interested in reducing the entropy of this code. I’m most interested in:</p>
-      <ul>
-        <li>Fixing existing code that’s broken.</li>
-        <li>Reducing the amount of code in existing patterns.</li>
-        <li>Improving the documentation.</li>
-      </ul>
-      <p>Please be mindful <strong>there are three templates</strong> that share a lot of code. Many changes apply to all three.</p>
-      <p>Please branch off the <code>main</code> branch instead of <code>master</code>.</p>
-      <h2>Author</h2>
-      <p>👋 I’m Ted Goas, the core author and maintainer. I’m a product designer & front-end developer with a soft spot for HTML emails. Some day I'd love to combine my professional craft and hobby to work on an email platform.<br>
-      <a href="https://twitter.com/TedGoas">@tedgoas</a> • <a href="https://www.tedgoas.com/">tedgoas.com</a>
-      </p>
-      <h2>Special thanks</h2>
-      <ul>
-        <li>Site logo by <a href="https://danstiop.com">Dan Stiop</a></li>
-        <li>Everyone in <a href="https://email.geeks.chat/">Email Geeks Chat</a></li>
-      </ul>
-      <a href="https://gumroad.com/a/29078643" class="htmlio-ad">
-        <div class="htmlio-ad-img">
-          <img src="{{ get_url(path="images/htmlio-180x150.png") | safe }}" alt="" width="180" height="150">
-        </div>
-        <div class="htmlio-ad-text">
-          <h4>Ready Made HTML Email Templates</h4>
-          <p>If you’d prefer something that’s ready out of the box, I vouch for htmlemail.io. Responsive email templates, fully tested, and ready for your ESP or codebase. I know Lee personally and he knows his stuff!</p>
-          <p class="link">10 Responsive Emails Designed for Startups & Developers →</p>
-        </div>
-      </a>
-      {% endblock content %}
+      
+<article><h1 id="the-templates">The Templates</h1>
+<h2 id="fluid-template">Fluid Template</h2>
+<p><img src="/images/template-fluid.svg" alt="example image" title="Fluid email template." /></p>
+<p>This template focuses on a fluid layout that sizes itself using percentage-based widths to shrink horizontally on narrow screens. This email layout does not reconfigure at different screen sizes.</p>
+<p>Good for simple transactional emails and single column layouts. If you want a basic template to handle rich text and images, this is a good baseline.</p>
+<h2 id="responsive-template">Responsive Template</h2>
+<p><img src="/images/template-responsive.svg" alt="example image" title="Responsive email template." /></p>
+<p>Good for more complicated, shape-shifting email layouts that work on <em>some</em> mobile clients.</p>
+<p>This template uses media queries to reconfigure the layout for different screen sizes for email clients that support media queries. However, mobile clients that don’t support media queries or the <code>&lt;style&gt;</code> tag will display a shrunk version of the desktop layout instead. This applies to some versions of Gmail (<a href="https://litmus.com/blog/gmail-to-support-responsive-email-design">still</a>) and Yahoo, as well as a number of international email clients (<a href="https://emails.hteumeuleu.com/should-we-stop-inlining-styles-in-emails-8c3b64f0d407#.57mlzfimq">more info on that here</a>).</p>
+<p>If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.</p>
+<h2 id="hybrid-template">Hybrid Template</h2>
+<p><img src="/images/template-hybrid.svg" alt="example image" title="Hybrid email template." /></p>
+<p>This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support. At its core, it uses max-width and min-width to impose rigid baselines (allowing some movement) and imposes a fixed, wide width for Outlook who is shackled to the desktop anyway. Once a mobile-friendly baseline is set, media queries progressively enhance the email further in clients that support it.</p>
+<p>If you have some email design experience, this template optimizes every popular email client. All the extra Outlook code can make these templates quite large and your maths have to be spot on for multi-column layouts.</p>
+<h2 id="archived-templates">Archived Templates</h2>
+<p>Templates in the archived-versions folder are not currently being maintained and should be considered unsupported and deprecated. They are kept around for historical purposes. 💫</p>
+<h2 id="known-issues">Known Issues</h2>
+<p>Not necessarily bugs with the code in this repo, but a few things that could trip you up.</p>
+<ul>
+<li>Some ESPs don’t like URLs in HTML comments (<a href="https://github.com/TedGoas/Cerberus/issues/222">example</a>). In this case, you can remove the URLs or even the entire HTML comment.</li>
+</ul>
+<h3 id="css-inliners">CSS Inliners</h3>
+<p>I recommend against using a CSS inliner with Cerberus. Here’s why:</p>
+<ul>
+<li>Cerberus is supposed to be simple and should not require a dependency like a CSS inliner.</li>
+<li>The placement of Cerberus’s CSS is already optimized. The CSS in the <head> is meant only for email clients that parse CSS in this location. It doesn’t need to be inlined.</li>
+<li>There are some CSS selectors like :hover that don’t inline so well and cause errors in some CSS inliners.</li>
+<li>Inlining leads to code bloat. Not only does this impact download speeds, but some email clients like Gmail and iOS Outlook truncate messages after they exceed a certain file size.</li>
+</ul>
+<p>I’m a fan of using snippets, available in most code editors. I understand CSS inliners help many folks, but if you use one with Cerberus, please do so at your own risk. I recommend <a href="https://htmlemail.io/inline/">Lee Munroe’s CSS inliner</a> and hear good things about <a href="https://github.com/Mange/roadie">Roadie</a>.</p>
+</article>
+
     </article>
     <div class="on-this-page"></div>
   </div>
-  <script type='text/javascript' src='{{ get_url(path="scripts/scripts.js") | safe }}'></script>
+  <script type='text/javascript' src='http://127.0.0.1:1111/scripts/scripts.js'></script>
   <script>hljs.highlightAll();</script>
   <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
-</body>
+<script src="/livereload.js?port=1025&amp;mindelay=10"></script></body>
 </html>

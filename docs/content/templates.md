@@ -16,6 +16,11 @@ This template focuses on a fluid layout that sizes itself using percentage-based
 
 Good for simple transactional emails and single column layouts. If you want a basic template to handle rich text and images, this is a good baseline.
 
+<div class="buttons">
+  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-fluid.html" class="button button-primary">View a demo</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html" class="button button-secondary">View code</a>
+</div>
+
 ## Responsive Template
 
 ![example image](/images/template-responsive.svg "Responsive email template.")
@@ -26,6 +31,11 @@ This template uses media queries to reconfigure the layout for different screen 
 
 If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.
 
+<div class="buttons">
+  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-responsive.html" class="button button-primary">View a demo</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html" class="button button-secondary">View code</a>
+</div>
+
 ## Hybrid Template
 
 ![example image](/images/template-hybrid.svg "Hybrid email template.")
@@ -33,6 +43,11 @@ If you’re already comfortable with media queries, the learning curve is relati
 This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support. At its core, it uses max-width and min-width to impose rigid baselines (allowing some movement) and imposes a fixed, wide width for Outlook who is shackled to the desktop anyway. Once a mobile-friendly baseline is set, media queries progressively enhance the email further in clients that support it.
 
 If you have some email design experience, this template optimizes every popular email client. All the extra Outlook code can make these templates quite large and your maths have to be spot on for multi-column layouts.
+
+<div class="buttons">
+  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-hybrid.html" class="button button-primary">View a demo</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html" class="button button-secondary">View code</a>
+</div>
 
 ## Archived Templates
 

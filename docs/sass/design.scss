@@ -163,7 +163,7 @@ a:focus,
 a:active {
   color: var(--link-hover);
 }
-a:visited {
+a:not(.button):visited {
   color: var(--link-visited);
 }
 article h2 {
@@ -421,6 +421,34 @@ aside[data-emoji]::before {
   display: flex;
   align-items: center;
   font-size: var(--fs-lg);
+}
+.buttons {
+  display: flex;
+  gap: var(--spacing4);
+}
+.button {
+  display: flex;
+  padding: var(--spacing8) var(--spacing12);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.button-primary {
+  background-color: var(--link);
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--gray-darker);
+    color: #fff;
+  }
+}
+.button-secondary {
+  border: 1px solid var(--link);
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--link-hover);
+  }
 }
 .email-client-support {
   border: 3px solid var(--gray-lighter);

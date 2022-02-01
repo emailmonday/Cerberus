@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Components </title>
+  <meta name="description" content=" About John Doe, a good human ">
+  <link rel="stylesheet" href="design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Cerberus - Patterns for Responsive HTML Email Templates">
+  <meta property="og:description" content="A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.">
+  <meta property="og:image" content="https://tedgoas.github.io/Cerberus/images/og-image.png" />
+  <meta property="og:image:alt" content="Cerberus: A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client.">
+  <meta property="og:locale" content="en_EN">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://tedgoas.github.io/Cerberus">
+  <link rel="canonical" href="https://tedgoas.github.io/Cerberus">
+
+  <link rel="icon" href="https://tedgoas.github.io/Cerberus/favicon.ico" sizes="any">
+  <link rel="icon" href="https://tedgoas.github.io/Cerberus/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="https://tedgoas.github.io/Cerberus/favicon.png">
+
+</head>
+<body id="page-components">
+  <div class="site">
+    <nav class="sitenav">
+      <div class="mobile-header">
+        <a href="/" rel="home"><img src="images/logo-cerberus-light.svg" alt="Cerberus logo." class="logo dark-hide"></a>
+        <a href="/" rel="home"><img src="images/logo-cerberus-dark.svg" alt="Cerberus logo." class="logo light-hide"></a>
+        <button class="mobile-menu" onclick="siteNav()">Menu <div class="menu-icon"><span class="icon-bar bar1"></span><span class="icon-bar bar2"></span><span class="icon-bar bar3"></span></div></button>
+      </div>
+      <ul class="reset" id="sitenav-ul">
+        <li><a href="/" class="sitenav-home">Home</a></li>
+        <li><a href="/templates" class="sitenav-templates">The Templates</a></li>
+        <li><a href="/components" class="sitenav-components">Components</a></li>
+        <li><a href="/hybrid-responsive" class="sitenav-hybrid-responsive">Hybrid vs. Responsive</a></li>
+        <li><a href="/outlook" class="sitenav-outlook">Outlook Conditional CSS</a></li>
+        <li><a href="/dark-mode" class="sitenav-dark-mode">Dark Mode</a></li>
+        <li><a href="/best-practices" class="sitenav-best-practices">Best Practices</a></li>
+        <li class="first-minor minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58214 0 0 3.67143 0 8.20357C0 11.8286 2.29286 14.9 5.47143 15.9857C5.87143 16.0607 6.01786 15.8071 6.01786 15.5893C6.01786 15.3929 6.01071 14.8786 6.00714 14.1929C3.78214 14.6893 3.31071 13.0929 3.31071 13.0929C2.94643 12.1464 2.42143 11.8929 2.42143 11.8929C1.69643 11.3821 2.475 11.3929 2.475 11.3929C3.27857 11.45 3.7 12.2393 3.7 12.2393C4.41429 13.4929 5.57143 13.1321 6.02857 12.9214C6.1 12.3929 6.30714 12.0286 6.53571 11.825C4.76071 11.6179 2.89286 10.9143 2.89286 7.77143C2.89286 6.875 3.20357 6.14286 3.71429 5.57143C3.63214 5.36429 3.35714 4.52857 3.79286 3.4C3.79286 3.4 4.46429 3.17857 5.99286 4.23929C6.63214 4.05714 7.31429 3.96786 7.99643 3.96429C8.675 3.96786 9.36071 4.05714 10 4.23929C11.5286 3.17857 12.1964 3.4 12.1964 3.4C12.6321 4.52857 12.3571 5.36429 12.275 5.57143C12.7857 6.14643 13.0964 6.87857 13.0964 7.77143C13.0964 10.9214 11.225 11.6143 9.44286 11.8179C9.72857 12.0714 9.98571 12.5714 9.98571 13.3357C9.98571 14.4321 9.975 15.3179 9.975 15.5857C9.975 15.8036 10.1179 16.0607 10.525 15.9786C13.7107 14.8964 16 11.825 16 8.20357C16 3.67143 12.4179 0 8 0Z" fill="currentColor"/></svg>
+          View on Github
+        </a></li>
+        <li class="minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.66666 6.66666L7.99999 9.99999L11.3333 6.66666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 10V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Zip
+        </a></li>
+        <li class="minor"><a href="https://github.com/sponsors/TedGoas"><img src="images/icon-heart.svg" alt="" height="16" width="16" border="0"> Sponsor Me</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      
+<article><h1 id="components">Components</h1>
+<h2 id="tables">Tables</h2>
+<p><code>&lt;table&gt;</code>s are still the most dependable way to create layouts for HTML emails.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+  &lt;tr&gt;
+    &lt;td&gt; … &lt;/td&gt;
+    &lt;td&gt; … &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <div class="example example-padded"">
+    <table width="100%">
+      <tr>
+        <td width="50%">Column 1</td>
+        <td width="50%">Column 2</td>
+      </tr>
+    </table>
+  </div>
+</figure>
+<table class="data-table">
+  <tr><th>Attribute</th><th>Description</th></tr>
+  <tr><td><code>role="presentation"</code></td><td>Tells screen readers to skip over the table’s tags and move straight into the content.</td></tr>
+  <tr><td><code>cellspacing="0"</code></td><td>Negates unwanted spacing</td></tr>
+  <tr><td><code>cellpadding="0"</code></td><td>Negates unwanted padding</td></tr>
+  <tr><td><code>border="0"</code></td><td>Negates unwanted borders</td></tr>
+  <tr><td><code>width="100%"</code></td><td>(Optional) Forces table take up all available horizontal space.</td></tr>
+</table>
+<h2 id="spacers">Spacers</h2>
+<p>The best way to control spacing between components in HTML email is to use <code>padding</code> (applied to <code>&lt;td&gt;</code>’s) and <code>margin</code> (applied to <code>&lt;h&gt;</code> tags, <code>&lt;p&gt;</code>’s, <code>&lt;ol&gt;</code>’s, <code>&lt;li&gt;</code>’s, etc.).</p>
+<p>However <code>padding</code> and <code>margin</code> cannot be used reliably to space out <code>&lt;table&gt;</code>’s or <code>&lt;tr&gt;</code>’s. In these cases, it's best to use a spacer to create separation.</p>
+<pre><code class="language-html" data-lang="HTML">&lt;tr&gt;
+  &lt;td aria-hidden="true" height="30" style="font-size: 0; line-height: 0px;"&gt;
+    &amp;nbsp;
+  &lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+<table class="data-table">
+  <tr><th>Attribute</th><th>Description</th></tr>
+  <tr><td><code>height</code></td><td>Size of the spacer.</td></tr>
+  <tr><td><code>aria-hidden="true"</code></td><td>Hide the <code>&amp;nbsp;</code> from screen readers.</td></tr>
+  <tr><td><code>&amp;nbsp;</code></td><td>Some email clients will collapse the spacer’s height if there’s no content.</td></tr>
+  <tr><td><code>style="font-size: 0px;line-height: 0px;"</code></td><td>Some clients will add additional space inherited from the <code>&amp;nbsp;</code>’s <code>font-size</code> and <code>line-height</code>.</td></tr>
+</table>
+<h2 id="typography">Typography</h2>
+<p>It’s safe and accessible to use semantic HTML tags like <code>&lt;h&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;ul&gt;</code> for text in email just as we do for the web. The main difference in email is that <a href="https://stackoverflow.design/email/guidelines/faq#why-do-we-have-to-write-css-inline?">CSS should be written inline</a> to specify intended styles (like the color of an anchor tag) and zero out unintended defaults (like the default margin around a <code>&lt;p&gt;</code> tag).</p>
+<h3 id="headlines">Headlines</h3>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;h1 style=""&gt;Heading level 1&lt;/h1&gt;
+&lt;h2 style=""&gt;Heading level 2&lt;/h2&gt;
+&lt;h3 style=""&gt;Heading level 3&lt;/h3&gt;</code></pre>
+  <div class="example example-padded"">
+    <strong style="display: block; font-size: 3rem; margin: 0 0 40px; padding: 0; border: 0;">Heading 1</strong>
+    <strong style="display: block; font-size: 2.25rem; margin: 0 0 30px; padding: 0; border: 0;">Heading 2</strong>
+    <strong style="display: block; font-size: 1.75rem; margin: 0; padding: 0; border: 0;">Heading 3</strong>
+  </div>
+</figure>
+<h3 id="paragraphs">Paragraphs</h3>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;p style=""&gt;Paragraph text&lt;/p&gt;
+&lt;p style=""&gt;More paragraph text&lt;/p&gt;</code></pre>
+  <div class="example example-padded"">
+  <p>Paragraph text lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius eros suscipit, tincidunt leo eget, consequat libero.</p>
+  <p>More paragraph text</p>
+  </div>
+</figure>
+<h3 id="lists">Lists</h3>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;ul style="padding: 0; margin: 0 0 15px 0; list-style-type: disc;"&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Unordered list item&lt;/li&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Unordered list item&lt;/li&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Unordered list item&lt;/li&gt;
+&lt;/ul&gt;
+&nbsp;
+&lt;ol style="padding: 0; margin: 0 0 15px 0; list-style-type: decimal;"&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Ordered list item&lt;/li&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Ordered list item&lt;/li&gt;
+  &lt;li style="margin: 0 0 10px 30px;"&gt;Ordered list item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<div class="example example-padded"">
+  <ul>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+  </ul>
+  <ol>
+    <li>Ordered list item</li>
+    <li>Ordered list item</li>
+    <li>Ordered list item</li>
+  </ol>
+</div>
+</figure>
+<h3 id="links">Links</h3>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;a href="" style="color: teal;"&gt;Link text&lt;/a&gt;</code></pre>
+  <div class="example example-padded"">
+    <a href="$" style="color: teal;">Link text</a>
+  </div>
+</figure>
+<h4 id="auto-detected-links">Auto-detected links</h4>
+<p>Some email clients auto-detect certain text strings (like dates, times, and locations) and automatically convert them into hyperlinks. We can’t <em>remove</em> the link, but we can make the link <em>appear</em> like the text around it by negating a few CSS styles.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;style&gt;
+  a[x-apple-data-detectors],  /* iOS */
+  .aBn,  /* Gmail */
+  .unstyle-auto-detected-links a {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+&lt;/style&gt;
+&nbsp;
+&lt;p class="unstyle-auto-detected-links"&gt;
+  Our mailing address is 123 Fake St.
+&lt;/p&gt;</code></pre>
+  <div class="example example-padded"">
+    <p style="">Our mailing address is <a href="https://www.google.com/maps/place/123+Fake+Street,+Oak+Lawn,+IL+60453/@41.7252322,-87.7508841,17z/data=!3m1!4b1!4m5!3m4!1s0x880e3bd3bb6db18d:0x6582323d7a833d16!8m2!3d41.7252282!4d-87.7486954" style="border-bottom: 0 !important; cursor: default !important; color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;">123 Fake St</a>.</p>
+    <p>The mail address is a link ☝️</p>
+  </div>
+</figure>
+<p>In this example, some email clients will detect &quot;123 Fake St.&quot; as a location and automatically add an unstyled <code>&lt;a href=&quot;&quot;&gt;</code> tag that links to a maps product like Google Maps or Apple Maps. We can't prevent this from happening, but we can make the link appear like the surrounding body text by including a <code>unstyle-auto-detected-links</code> class in the container tag.</p>
+<aside data-emoji="💁🏻">Using <code>class="unstyle-auto-detected-links"</code> applies styles defined in the <code>&lt;style&gt;</code> tag, so only email clients that support <code>&lt;style&gt;</code> in <code>&lt;head&gt;</code> will render these styles.</aside>
+<h3 id="prevent-text-wrapping">Prevent Text Wrapping</h3>
+<p>A non-breaking space (<code>&amp;nbsp;</code>) can be used to prevent a group of words from breaking onto multiple lines. Useful for keeping names together and preventing typographic orphans and widows.</p>
+<pre><code class="language-html" data-lang="HTML"> I want these&amp;nbsp;words to stay together and prevent&amp;nbsp;widows.</code></pre>
+<p>🙏 <a href="https://drive.google.com/open?id=0B2uzG2bvD431aWsyTXRnVG94S3c">Rob Berinti’s TEDC ’15 talk on Typography</a></p>
+<h3 id="web-fonts">Web fonts</h3>
+<p>Sometimes we use web fonts in emails to match the aesthetic of a marketing campaign or announcement. Web fonts <a href="https://www.campaignmonitor.com/css/text-fonts/font-face/">don’t have great support in email clients</a>, so here’s how we ensure our web font displays in as many email clients as possible:</p>
+<ol>
+<li>Include an external stylesheet at the top of the email’s <code>&lt;head&gt;</code> tag. Sites like Google Fonts provide this code.</li>
+<li>Windows Outlook sometimes chokes on web font references and defaults everything to Times New Roman. To avoid this, wrap the web font reference in a <code>&lt;!--[if !mso]&gt;</code> tag (so Windows Outlook ignores it) and define a fallback font for Windows Outlook inside a <code>&lt;!--[if mso]&gt;</code> tag.</li>
+<li>Lastly, reference the web font at the beginning of the font stack, followed by a system fallback font for email clients that can’t display (and ignore) the web font.</li>
+</ol>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;head&gt;
+  &lt;!--[if mso]&gt;
+  &lt;style&gt;
+    * {
+      font-family: sans-serif !important;
+    }
+  &lt;/style&gt;
+  &lt;![endif]--&gt;
+&nbsp;
+  &lt;!--[if !mso]&gt;
+  &lt;link href='https://fonts.googleapis.com/css2?family=Lobster&display=swap' rel='stylesheet' type='text/css'&gt;
+  &lt;![endif]--&gt;
+&lt;/head&gt;
+&nbsp;
+&lt;body&gt;
+  &lt;p style="font-family: 'Lobster', cursive;"&gt;Text in Lobster in email clients that support web fonts.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+  <div class="example example-padded" style="text-align: center;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <p style="font-family: 'Lobster', cursive; font-size: 2rem;">Text in Lobster in email clients that support web fonts.</p>
+    <p style="font-size: 1rem; line-height: 1.5; color: #64748B; max-width: 500px; margin-left: auto; margin-right: auto;">But seriously please don't actually use Lobster in your email, I'm just trying to show how web fonts work.</p>
+  </div>
+</figure>
+<h2 id="images">Images</h2>
+<p>All email clients can display <code>.png</code>, <code>.gif</code>, and <code>.jpg</code> images displayed with the <code>&lt;img&gt;</code> tag. <code>.svg</code> images are not well supported, regardless of how they’re referenced, so avoid using these.</p>
+<p>Most images should be coded responsive by default, meaning they’ll scale down proportionately in small viewports. It’s safest to code all images this way, even if they don’t end up scaling in practice. However if we’re confident that an image will never scale, we can display a non-responsive image using less code.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;!-- Responsive --&gt;
+&lt;img src="https://fakeimg.pl/1280x600" width="640" height="" alt="alt_text" border="0" style="width: 100%; max-width: 640px; height: auto; display: block;" class="g-img"&gt;
+&nbsp;
+&lt;!-- Static --&gt;
+&lt;img src="https://fakeimg.pl/256" width="128" height="128" alt="alt_text" border="0" style="display: block;"&gt;</code></pre>
+  <div class="example example-padded"">
+    <img src="https://fakeimg.pl/600x200" style="width: 100%; max-width: 100%;">
+    <br>
+    <img src="https://fakeimg.pl/200">
+  </div>
+</figure>
+<table class="data-table">
+  <tr><th>Name</th><th>Type</th><th>Notes</th></tr>
+  <tr><td><code>src</code></td><td><code>attribute</code><td>Use full <code>https://</code> absolute path reference.</td></tr>
+  <tr><td><code>height</code></td><td><code>attribute</code><td>Set to intended desktop width.</td></tr>
+  <tr><td><code>width</code></td><td><code>attribute</code><td>Optional. Use only for images that won’t scale.</td></tr>
+  <tr><td><code>border</code></td><td><code>attribute</code><td>Always set to 0 to avoid blue outlines on image links.</td></tr>
+  <tr><td><code>alt</code></td><td><code>attribute</code><td>Always include but can be left empty if image is ornamental (Eg. <code>alt=""</code>).</td></tr>
+  <tr><td><code>width</code></td><td><code>inline CSS</code><td>[Responsive] Always set to <code>100%</code> for responsive images. Optional for static images.</td></tr>
+  <tr><td><code>max-width</code></td><td><code>inline CSS</code><td>[Responsive] Always set to intended desktop width. Optional for static images.</td></tr>
+  <tr><td><code>height</code></td><td><code>inline CSS</code><td>[Responsive] Always set to <code>auto</code> for responsive images. Optional for static images.</td></tr>
+  <tr><td><code>display</code></td><td><code>inline CSS</code><td>Generally good practice to use <code>display:block;</code> when possible since it negates a few pixels of unwanted space below images in some clients.</td></tr>
+  <tr><td><code>.g-img</code></td><td><code>class</code><td>Advisable for images larger than ~300px wide. Prevents <a href="https://www.emailonacid.com/blog/article/email-development/prevent-gmail-from-displaying-image-download-button-in-email/">gmail from displaying an image download icon over images</a>.</td></tr>
+</table>
+<aside data-emoji="💁🏻">Every image that should <b>scale down</b> in small screens should have a <code>width: 100%; max-width: (desktop-width)px;</code> in it's <code>style=""</code> attribute. <code>(desktop-width)px;</code> is the largest size an image should appear in on desktop. This allows images to scale down when their desktop width exceeds the width of its container.</aside>
+<h2 id="backgrounds">Backgrounds</h2>
+<h3 id="background-colors">Background Colors</h3>
+<p>Solid background colors are very well supported in email clients using the <code>bgcolor</code> attribute, or <code>background-color</code> or <code>background</code> CSS properties.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;!-- Using HTML attributes --&gt;
+&lt;table bgcolor="#9C36B5"&gt;
+  &lt;tr&gt;
+    &lt;td&gt; … &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&nbsp;
+&lt;!-- Using inline CSS --&gt;
+&lt;table style="background-color: #9C36B5;"&gt;
+  &lt;tr&gt;
+    &lt;td&gt; … &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <div class="example" style="background-color: #9C36B5; padding: 6em 3em; text-align: center;">
+    <strong style="font-size: 3rem; color: #fff;">My text</strong>
+  </div>
+</figure>
+<h3 id="background-images">Background Images</h3>
+<p>Background images allow us to place additional HTML content on top of them, one of the few reliable ways to provide layering possibilities in email. A benefit of using background images over foreground images is, when paired with a background color, the HTML content on top of the background image remains accessible even when images are disabled.</p>
+<p>Background images can be complicated to implement in email, as many properties need to be defined once in CSS and <em>again</em> in VML for Windows Outlook and Win10 Mail.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;td valign="middle" style="background-image: url('https://www.website.com/path/to/image.png'); background-position: center center; background-size: cover; background-color: #000000;"&gt;
+    &lt;!--[if gte mso 9]&gt;
+    &lt;v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:220px;"&gt;
+    &lt;v:fill type="tile" src="https://www.website.com/path/to/image.png" color="#000000"/&gt;
+    &lt;v:textbox inset="0,0,0,0"&gt;
+    &lt;![endif]--&gt;
+    &lt;div&gt;
+      &lt;table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"&gt;
+        &lt;tr&gt;
+          &lt;td style="padding: 60px; color: #ffffff; font-family: arial, sans-serif; font-size: 15px; text-align: center;"&gt;
+            Foreground HTML content.
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!--[if gte mso 9]&gt;
+    &lt;/v:textbox&gt;
+    &lt;/v:rect&gt;
+    &lt;![endif]--&gt;
+  &lt;/td&gt;</code></pre>
+  <div class="example" style="background: url('/images/figure-unsplash.avif') center center repeat; padding: 6em 3em; text-align: center;">
+    <strong style="font-size: 3rem; color: #fff;">My text</strong>
+  </div>
+</figure>
+<table class="data-table">
+  <tr><th>Name</th><th>Type</th><th>Notes</th></tr>
+  <tr><td><code>background-image</code></td><td><code>inline CSS</code><td>Always set and use full <code>https://</code> reference.</td></tr>
+  <tr><td><code>background-position</code></td><td><code>inline CSS</code><td>Optional to set the size of the image.</td></tr>
+  <tr><td><code>background-size</code></td><td><code>inline CSS</code><td>Optional to set the position of the image.</td></tr>
+  <tr><td><code>background-color</code></td><td><code>inline CSS</code><td>Always set to make foreground HTML legible if background image doesn’t load.</td></tr>
+  <tr><td><code>width</code></td><td><code>VML in <code>&lt;v:rect&gt;</code></code><td>Always set to full container width. VML doesn’t account for padding, adjust as necessary.</td></tr>
+  <tr><td><code>height</code></td><td><code>VML in <code>&lt;v:rect&gt;</code></code><td>Always set to full container height. VML doesn’t account for padding, adjust as necessary.</td></tr>
+  <tr><td><code>src</code></td><td><code>VML in <code>&lt;v:fill&gt;</code></code><td>Always set and use full <code>https://</code> reference.</td></tr>
+  <tr><td><code>color</code></td><td><code>VML in <code>&lt;v:fill&gt;</code></code><td>Always set to make foreground HTML legible if background image doesn’t load.</td></tr>
+</table>
+<aside data-emoji="💁🏻">Windows Outlook and Win10 Mail cannot scale background images, so the image referenced in VML should be prepared @1x. Most other email clients can scale background images defined in CSS, so using @2x images is advisable.</aside>
+<h2 id="buttons">Buttons</h2>
+<p>Buttons are the primary way for users to take action from an email. Buttons should have ample click / tap space and describe their actions. Creating a button that displays consistently across email clients requires multiple HTML tags.</p>
+<figure>
+  <pre><code class="language-html" data-lang="HTML">&lt;style&gt;
+  .button-td-primary:hover,
+  .button-td-primary:focus {
+    background: #555555 !important;
+  }
+&lt;/style&gt;
+  &nbsp;
+&lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;"&gt;
+  &lt;tr&gt;
+    &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;"&gt;
+      &lt;a class="button-a button-a-primary" href="https://google.com/" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;Primary Button&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  <div class="example example-padded">
+    <style>
+      .ex-button:hover,
+      .ex-button:focus {
+        background: #555555 !important;
+      }
+      @media (prefers-color-scheme: dark) {
+        .ex-button {
+          background: #ffffff !important;
+          color: #222222 !important;
+        }
+        .ex-button:hover {
+          background: #cccccc !important;
+        }
+      }
+    </style>
+    <a href="#" class="ex-button" style="background: #222; color: #fff; padding: 13px 17px; display: inline-block; border-radius: 4px; text-decoration: none; transition: all 100ms ease-in;">Button Text</a>
+  </div>
+</figure>
+<table class="data-table">
+  <tr><th>Name</th><th>Description</th></tr>
+  <tr><td><code>.button-td</code></td><td>Provides transition effects on <code>:hover</code> where supported.</td></tr>
+  <tr><td><code>.button-a</code></td><td>Provides transition effects on <code>:hover</code> where supported.</td></tr>
+  <tr><td><code>.button-td-primary</code></td><td>Also provides <code>:hover</code> and dark mode styles where supported.</td></tr>
+  <tr><td><code>.button-a-primary</code></td><td>Also provides <code>:hover</code> and dark mode styles where supported.</td></tr>
+</table>
+<aside data-emoji="💁🏻">
+  Some styles are duplicated between the <code>&lt;a&gt;</code> and its parent <code>&lt;td&gt;</code>. Desktop Outlook and Office 365 on Windows don't style links as block levels tags, so we need to style the <code>&lt;td&gt;</code> to match the <code>&lt;a&gt;</code> to make it appear as a button.
+  <img src="/images/figure-button.svg" alt="">
+</aside>
+</article>
+
+    </article>
+    <div class="on-this-page"></div>
+  </div>
+  <script type='text/javascript' src='scripts/scripts.js'></script>
+  <script>hljs.highlightAll();</script>
+  <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+<script src="/livereload.js?port=1025&amp;mindelay=10"></script></body>
+</html>

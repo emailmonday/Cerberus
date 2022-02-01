@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Outlook Conditional CSS </title>
+  <meta name="description" content=" Some versions of Windows Outlook use Microsoft Word as a rendering engine, which can lead to some odd rendering issues. Outlook conditional comments allow us to add or exclude code that is only read by these versions of Outlook. ">
+  <link rel="stylesheet" href="design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Cerberus - Patterns for Responsive HTML Email Templates">
+  <meta property="og:description" content="A few simple, but solid patterns for responsive HTML email templates and newsletters. Even in Outlook and Gmail.">
+  <meta property="og:image" content="https://tedgoas.github.io/Cerberus/images/og-image.png" />
+  <meta property="og:image:alt" content="Cerberus: A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client.">
+  <meta property="og:locale" content="en_EN">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://tedgoas.github.io/Cerberus">
+  <link rel="canonical" href="https://tedgoas.github.io/Cerberus">
+
+  <link rel="icon" href="https://tedgoas.github.io/Cerberus/favicon.ico" sizes="any">
+  <link rel="icon" href="https://tedgoas.github.io/Cerberus/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="https://tedgoas.github.io/Cerberus/favicon.png">
+
+</head>
+<body id="page-outlook">
+  <div class="site">
+    <nav class="sitenav">
+      <div class="mobile-header">
+        <a href="/" rel="home"><img src="images/logo-cerberus-light.svg" alt="Cerberus logo." class="logo dark-hide"></a>
+        <a href="/" rel="home"><img src="images/logo-cerberus-dark.svg" alt="Cerberus logo." class="logo light-hide"></a>
+        <button class="mobile-menu" onclick="siteNav()">Menu <div class="menu-icon"><span class="icon-bar bar1"></span><span class="icon-bar bar2"></span><span class="icon-bar bar3"></span></div></button>
+      </div>
+      <ul class="reset" id="sitenav-ul">
+        <li><a href="/" class="sitenav-home">Home</a></li>
+        <li><a href="/templates" class="sitenav-templates">The Templates</a></li>
+        <li><a href="/components" class="sitenav-components">Components</a></li>
+        <li><a href="/hybrid-responsive" class="sitenav-hybrid-responsive">Hybrid vs. Responsive</a></li>
+        <li><a href="/outlook" class="sitenav-outlook">Outlook Conditional CSS</a></li>
+        <li><a href="/dark-mode" class="sitenav-dark-mode">Dark Mode</a></li>
+        <li><a href="/best-practices" class="sitenav-best-practices">Best Practices</a></li>
+        <li class="first-minor minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58214 0 0 3.67143 0 8.20357C0 11.8286 2.29286 14.9 5.47143 15.9857C5.87143 16.0607 6.01786 15.8071 6.01786 15.5893C6.01786 15.3929 6.01071 14.8786 6.00714 14.1929C3.78214 14.6893 3.31071 13.0929 3.31071 13.0929C2.94643 12.1464 2.42143 11.8929 2.42143 11.8929C1.69643 11.3821 2.475 11.3929 2.475 11.3929C3.27857 11.45 3.7 12.2393 3.7 12.2393C4.41429 13.4929 5.57143 13.1321 6.02857 12.9214C6.1 12.3929 6.30714 12.0286 6.53571 11.825C4.76071 11.6179 2.89286 10.9143 2.89286 7.77143C2.89286 6.875 3.20357 6.14286 3.71429 5.57143C3.63214 5.36429 3.35714 4.52857 3.79286 3.4C3.79286 3.4 4.46429 3.17857 5.99286 4.23929C6.63214 4.05714 7.31429 3.96786 7.99643 3.96429C8.675 3.96786 9.36071 4.05714 10 4.23929C11.5286 3.17857 12.1964 3.4 12.1964 3.4C12.6321 4.52857 12.3571 5.36429 12.275 5.57143C12.7857 6.14643 13.0964 6.87857 13.0964 7.77143C13.0964 10.9214 11.225 11.6143 9.44286 11.8179C9.72857 12.0714 9.98571 12.5714 9.98571 13.3357C9.98571 14.4321 9.975 15.3179 9.975 15.5857C9.975 15.8036 10.1179 16.0607 10.525 15.9786C13.7107 14.8964 16 11.825 16 8.20357C16 3.67143 12.4179 0 8 0Z" fill="currentColor"/></svg>
+          View on Github
+        </a></li>
+        <li class="minor"><a href="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.66666 6.66666L7.99999 9.99999L11.3333 6.66666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 10V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download Zip
+        </a></li>
+        <li class="minor"><a href="https://github.com/sponsors/TedGoas"><img src="images/icon-heart.svg" alt="" height="16" width="16" border="0"> Sponsor Me</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      
+<article><h1 id="outlook-conditional-css">Outlook Conditional CSS</h1>
+<p>Windows Outlook 2003 and above use Microsoft Word as a rendering engine, which can lead to some weird rendering issues. Outlook conditional comments allow us to add bits of HTML that are only read by the Word-based versions of Outlook.</p>
+<h2 id="basic-syntax">Basic syntax</h2>
+<p>We can use <strong>MSO</strong> (<strong>M</strong>icro<strong>s</strong>oft <strong>O</strong>ffice) tags to add HTML / CSS anywhere in an email template. This code will be ignored by other email clients. Here’s what it looks like:</p>
+<pre><code class="language-html" data-lang="HTML">&lt;!--[if mso]&gt;
+  &lt;table&gt;&lt;tr&gt;&lt;td&gt;
+    /* Outlook-specific HTML content goes here. */
+  &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;![endif]--&gt;</code></pre>
+<p>Only Outlook will render this table.</p>
+<p>MSO tags can also be used to add styles targeting Outlook (<a href="https://www.campaignmonitor.com/css/style-element/style-in-head/">Outlook supports CSS in the <code>&lt;head&gt;</code></a>):</p>
+<pre><code class="language-html" data-lang="HTML">&lt;!--[if mso]&gt;
+  &lt;style&gt;
+    .example-class {
+      /* Outlook-specific CSS goes here. */
+    }
+  &lt;/style&gt;
+&lt;![endif]--&gt;</code></pre>
+<p>It’s the same thing we used to do to <a href="https://www.quirksmode.org/css/condcom.html">target old versions of Internet Explorer</a>, except it targets Microsoft Office.</p>
+<h2 id="ghost-tables">Ghost tables</h2>
+<p>The main way we use MSO tags in our emails is to create “ghost tables” so <a href="https://stackoverflow.design/email/base/responsiveness#hybrid-design">hybrid emails</a> don’t fall apart in Outlook. Hybrid design uses <code>inline-block</code>, <code>max-width</code>, <code>min-width</code> to stack table columns. Outlook doesn’t support these CSS properties, so we use MSO tags to create “ghost tables” that apply a fixed width just for Outlook.</p>
+<pre><code class="language-html" data-lang="HTML">&lt;!--[if mso]&gt;
+&lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+&lt;tr&gt;
+&lt;td width="340"&gt;
+&lt;![endif]--&gt;
+  &lt;div style="display:inline-block; width:100%; min-width:200px; max-width:340px;"&gt;
+    Outlook can’t render the CSS in this DIV but other email clients can, so we wrap this in a ghost table that replicates the DIV’s desktop style. In this case, a container 340px wide.
+  &lt;/div&gt;
+&lt;!--[if mso]&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;![endif]--&gt;</code></pre>
+<p>Without the ghost table above, Outlook would display the <code>&lt;div&gt;</code> at 100% width. <a href="https://stackoverflow.design/email/base/responsiveness#hybrid-design">Learn how we use ghost tables to make our emails responsive</a>.</p>
+<h2 id="targeting-specific-outlook-versions">Targeting specific Outlook versions</h2>
+<p>We usually target <em>all</em> versions of Outlook using <code>&lt;!--[if mso]&gt;</code>. But sometimes when testing emails in Litmus, an email looks ok in one Outlook version but is broken in another. It’s not common but it happens, and there are a few ways to target specific versions of Outlook while omitting others.</p>
+<h2 id="outlook-versions">Outlook versions</h2>
+<p>Using Microsoft Office version numbers allows you to target a specific Outlook version.</p>
+<table class="data-table">
+  <tr><th>Outlook version(s)</th><th>Code</th></tr>
+  <tr><td>All Windows Outlook</td><td><code>&lt;!--[if mso]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2000</td><td><code>&lt;!--[if mso 9]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2002</td><td><code>&lt;!--[if mso 10]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2003</td><td><code>&lt;!--[if mso 11]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2007</td><td><code>&lt;!--[if mso 12]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2010</td><td><code>&lt;!--[if mso 14]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2013</td><td><code>&lt;!--[if mso 15]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Outlook 2016</td><td><code>&lt;!--[if mso 16]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+</table>
+<h2 id="conditional-logic">Conditional logic</h2>
+<p>Using operators allows you to create conditional expressions for targeting multiple Outlook versions.</p>
+<aside data-emoji="💁🏻">
+⚠️ Cerberus is a relatively simple design and doesn't use these very often, if at all. But they’re here if you need them every once in a while.
+</aside>
+<table class="data-table">
+  <tr><th>Code</th><th>Description</th><th>Example</th></tr>
+  <td><code>&lt;gt&gt;</code></td><td>greater than</td><td><code>&lt;!--[if gt mso 14]&gt;<br>Everything above Outlook 2010<br> &lt;![endif]--&gt;</code></td></tr>
+  <td><code>&lt;lt&gt;</code></td><td>less than</td><td><code>&lt;!--[if lt mso 14]&gt;<br>Everything below Outlook 2010<br> &lt;![endif]--&gt;</code></td></tr>
+  <td><code>&lt;gte&gt;</code></td><td>greater than or equal to</td><td><code>&lt;!--[if gte mso 14]&gt;<br>Outlook 2010 and above<br>&lt;![endif]--&gt;</code></td></tr>
+  <td><code>&lt;lte&gt;</code></td><td>less than or equal to</td><td><code>&lt;!--[if lte mso 14]&gt;<br>Outlook 2010 and below<br>&lt;![endif]--&gt;</code></td></tr>
+  <td><code>&lt;|&gt;</code></td><td>or</td><td><code>&lt;!--[if (mso 12)|(mso 16)]&gt;<br>Outlook 2007 / 2016 only<br>&lt;![endif]--&gt;</code></td></tr>
+  <td><code>&lt;!&gt;</code></td><td>not</td><td><code>&lt;!--[if !mso]>&gt;!--&gt;<br>All Outlooks will ignore this<br> &lt;![endif]--&gt;</code></td></tr>
+</table>
+</article>
+
+    </article>
+    <div class="on-this-page"></div>
+  </div>
+  <script type='text/javascript' src='scripts/scripts.js'></script>
+  <script>hljs.highlightAll();</script>
+  <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+<script src="/livereload.js?port=1025&amp;mindelay=10"></script></body>
+</html>

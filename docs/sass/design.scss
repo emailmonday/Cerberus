@@ -79,7 +79,6 @@ table {
   --fc-light:     var(--gray-dark);
   --bg-aside:     var(--light-yellow);
   --border-aside: var(--yellow);
-  --accent:       var(--purple);
 
   /* Spacing */
   --spacing2:       0.2rem;
@@ -299,12 +298,14 @@ header h1 {
   font-size: var(fs-xxl);
   margin: 0 0 var(--spacing16);
   letter-spacing: -1px;
-  color: var(--accent);
 }
 header p {
   margin: 0;
   font-size: var(--fs-lg);
   line-height: var(--lh-lg);
+}
+header .button {
+  margin-top: var(--spacing12);
 }
 .email-logos {
   display: flex;
@@ -427,10 +428,13 @@ aside[data-emoji]::before {
   gap: var(--spacing4);
 }
 .button {
-  display: flex;
-  padding: var(--spacing8) var(--spacing12);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing4);
+  padding: var(--spacing4) var(--spacing8);
   text-decoration: none;
   border-radius: 4px;
+  font-size: var(--fs-md);
 }
 .button-primary {
   background-color: var(--link);

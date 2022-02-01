@@ -68,6 +68,7 @@ table {
   --gray-lightest:#E2E8F0;
   --gray-lighter: #CBD5E1;
   --gray-light:   #94A3B8;
+  --white:        #fff;
 
   /* Component colors */
   --bg-site:      #fff;
@@ -98,14 +99,14 @@ table {
   /* Font Sizes */
   --fs-xs:      0.875rem;
   --fs-sm:      1rem;
-  --fs-md:      1.125rem;
+  --fs-md:      1.25rem;
   --fs-lg:      1.5rem;
   --fs-xl:      2rem;
   --fs-xxl:     3rem;
 
   /* Line Heights */
   --lh-sm:  1.3rem;
-  --lh-md:  1.67rem;
+  --lh-md:  1.75rem;
   --lh-lg:  2rem;
 
   /* Font styles */
@@ -181,7 +182,6 @@ code {
     display: none !important;
   }
 }
-
 /* Base Styles :: END */
 
 /* Custom Styles :: BEGIN */
@@ -416,19 +416,19 @@ aside[data-emoji]::before {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing4);
-  padding: var(--spacing4) var(--spacing8);
+  padding: var(--spacing8) var(--spacing12);
   text-decoration: none;
   border-radius: 4px;
   font-size: var(--fs-md);
 }
 .button-primary {
   background-color: var(--link);
-  color: #fff;
+  color: var(--white);
   &:hover,
   &:focus,
   &:active {
     background-color: var(--gray-darker);
-    color: #fff;
+    color: var(--gray-lightest);
   }
 }
 .button-secondary {
@@ -444,6 +444,7 @@ aside[data-emoji]::before {
   padding: var(--spacing8);
   border-radius: 4px;
   margin-bottom: var(--margin-bottom);
+  font-size: var(--fs-sm);
 }
 .three-columns {
   display: grid;
@@ -642,6 +643,7 @@ aside[data-emoji]::before {
     --teal:         #63e6be;
     --light-yellow: #854D0E;
     --yellow:       #713F12;
+    --white:         var(--gray-lightest);
     --gray-lightest:#0F172A;
     --gray-lighter: #334155;
     --gray-light:   #64748B;

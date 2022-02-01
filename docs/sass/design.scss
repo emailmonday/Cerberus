@@ -258,15 +258,6 @@ body::before {
     top: 7px;
     background: url("images/icon-active.svg") no-repeat;
   }
-  /*&::before {
-    display: block;
-    content: "";
-    border-radius: 50%;
-    height: 7px;
-    width: 7px;
-    margin-right: var(--spacing4);
-    background-color: var(--link);
-  }*/
 }
 .first-minor  {
   margin-top: var(--spacing12);
@@ -279,12 +270,6 @@ body::before {
   display: flex;
   align-items: center;
   gap: var(--spacing4);
-}
-.darkmode-toggle {
-  padding: 0;
-  background: 0;
-  border: 0;
-  cursor: pointer;
 }
 /* Nav :: END */
 /* Article :: BEGIN */

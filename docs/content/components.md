@@ -342,7 +342,7 @@ Buttons are the primary way for users to take action from an email. Buttons shou
         }
       }
     </style>
-    <a href="#" class="ex-button" style="background: #222; color: #fff; padding: 13px 17px; display: inline-block; border-radius: 4px; text-decoration: none; transition: all 100ms ease-in;">Button Text</a>
+    <a href="#" class="ex-button" style="background: #222; color: #fff; padding: 13px 17px; font-size: 15px; line-height: 15px; display: inline-block; border-radius: 4px; text-decoration: none; transition: all 100ms ease-in;">Button Text</a>
   </div>
 </figure>
 <table class="data-table">

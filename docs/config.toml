@@ -1,0 +1,11 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Highlight all code blocks found
+highlight_code = true
+
+# Which theme to use for the code highlighting. (https://www.getgutenberg.io/documentation/getting-started/configuration/)
+highlight_theme = "cheerfully-light"

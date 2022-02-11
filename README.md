@@ -1,6 +1,6 @@
 # Cerberus Responsive Email Patterns
 
-<a href="https://www.cerberusemail.com/"><img src="/docs/static/images/logo-cerberus-light.svg" alt="Cerberus logo" width="75" height="64" align="left" hspace="10" vspace="6"></a>
+<a href="https://www.cerberusemail.com/"><img src="/docs/static/images/logo-cerberus-light.svg" alt="Cerberus logo" width="148" height="93" align="left" hspace="10" vspace="6"></a>
 
 Coding regular emails is hard enough by itself. Making them responsive and accessible shouldn’t add to the headache. A few simple, but solid patterns are all that’s needed to optimize emails for small screens and assistive technologies.
 

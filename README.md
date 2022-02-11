@@ -1,8 +1,8 @@
 # Cerberus Responsive Email Patterns
 
-<a href="http://tedgoas.github.io/Cerberus/"><img src="http://tedgoas.github.io/Cerberus/assets/logo.png" alt="Cerberus logo" width="75" height="64" align="left" hspace="10" vspace="6"></a>
+<a href="https://www.cerberusemail.com/"><img src="/docs/static/images/logo-cerberus-light.svg" alt="Cerberus logo" width="75" height="64" align="left" hspace="10" vspace="6"></a>
 
-Coding regular emails is hard enough by itself. Making them responsive shouldn’t add to the headache. A few simple, but solid patterns are all that’s needed to optimize emails for small screens.
+Coding regular emails is hard enough by itself. Making them responsive and accessible shouldn’t add to the headache. A few simple, but solid patterns are all that’s needed to optimize emails for small screens and assistive technologies.
 
 **That’s what Cerberus is.**
 
@@ -10,7 +10,7 @@ It’s just a few responsive email patterns that go a long way. The code blocks 
 
 Each template is annotated and has good support among popular email clients.
 
-## **[Learn More and See Examples](http://tedgoas.github.io/Cerberus/)** ##
+## **[Learn More and See Examples](https://www.cerberusemail.com/)** ##
 
 ## Contents
 
@@ -20,12 +20,10 @@ Each template is annotated and has good support among popular email clients.
 
 **`cerberus-hybrid.html`** - This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support.
 
-
-[![forthebadge](http://forthebadge.com/images/badges/validated-html2.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
-
 ## Author
 
-Hi there, I’m Ted Goas, the core author and maintainer. I’m a designer & front-end developer working on websites, web apps, and HTML emails. And I enjoy [talking shop on Twitter](https://twitter.com/TedGoas).
+👋 I’m Ted Goas, the core author and maintainer. I’m a product designer & front-end developer with a soft spot for HTML emails. Some day I'd love to combine my professional craft and hobby to work on an email platform.
+[@tedgoas](https://twitter.com/TedGoas) § [TedGoas.com](https://www.tedgoas.com/)
 
 ## License
 

@@ -64,7 +64,7 @@ Not necessarily bugs with the code in this repo, but a few things that could tri
 I recommend against using a CSS inliner with Cerberus. Here’s why:
 
 - Cerberus is supposed to be simple and should not require a dependency like a CSS inliner.
-- The placement of Cerberus’s CSS is already optimized. The CSS in the <head> is meant only for email clients that parse CSS in this location. It doesn’t need to be inlined.
+- The placement of Cerberus’s CSS is already optimized. The CSS in the <code>&lt;head&gt;</code> is meant only for email clients that parse CSS in this location. It doesn’t need to be inlined.
 - There are some CSS selectors like :hover that don’t inline so well and cause errors in some CSS inliners.
 - Inlining leads to code bloat. Not only does this impact download speeds, but some email clients like Gmail and iOS Outlook truncate messages after they exceed a certain file size.
 

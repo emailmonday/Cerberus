@@ -412,7 +412,12 @@ aside[data-emoji]::before {
   display: flex;
   gap: var(--spacing4);
 }
+.parcel-button {
+
+}
 .button {
+  border: 1px solid;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: var(--spacing4);
@@ -420,19 +425,22 @@ aside[data-emoji]::before {
   text-decoration: none;
   border-radius: 4px;
   font-size: var(--fs-md);
+  line-height: var(--lh-md);
 }
 .button-primary {
+  border-color: var(--link);
   background-color: var(--link);
   color: var(--white);
   &:hover,
   &:focus,
   &:active {
+    border-color: var(--gray-darker);
     background-color: var(--gray-darker);
     color: var(--gray-lightest);
   }
 }
 .button-secondary {
-  border: 1px solid var(--link);
+  border-color: var(--link);
   &:hover,
   &:focus,
   &:active {

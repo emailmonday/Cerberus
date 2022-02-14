@@ -17,7 +17,15 @@ This template focuses on a fluid layout that sizes itself using percentage-based
 Good for simple transactional emails and single column layouts. If you want a basic template to handle rich text and images, this is a good baseline.
 
 <div class="buttons">
-  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-fluid.html" class="button button-primary">View a demo</a>
+  <form
+    class="parcel-button"
+    action="https://parcel.io/playground"
+    method="POST"
+    target="_blank"
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html">
+    <input type="hidden" name="data" value="" />
+    <input type="button" class="button button-primary" value="Edit in Parcel" />
+  </form>
   <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html" class="button button-secondary">View code</a>
 </div>
 
@@ -32,9 +40,18 @@ This template uses media queries to reconfigure the layout for different screen 
 If you’re already comfortable with media queries, the learning curve is relatively low. If total device coverage isn’t required, you can create a responsive email the same way you create a responsive website.
 
 <div class="buttons">
-  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-responsive.html" class="button button-primary">View a demo</a>
+  <form
+    class="parcel-button"
+    action="https://parcel.io/playground"
+    method="POST"
+    target="_blank"
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html">
+    <input type="hidden" name="data" value="" />
+    <input type="button" class="button button-primary" value="Edit in Parcel" />
+  </form>
   <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html" class="button button-secondary">View code</a>
 </div>
+
 
 ## Hybrid Template
 
@@ -45,7 +62,15 @@ This template uses a hybrid approach to reconfigure the layout for different scr
 If you have some email design experience, this template optimizes every popular email client. All the extra Outlook code can make these templates quite large and your maths have to be spot on for multi-column layouts.
 
 <div class="buttons">
-  <a href="http://htmlpreview.github.io/?https://github.com/TedGoas/Cerberus/blob/master/cerberus-hybrid.html" class="button button-primary">View a demo</a>
+  <form
+    class="parcel-button"
+    action="https://parcel.io/playground"
+    method="POST"
+    target="_blank"
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html">
+    <input type="hidden" name="data" value="" />
+    <input type="button" class="button button-primary" value="Edit in Parcel" />
+  </form>
   <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html" class="button button-secondary">View code</a>
 </div>
 
@@ -69,3 +94,35 @@ I recommend against using a CSS inliner with Cerberus. Here’s why:
 - Inlining leads to code bloat. Not only does this impact download speeds, but some email clients like Gmail and iOS Outlook truncate messages after they exceed a certain file size.
 
 I’m a fan of using snippets, available in most code editors. I understand CSS inliners help many folks, but if you use one with Cerberus, please do so at your own risk. I recommend [Lee Munroe’s CSS inliner](https://htmlemail.io/inline/) and hear good things about [Roadie](https://github.com/Mange/roadie).
+
+<script>
+  (function () {
+    const forms = document.querySelectorAll('.parcel-button');
+    for (let i = 0; i < forms.length; i++) {
+      const form = forms[i];
+      form.addEventListener('click', function (event) {
+        const url = form.getAttribute('data-url');
+        // if we have a url to fetch html from
+        if (!form.elements.data.value && url) {
+          event.preventDefault();
+          // fetch the data, update the value to
+          fetch(url)
+            .then((response) => {
+              return response.text();
+            })
+            .then((html) => {
+              // set the value of the email content and resubmit the form
+              form.elements.data.setAttribute(
+                'value',
+                encodeURIComponent(JSON.stringify({ name: 'Email', html }))
+              );
+              form.submit();
+            });
+        }
+        else {
+          form.submit()
+        }
+      });
+    }
+  })();
+</script>

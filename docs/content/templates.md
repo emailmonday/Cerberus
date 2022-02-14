@@ -119,6 +119,9 @@ I’m a fan of using snippets, available in most code editors. I understand CSS 
               form.submit();
             });
         }
+        else {
+          form.submit()
+        }
       });
     }
   })();

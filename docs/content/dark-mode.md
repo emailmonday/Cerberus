@@ -12,7 +12,7 @@ Cerberus includes patterns for dark mode using the `prefers-color-scheme` media 
 
 ## Overview
 
-Cerberus defines dark mode styles in each template’s <head>. These styles can override styles for components (like buttons and text) and create utility classes that can be applied anywhere in a template’s HTML.
+Cerberus defines dark mode styles in each template’s `<head>`. These styles can override styles for components (like buttons and text) and create utility classes that can be applied anywhere in a template’s HTML.
 
 ## Examples
 

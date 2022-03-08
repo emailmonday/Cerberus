@@ -79,7 +79,7 @@ Using Microsoft Office version numbers allows you to target a specific Outlook v
 Using operators allows you to create conditional expressions for targeting multiple Outlook versions.
 
 <aside data-emoji="💁🏻">
-⚠️ Cerberus is a relatively simple design and doesn't use these very often, if at all. But they’re here if you need them every once in a while.
+Cerberus is a relatively simple design and doesn't use these very often, if at all. But they’re here if you need them every once in a while.
 </aside>
 
 <table class="data-table">

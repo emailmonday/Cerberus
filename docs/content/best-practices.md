@@ -12,7 +12,7 @@ page_id = "best-practices"
 
 ## General rules and principles
 
-Cerberus strives to support email clients with low levels of HTML & CSS support (namely Microsoft Outlook, a [few versions of Gmail](https://emails.hteumeuleu.com/trying-to-make-sense-of-gmail-css-support-after-the-2016-update-53c15151063a), and a handful of [mostly non-US clients](https://emails.hteumeuleu.com/should-we-stop-inlining-styles-in-emails-8c3b64f0d407)). It’s safest to code emails like it’s 1999 (s)till).
+Cerberus strives to support email clients with low levels of HTML & CSS support (namely Microsoft Outlook, a [few versions of Gmail](https://emails.hteumeuleu.com/trying-to-make-sense-of-gmail-css-support-after-the-2016-update-53c15151063a), and a handful of [mostly non-US clients](https://emails.hteumeuleu.com/should-we-stop-inlining-styles-in-emails-8c3b64f0d407)). It’s safest to code emails like it’s 1999 (still).
 
 That means:
 

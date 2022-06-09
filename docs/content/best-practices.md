@@ -8,7 +8,7 @@ page_id = "best-practices"
 
 # Best Practices
 
-[Emails don’t need to look the same in every email client](http://doemailshavetolookthesameineveryclient.com/), Emails don’t need to look the same in every email client, but there are some guidelines to make sure they render properly in email clients and are as accessible as possible.
+[Emails don’t need to look the same in every email client](http://doemailshavetolookthesameineveryclient.com/), but there are some guidelines to make sure they render properly in email clients and are as accessible as possible.
 
 ## General rules and principles
 

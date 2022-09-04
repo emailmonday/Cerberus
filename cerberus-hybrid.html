@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
@@ -41,10 +41,10 @@
     <!-- CSS Reset : BEGIN -->
     <style>
 
-        /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+        /* What it does: Tells the email client that both light and dark styles are provided. A duplicate of meta color-scheme meta tag above. */
         :root {
-          color-scheme: light;
-          supported-color-schemes: light;
+          color-scheme: light dark;
+          supported-color-schemes: light dark;
         }
 
         /* What it does: Remove spaces around the email design added by some email clients. */

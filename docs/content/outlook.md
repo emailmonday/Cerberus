@@ -72,6 +72,7 @@ Using Microsoft Office version numbers allows you to target a specific Outlook v
   <tr><td>Outlook 2010</td><td><code>&lt;!--[if mso 14]&gt; your code &lt;![endif]--&gt;</code></td></tr>
   <tr><td>Outlook 2013</td><td><code>&lt;!--[if mso 15]&gt; your code &lt;![endif]--&gt;</code></td></tr>
   <tr><td>Outlook 2016</td><td><code>&lt;!--[if mso 16]&gt; your code &lt;![endif]--&gt;</code></td></tr>
+  <tr><td>Everything but Outlook</td><td><code>&lt;!--[if !mso]&gt; Outlook will ignore this &lt;![endif]--&gt;</code></td></tr>
 </table>
 
 ## Conditional logic

@@ -22,11 +22,11 @@ Good for simple transactional emails and single column layouts. If you want a ba
     action="https://parcel.io/playground"
     method="POST"
     target="_blank"
-    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html">
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-fluid.html">
     <input type="hidden" name="data" value="" />
     <input type="button" class="button button-primary" value="Edit in Parcel" />
   </form>
-  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-fluid.html" class="button button-secondary">View code</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-fluid.html" class="button button-secondary">View code</a>
 </div>
 
 ## Responsive Template
@@ -45,11 +45,11 @@ If you’re already comfortable with media queries, the learning curve is relati
     action="https://parcel.io/playground"
     method="POST"
     target="_blank"
-    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html">
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-responsive.html">
     <input type="hidden" name="data" value="" />
     <input type="button" class="button button-primary" value="Edit in Parcel" />
   </form>
-  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-responsive.html" class="button button-secondary">View code</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-responsive.html" class="button button-secondary">View code</a>
 </div>
 
 
@@ -67,11 +67,11 @@ If you have some email design experience, this template optimizes every popular 
     action="https://parcel.io/playground"
     method="POST"
     target="_blank"
-    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html">
+    data-url="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-hybrid.html">
     <input type="hidden" name="data" value="" />
     <input type="button" class="button button-primary" value="Edit in Parcel" />
   </form>
-  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/master/cerberus-hybrid.html" class="button button-secondary">View code</a>
+  <a href="https://raw.githubusercontent.com/TedGoas/Cerberus/main/cerberus-hybrid.html" class="button button-secondary">View code</a>
 </div>
 
 ## Archived Templates

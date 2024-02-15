@@ -27,12 +27,13 @@ That means:
 
 1. **Use `<table border="0" cellpadding="0" cellspacing="0" role="presentation">` when creating new tables.** This negates any unwanted spacing and borders and tells screen readers to skip over the table’s tags and move straight into the content.
 2. **When in doubt, nest another table.** For finer control of your HTML, nest tables when building emails.
-3. **Use padding for spacing in table cells.** Margins aren’t fully supported on tables and container elements.
-4. **Use margin for typography.** Margins *are* fully supported for headlines, paragraphs, and lists.
-5. **Use `align` for layout instead of `float`, `grid`, or `flexbox`.** Floats aren’t supported in Outlook and email clients don’t have good support for modern CSS layout properties in general.
-6. **HTML attributes are still relevant.** Most styling is done using CSS. But because some email clients use antiquated rendering engines, they tend to better understand HTML attributes like `align`, `valign`, `height`, and `width`.
-7. **Define color as `#ffffff` instead of `#fff` or `rgb(1,2,3)`.** Six-digit hex is supported in inline CSS as well as HTML attributes like `bgcolor` that are still supported in email.
-8. **Don’t forget about [preview text](https://stackoverflow.design/email/guidelines/faq#what-is-preview-text?).** We can specify the text that appears beneath subject lines in many email clients. If preview text is not included, this space will be populated by the email’s content.
+3. **Each `<td>` that contains text should have basic font properties inlined.** Do not rely on inheritance from parent elements for `font-family`, `font-size`, `font-weight`, `line-height` and `color` properties. Outlook on Windows is known to reset these properties to values from `<body>` every time you nest text in another table.
+4. **Use padding for spacing in table cells.** Margins aren’t fully supported on tables and container elements.
+5. **Use margin for typography.** Margins *are* fully supported for headlines, paragraphs, and lists.
+6. **Use `align` for layout instead of `float`, `grid`, or `flexbox`.** Floats aren’t supported in Outlook and email clients don’t have good support for modern CSS layout properties in general.
+7. **HTML attributes are still relevant.** Most styling is done using CSS. But because some email clients use antiquated rendering engines, they tend to better understand HTML attributes like `align`, `valign`, `height`, and `width`.
+8. **Define color as `#ffffff` instead of `#fff` or `rgb(1,2,3)`.** Six-digit hex is supported in inline CSS as well as HTML attributes like `bgcolor` that are still supported in email.
+9. **Don’t forget about [preview text](https://stackoverflow.design/email/guidelines/faq#what-is-preview-text?).** We can specify the text that appears beneath subject lines in many email clients. If preview text is not included, this space will be populated by the email’s content.
 
 ## Images
 

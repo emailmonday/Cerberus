@@ -27,7 +27,7 @@ That means:
 
 1. **Use `<table border="0" cellpadding="0" cellspacing="0" role="presentation">` when creating new tables.** This negates any unwanted spacing and borders and tells screen readers to skip over the table’s tags and move straight into the content.
 2. **When in doubt, nest another table.** For finer control of your HTML, nest tables when building emails.
-3. **Inline values of "inherited by default" CSS properties in `<td>` elements.** Do not rely on [default CSS inheritance](https://web.dev/learn/css/inheritance#which_properties_are_inherited_by_default) from parent elements for properties like `font-family`, `font-size`, `font-weight`, `line-height`, `color` etc. Outlook on Windows is known to reset these properties to values from `<body>` every time you nest text in another table.
+3. **Don't rely on CSS inheritance.** Some versions of Windows Outlook reset CSS properties `font-family`, `font-size`, `font-weight`, `line-height`, `color` from parent elements from `<body>` when nesting tables.
 4. **Use padding for spacing in table cells.** Margins aren’t fully supported on tables and container elements.
 5. **Use margin for typography.** Margins *are* fully supported for headlines, paragraphs, and lists.
 6. **Use `align` for layout instead of `float`, `grid`, or `flexbox`.** Floats aren’t supported in Outlook and email clients don’t have good support for modern CSS layout properties in general.

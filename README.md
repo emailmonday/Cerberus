@@ -20,11 +20,6 @@ Each template is annotated and has good support among popular email clients.
 
 **`cerberus-hybrid.html`** - This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support.
 
-## Author
-
-👋 I’m Ted Goas, the core author and maintainer. I’m a product designer & front-end developer with a soft spot for HTML emails. Some day I'd love to combine my professional craft and hobby to work on an email platform.
-[@tedgoas](https://twitter.com/TedGoas) § [TedGoas.com](https://www.tedgoas.com/)
-
 ## License
 
 Let’s go with something simple and permissive, shall we?
@@ -38,7 +33,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-## More Email Templates
-
-If you’d prefer something that’s ready out of the box, I vouch for [htmlemail.io’s responsive email templates](https://gumroad.com/a/29078643). They’re fully tested and ready for your ESP or codebase.

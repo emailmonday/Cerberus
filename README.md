@@ -20,11 +20,6 @@ Each template is annotated and has good support among popular email clients.
 
 **`cerberus-hybrid.html`** - This template uses a hybrid approach to reconfigure the layout for different screen sizes for email clients regardless of media query support.
 
-## Author
-
-👋 I’m Ted Goas, the core author and maintainer. I’m a product designer & front-end developer with a soft spot for HTML emails. Some day I'd love to combine my professional craft and hobby to work on an email platform.
-[@tedgoas](https://twitter.com/TedGoas) § [TedGoas.com](https://www.tedgoas.com/)
-
 ## License
 
 Let’s go with something simple and permissive, shall we?

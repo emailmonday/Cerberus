@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is and what you would expect the behavior to be.
+A clear and concise description of what the issue is and what you would expect the behavior to be.
 
 **To Reproduce**
 1. Which template? (there are three)

@@ -55,4 +55,4 @@ In this example, the two columns will display side-by-side on wide, desktop disp
 
 Once a hybrid baseline is set, media queries can be used to fine-tune a responsive email layout further in email clients that support it.
 
-🙏 [Fabio Carneiro’s TEDC15 talk files](https://github.com/fcarneiro/tedc15_template), as well as [Action Rocket's](http://labs.actionrocket.co/the-hybrid-coding-approach) and [Nicole Merlin's](http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919) articles on hybrid email design.
+🙏 [Fabio Carneiro’s TEDC15 talk files](https://github.com/fcarneiro/tedc15_template), as well as [Nicole Merlin's](http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919) articles on hybrid email design.

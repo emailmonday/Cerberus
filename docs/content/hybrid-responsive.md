@@ -24,7 +24,7 @@ Media queries are a standard way to optimize layouts for small screen sizes on t
 
 ## Hybrid
 
-Hybrid design uses `inline-block`, `max-width`, `min-width`, and [ghost tables](https://stackoverflow.design/email/base/mso#ghost-tables) stack columns without media queries while imposing a fixed, desktop width for Outlook.
+Hybrid design uses `inline-block`, `max-width`, `min-width`, and ghost tables stack columns without media queries while imposing a fixed, desktop width for Outlook.
 
 <pre><code class="language-html" data-lang="HTML">&lt;tr&gt;
   &lt;td&gt;

@@ -55,4 +55,3 @@ Tools to ensure emails look as they should when they’re sent.
 
 - [Litmus](https://www.litmus.com/) and [Email on Acid](https://www.emailonacid.com/) allow us to preview screenshots of our emails across 90+ email clients on multiple devices. Both have code editors built in (Eg. [Litmus Builder](https://litmus.com/email-builder)), which helps troubleshoot and fix bugs in actual email clients.
 - [Parcel](https://useparcel.com/) - A web-based code editor built specifically for email development.
-- [Putsmail](https://putsmail.com/) - Send yourself test emails.

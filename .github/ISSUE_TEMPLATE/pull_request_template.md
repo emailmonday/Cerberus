@@ -1,5 +1,5 @@
 **Description**
-A clear and concise description of what the bug is and what you would expect the behavior to be.
+A clear and concise description of what the pull is and what you would expect the behavior to be.
 
 **Closes issue(s)**
 
